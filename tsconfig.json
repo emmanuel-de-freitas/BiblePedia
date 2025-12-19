@@ -1,0 +1,55 @@
+{
+  "include": [
+    "**/*",
+    "./src/**/*",
+    "**/.server/**/*",
+    "**/.client/**/*",
+    ".react-router/types/**/*"
+  ],
+  "compilerOptions": {
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2022"
+    ],
+    "types": [
+      "node",
+      "vite/client"
+    ],
+    "target": "ES2022",
+    "module": "Preserve",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "rootDirs": [
+      ".",
+      "./src",
+      "./.react-router/types"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/atoms/*": [
+        "./src/atoms/*"
+      ],
+      "@/components": [
+        "./src/components/index.ts"
+      ],
+      "@/ui/*": [
+        "./src/components/ui/*"
+      ],
+      "@/services/*": [
+        "./src/services/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
+      ],
+      "@/types": [
+        "./src/types/index.ts"
+      ]
+    },
+    "esModuleInterop": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true
+  }
+}
