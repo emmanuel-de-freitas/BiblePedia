@@ -5,6 +5,9 @@ import macros from 'unplugin-parcel-macros';
 
 export default defineConfig({
   plugins: [macros.vite(), reactRouter(), tsconfigPaths()],
+  ssr: {
+    noExternal: ['@react-spectrum/s2', '@react-spectrum']
+  },
   build: {
     target: ['es2022'],
     // Lightning CSS produces much a smaller CSS bundle than the default minifier.

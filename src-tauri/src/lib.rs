@@ -1,9 +1,11 @@
 mod database;
 mod epub;
 mod file_dialog;
+mod splashscreen;
 
 use database::DatabaseState;
 use epub::EpubState;
+use splashscreen::init_splashscreen;
 use std::sync::Mutex;
 use tauri::Manager;
 
@@ -19,6 +21,12 @@ pub fn run() {
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_dialog::init())
         .setup(|app| {
+            // Initialize splashscreen
+            let app_handle = app.handle().clone();
+            if let Err(e) = init_splashscreen(&app_handle) {
+                eprintln!("Failed to initialize splashscreen: {}", e);
+            }
+
             // Initialize database
             let app_dir = app
                 .path()
@@ -67,6 +75,9 @@ pub fn run() {
             database::delete_book,
             database::update_book_progress,
             database::get_recently_opened,
+            // Splashscreen commands
+            splashscreen::close_splashscreen_command,
+            splashscreen::update_splashscreen_status,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

@@ -18,12 +18,12 @@ import { invoke } from "@tauri-apps/api/core";
  *   console.log(`Progress: ${progress.percent}%`);
  * });
  */
-async function importEpub(path: string, onProgress?: (progress: ProgressUpdate) => void): Promise<ExtractionResult> {
+async function importEpub(path: string, onProgress?: (progress?: ProgressUpdate) => void): Promise<ExtractionResult> {
 
   try {
     // Listen for progress updates
     const unlisten = await listen<ProgressUpdate>('extraction-progress', (event) => {
-      onProgress(event.payload);
+      if (onProgress) onProgress(event.payload);
     });
 
     // Validate EPUB
@@ -58,7 +58,7 @@ async function importEpub(path: string, onProgress?: (progress: ProgressUpdate) 
     });
     throw error;
   } finally {
-    onProgress(null);
+    if (onProgress) onProgress(undefined);
   }
 };
 
@@ -74,8 +74,10 @@ async function browseFiles(): Promise<string> {
       const fileName = filePath.split(/[\\/]/).pop() || 'Unknown';
       return fileName;
     }
+    throw new Error('No file selected');
   } catch (error) {
     console.error('File selection failed:', error);
+    throw error;
   }
 }
 

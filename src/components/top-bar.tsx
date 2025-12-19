@@ -1,6 +1,6 @@
 import { style } from "@react-spectrum/s2/style" with { type: 'macro' }
 import Search from "./search";
-import Heading from './ui/heading';
+import Heading from '@/ui/heading';
 
 const Topbar = () => {
   const topbarStyle = style({

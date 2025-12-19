@@ -5,32 +5,55 @@
   "identifier": "com.philagora.livrea",
   "build": {
     "beforeDevCommand": "bun run dev",
-    "devUrl": "http://localhost:3000",
+    "devUrl": "http://localhost:5173",
     "beforeBuildCommand": "bun run build",
-    "frontendDist": "../out"
+    "frontendDist": "../build"
   },
   "app": {
     "windows": [
       {
-        "title": "livrea",
-        "decorations": true,
+        "title": "",
+        "center": true,
+        "alwaysOnTop": true,
+        "dragDropEnabled": false,
+        "devtools": false,
+        "allowLinkPreview": false,
+        "focus": true,
+        "height": 400,
         "titleBarStyle": "Overlay",
+        "decorations": false,
+        "width": 700,
+        "focusable": true,
+        "resizable": false,
+        "preventOverflow": true,
+        "visible": false,
+        "visibleOnAllWorkspaces": true,
+        "zoomHotkeysEnabled": false,
+        "backgroundThrottling": "disabled",
+        "label": "splashscreen",
+        "url": "splashscreen.html"
+      },
+      {
+        "title": "",
+        "decorations": true,
+        "titleBarStyle": "Transparent",
         "transparent": false,
         "dragDropEnabled": true,
-        "hiddenTitle": true,
+        "hiddenTitle": false,
         "width": 1000,
         "height": 700,
         "resizable": true,
         "minWidth": 800,
+        "create": false,
         "minHeight": 600,
         "maxWidth": 1920,
         "maxHeight": 1080,
         "fullscreen": false,
-        "label": "main"
+        "label": "dashboard"
       }
     ],
     "security": {
-      "csp": null
+      "csp": "img-src 'self' data: https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline'"
     }
   },
   "bundle": {

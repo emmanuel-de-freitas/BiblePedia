@@ -1,10 +1,10 @@
 'use client';
 
 import { SearchField, Form } from '@react-spectrum/s2';
-import { booksAtom } from 'atoms/books';
-import { searchQueryAtom } from 'atoms/search';
+import { booksAtom } from '@/atoms/books';
+import { searchQueryAtom } from '@/atoms/search';
 import { useAtom } from 'jotai';
-import { searchBooks } from 'services/books';
+import { searchBooks } from '@/services/books';
 
 const Search = () => {
   const [query, setQuery] = useAtom(searchQueryAtom);

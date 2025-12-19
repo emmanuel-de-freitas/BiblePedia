@@ -1,3 +1,7 @@
+import '@react-spectrum/s2/page.css';
+import { Provider } from '@react-spectrum/s2';
+import { useNavigate, useHref, useRouteLoaderData, type NavigateOptions, type LoaderFunctionArgs } from 'react-router';
+
 import {
   isRouteErrorResponse,
   Links,
@@ -9,21 +13,34 @@ import {
 
 import type { Route } from "./+types/root";
 
+// Configure the type of the `routerOptions` prop on all React Spectrum components.
+declare module '@react-spectrum/s2' {
+  interface RouterConfig {
+    routerOptions: NavigateOptions
+  }
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
+  let lang = 'en-US';
+  let navigate = useNavigate();
+
+
   return (
-    <html lang="en" data-background="layer-1">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-      </body>
-    </html>
+    <Provider elementType="html" locale={lang} router={{ navigate, useHref }}>
+      <html lang="en" data-background="base">
+        <head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <Meta />
+          <Links />
+        </head>
+        <body style={{ margin: 0, boxSizing: 'border-box', height: 'screen', overscrollBehavior: 'none', overflow: 'hidden' }}>
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+        </body>
+      </html>
+    </Provider>
   );
 }
 

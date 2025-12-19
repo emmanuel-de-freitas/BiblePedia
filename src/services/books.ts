@@ -14,6 +14,7 @@ async function loadBooks(): Promise<Book[]> {
     await invoke('show_error_dialog', {
       message: `Failed to load library: ${error}`,
     });
+    throw error;
   } finally {
     await invoke('show_success_dialog', {
       message: 'Library loaded successfully',
@@ -35,6 +36,7 @@ async function searchBooks(query: string): Promise<Book[]> {
     await invoke('show_error_dialog', {
       message: `Failed to search library: ${error}`,
     });
+    throw error;
   }
 };
 
