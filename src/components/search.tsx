@@ -5,6 +5,7 @@ import { booksAtom } from '@/atoms/books';
 import { searchQueryAtom } from '@/atoms/search';
 import { useAtom } from 'jotai';
 import { searchBooks } from '@/services/books';
+import { style } from '@react-spectrum/s2/style' with { type: 'macro' };
 
 const Search = () => {
   const [query, setQuery] = useAtom(searchQueryAtom);
@@ -15,13 +16,18 @@ const Search = () => {
     setResults(results);
   };
 
+  const searchFieldStyle = style({
+    width: '100%',
+  });
+
   return (
-    <Form id='search'>
+    <Form id='search' styles={style({ flexGrow: 1, maxWidth: '60%' })}>
       <SearchField
-        label="Search"
-        size="M"
+        size="L"
+        styles={searchFieldStyle}
         enterKeyHint="search"
         form='search'
+        inputMode='search'
         onSubmit={handleSearch}
         placeholder="Search books, authors, or titles..."
         name="search"

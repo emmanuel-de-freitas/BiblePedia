@@ -4,6 +4,12 @@ export default {
   // Config options...
   // Server-side render by default, to enable SPA mode set this to `false`
   ssr: false,
-
-  appDirectory: "src/app"
+  future: {
+    unstable_optimizeDeps: true,
+  },
+  routeDiscovery: {
+    mode: 'initial'
+  },
+  appDirectory: "src/app",
+  buildDirectory: "build"
 } satisfies Config;

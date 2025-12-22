@@ -1,4 +1,4 @@
 import { atom } from "jotai";
-import { Book } from "@/types";
+import type { Book } from "@/types";
 
 export const booksAtom = atom<Book[]>([]);

@@ -1,21 +1,31 @@
 'use client'
 
-import { style } from "@react-spectrum/s2/style" with { type: 'macro' }
+import { style, iconStyle } from "@react-spectrum/s2/style" with { type: 'macro' }
+import Libraries from '@react-spectrum/s2/illustrations/gradient/generic1/Libraries';
 import Heading from "@/ui/heading";
-import Text from "@/ui/text";
+import Navbar from "./navbar";
 
 const Sidebar = () => {
   const sidebarStyle = style({
-    width: 'auto',
-    margin: 32,
-    borderRadius: 'pill'
+    gridArea: 'sidebar',
+    paddingY: 20,
+    paddingX: 8
   });
+
+  const renderLogo = () => {
+    return (
+      <Libraries UNSAFE_style={{
+        width: 64
+      }}  />
+    );
+  }
 
 
   return (
     <div className={sidebarStyle}>
-      <Text>Livrea</Text>
-      <Heading level={1}>Hello Next.js!</Heading>
+
+        {renderLogo()}
+        <Navbar />
     </div>
   );
 };

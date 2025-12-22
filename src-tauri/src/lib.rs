@@ -1,30 +1,25 @@
 mod database;
 mod epub;
 mod file_dialog;
-mod splashscreen;
+mod window_manager;
 
 use database::DatabaseState;
 use epub::EpubState;
-use splashscreen::init_splashscreen;
 use std::sync::Mutex;
 use tauri::Manager;
-
-// Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-#[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
-}
+use window_manager::init_window;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_dialog::init())
+        .plugin(tauri_plugin_os::init())
         .setup(|app| {
-            // Initialize splashscreen
+            // Initialize window
             let app_handle = app.handle().clone();
-            if let Err(e) = init_splashscreen(&app_handle) {
-                eprintln!("Failed to initialize splashscreen: {}", e);
+            if let Err(e) = init_window(&app_handle) {
+                eprintln!("Failed to initialize window: {}", e);
             }
 
             // Initialize database
@@ -53,7 +48,6 @@ pub fn run() {
             Ok(())
         })
         .invoke_handler(tauri::generate_handler![
-            greet,
             // File dialog commands
             file_dialog::open_file_dialog,
             file_dialog::show_success_dialog,
@@ -74,10 +68,7 @@ pub fn run() {
             database::search_books,
             database::delete_book,
             database::update_book_progress,
-            database::get_recently_opened,
-            // Splashscreen commands
-            splashscreen::close_splashscreen_command,
-            splashscreen::update_splashscreen_status,
+            database::get_recently_opened
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

@@ -1,6 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
   "vcs": {
+    "defaultBranch": "master",
     "enabled": true,
     "clientKind": "git",
     "useIgnoreFile": true
@@ -30,13 +31,21 @@
       "quoteStyle": "double"
     }
   },
+  "json": {
+    "formatter": {
+      "bracketSameLine": true,
+      "trailingCommas": "none",
+    },
+  },
   "assist": {
     "enabled": true,
     "actions": {
       "source": {
         "recommended": true,
+        "useSortedKeys": "on",
         "organizeImports": "on"
-      }
+      },
+      "recommended": true
     }
   }
 }

@@ -1,6 +1,6 @@
 import { style } from "@react-spectrum/s2/style" with { type: 'macro' };
 
-import { HeadingLevel } from "@/types";
+import type { HeadingLevel } from "@/types";
 import { useMemo } from "react";
 
 
@@ -15,6 +15,7 @@ const Heading = ({ children, level }: IHeadingProps) => {
   const styles = useMemo(() => ({
     1: style({
       font: 'heading-2xl',
+      marginY: 8,
       fontFamily: 'sans'
     }),
     2: style({
@@ -23,7 +24,8 @@ const Heading = ({ children, level }: IHeadingProps) => {
     }),
     3: style({
       font: 'heading-lg',
-      fontWeight: 'normal',
+      fontWeight: 'bold',
+      marginY: 0,
       fontFamily: 'sans'
     }),
     4: style({

@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { style } from '@react-spectrum/s2/style' with { type: 'macro' };
 import { listenToSplashscreenStatus, type SplashscreenStatus } from '../services/splashscreen';
+import { ProgressCircle } from '@react-spectrum/s2';
 
 /**
- * Splashscreen React component
+ * Splashscreen React component using React Spectrum style macro
  * This is an example component that can be used as the splashscreen page
  */
 export function Splashscreen() {
@@ -34,45 +36,154 @@ export function Splashscreen() {
   }, []);
 
   return (
-    <div className="splashscreen">
+    <div
+      className={style({
+        width: 'screen',
+        height: 'screen',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundImage: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        color: 'white',
+        overflow: 'hidden',
+        position: 'relative',
+      })}
+    >
+      {/* Pattern overlay */}
+      <div
+        className={style({
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.05) 35px, rgba(255, 255, 255, 0.05) 70px)',
+          pointerEvents: 'none',
+        })}
+      />
+
+      {/* Content container with fade-in animation */}
+      <div
+        className={style({
+          textAlign: 'center',
+          zIndex: 1,
+        })}
+        style={{ animation: 'fadeIn 0.5s ease-in' }}
+      >
+        {/* Logo with pulse animation */}
+        <div
+          className={style({
+            size: 120,
+            marginX: 'auto',
+            marginBottom: 32,
+            backgroundColor: 'transparent-white-900',
+            borderRadius: 'xl',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: 'elevated',
+          })}
+          style={{ animation: 'pulse 2s ease-in-out infinite' }}
+        >
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            className={style({
+              size: 64,
+              fill: 'indigo',
+            })}
+          >
+            <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h12V4H6zm2 2h8v2H8V6zm0 4h8v2H8v-2zm0 4h5v2H8v-2z" />
+          </svg>
+        </div>
+
+        {/* Title */}
+        <h1
+          className={style({
+            font: 'heading-3xl',
+            marginBottom: 8,
+            color: 'white',
+          })}
+        >
+          Livrea
+        </h1>
+
+        {/* Tagline */}
+        <p
+          className={style({
+            color: 'transparent-white-900',
+            font: 'body-lg',
+            marginBottom: 40,
+          })}
+        >
+          Your Digital Library
+        </p>
+
+        {/* Loading container */}
+        <div
+          className={style({
+            marginTop: 40,
+          })}
+        >
+          {/* Progress bar */}
+          <div
+            className={style({
+              width: 240,
+              height: 4,
+              backgroundColor: 'transparent-white-200',
+              borderRadius: 'sm',
+              marginX: 'auto',
+              marginBottom: 16,
+              overflow: 'hidden',
+              position: 'relative',
+            })}
+          >
+            <div
+              className={style({
+                height: 'full',
+                backgroundColor: 'white',
+                borderRadius: 'sm',
+                boxShadow: 'elevated',
+                transition: 'default',
+              })}
+              style={{ width: `${status.progress || 0}%` }}
+            />
+          </div>
+
+          {/* Loading spinner */}
+          <ProgressCircle
+            aria-label="Loading…"
+            value={50}
+            isIndeterminate
+            staticColor="auto" />
+
+          {/* Status text */}
+          <p
+            className={style({
+              color: 'transparent-white-900',
+              font: 'body-sm',
+              marginTop: 16,
+              fontWeight: 'medium',
+            })}
+          >
+            {status.message}
+          </p>
+        </div>
+      </div>
+
+      {/* Version */}
+      <div
+        className={style({
+          position: 'absolute',
+          bottom: 20,
+          color: 'transparent-white-600',
+          font: 'detail-sm',
+        })}
+        style={{ left: '50%', transform: 'translateX(-50%)' }}
+      >
+        v0.1.0
+      </div>
+
+      {/* Global keyframe animations */}
       <style>{`
-        .splashscreen {
-          width: 100vw;
-          height: 100vh;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          color: white;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-          overflow: hidden;
-          position: relative;
-        }
-
-        .splashscreen::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-image: repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 35px,
-            rgba(255, 255, 255, 0.05) 35px,
-            rgba(255, 255, 255, 0.05) 70px
-          );
-          pointer-events: none;
-        }
-
-        .splashscreen-content {
-          text-align: center;
-          z-index: 1;
-          animation: fadeIn 0.5s ease-in;
-        }
-
         @keyframes fadeIn {
           from {
             opacity: 0;
@@ -84,19 +195,6 @@ export function Splashscreen() {
           }
         }
 
-        .logo {
-          width: 120px;
-          height: 120px;
-          margin: 0 auto 30px;
-          background: rgba(255, 255, 255, 0.95);
-          border-radius: 24px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-          animation: pulse 2s ease-in-out infinite;
-        }
-
         @keyframes pulse {
           0%, 100% {
             transform: scale(1);
@@ -106,103 +204,12 @@ export function Splashscreen() {
           }
         }
 
-        .logo svg {
-          width: 70px;
-          height: 70px;
-          fill: #667eea;
-        }
-
-        .title {
-          font-size: 48px;
-          font-weight: 700;
-          margin-bottom: 10px;
-          letter-spacing: -1px;
-          text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .tagline {
-          color: rgba(255, 255, 255, 0.9);
-          font-size: 18px;
-          margin-bottom: 40px;
-          font-weight: 400;
-        }
-
-        .loading-container {
-          margin-top: 40px;
-        }
-
-        .loading-bar {
-          width: 240px;
-          height: 4px;
-          background: rgba(255, 255, 255, 0.2);
-          border-radius: 2px;
-          margin: 0 auto 15px;
-          overflow: hidden;
-          position: relative;
-        }
-
-        .loading-progress {
-          height: 100%;
-          background: white;
-          border-radius: 2px;
-          width: ${status.progress || 0}%;
-          transition: width 0.3s ease;
-          box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-
-        .loading-spinner {
-          width: 40px;
-          height: 40px;
-          margin: 0 auto;
-          border: 3px solid rgba(255, 255, 255, 0.3);
-          border-top-color: white;
-          border-radius: 50%;
-          animation: spin 1s linear infinite;
-        }
-
         @keyframes spin {
           to {
             transform: rotate(360deg);
           }
         }
-
-        .loading-text {
-          color: rgba(255, 255, 255, 0.9);
-          font-size: 14px;
-          margin-top: 15px;
-          font-weight: 500;
-        }
-
-        .version {
-          position: absolute;
-          bottom: 20px;
-          left: 50%;
-          transform: translateX(-50%);
-          color: rgba(255, 255, 255, 0.6);
-          font-size: 12px;
-        }
       `}</style>
-
-      <div className="splashscreen-content">
-        <div className="logo">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h12V4H6zm2 2h8v2H8V6zm0 4h8v2H8v-2zm0 4h5v2H8v-2z" />
-          </svg>
-        </div>
-
-        <h1 className="title">Livrea</h1>
-        <p className="tagline">Your Digital Library</p>
-
-        <div className="loading-container">
-          <div className="loading-bar">
-            <div className="loading-progress" />
-          </div>
-          <div className="loading-spinner" />
-          <p className="loading-text">{status.message}</p>
-        </div>
-      </div>
-
-      <div className="version">v0.1.0</div>
     </div>
   );
 }

@@ -10,6 +10,6 @@ export default function Entry() {
 
 
   return <div>
-    <Heading level={1}>Hello Next.js!</Heading>
+    <Heading level={2}>Hello Next.js!</Heading>
   </div>
 }

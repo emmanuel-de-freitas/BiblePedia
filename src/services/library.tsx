@@ -24,7 +24,7 @@ import { containerStyle, contentStyle } from '../styles/content';
 import { headerStyle } from '../styles/typography';
 import { cardContentStyle } from '../styles/card';
 import { bookAuthorStyle, bookMetaStyle, bookTitleStyle } from '../styles/book';
-import { Book, ExtractionResult, ProgressUpdate } from '@/types';
+import type { Book, ExtractionResult, ProgressUpdate } from '@/types';
 
 
 const searchBarStyle = style({

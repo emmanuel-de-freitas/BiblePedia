@@ -3,8 +3,10 @@
     "**/*",
     "./src/**/*",
     "**/.server/**/*",
-    "**/.client/**/*",
-    ".react-router/types/**/*"
+    "**/.client/**/*"
+  ],
+  "exclude": [
+    "node"
   ],
   "compilerOptions": {
     "lib": [
@@ -16,13 +18,11 @@
       "node",
       "vite/client"
     ],
-    "target": "ES2022",
-    "module": "Preserve",
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "jsx": "react-jsx",
     "rootDirs": [
       ".",
-      "./src",
       "./.react-router/types"
     ],
     "baseUrl": ".",
@@ -47,9 +47,14 @@
       ]
     },
     "esModuleInterop": true,
-    "noEmit": true,
+    "allowJs": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "verbatimModuleSyntax": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
+    "noEmit": true,
     "strict": true
   }
 }

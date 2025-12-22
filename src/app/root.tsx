@@ -1,6 +1,8 @@
+import React from 'react';
+
 import '@react-spectrum/s2/page.css';
 import { Provider } from '@react-spectrum/s2';
-import { useNavigate, useHref, useRouteLoaderData, type NavigateOptions, type LoaderFunctionArgs } from 'react-router';
+import { useNavigate, useHref, type NavigateOptions } from 'react-router';
 
 import {
   isRouteErrorResponse,
@@ -20,26 +22,28 @@ declare module '@react-spectrum/s2' {
   }
 }
 
+export function HydrateFallback() {
+  return <p>Loading Game...</p>;
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
   let lang = 'en-US';
   let navigate = useNavigate();
 
 
   return (
-    <Provider elementType="html" locale={lang} router={{ navigate, useHref }}>
-      <html lang="en" data-background="base">
+    <Provider elementType="html" locale={lang} router={{ navigate, useHref }} background="layer-1">
         <head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <Meta />
           <Links />
         </head>
-        <body style={{ margin: 0, boxSizing: 'border-box', height: 'screen', overscrollBehavior: 'none', overflow: 'hidden' }}>
+        <body style={{ margin: 0, boxSizing: 'border-box', overscrollBehavior: 'none', height: '100vh', overflow: 'hidden', backgroundColor: "inherit"}}>
           {children}
           <ScrollRestoration />
           <Scripts />
         </body>
-      </html>
     </Provider>
   );
 }

@@ -1,5 +1,5 @@
 import { invoke } from '@tauri-apps/api/core';
-import { Book } from "@/types";
+import type { Book } from "@/types";
 
 /**
  * Load books from the library.

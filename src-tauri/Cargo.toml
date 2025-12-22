@@ -1,9 +1,9 @@
 
 [package]
-name = "livres"
+name = "livrea"
 version = "0.1.0"
 description = "A Tauri App"
-authors = ["you"]
+authors = ["Emmanuel De Freitas"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -28,5 +28,6 @@ tauri-plugin-dialog = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 epub = "2.1.5"
-rusqlite = { version = "0.37", features = ["bundled"] }
+rusqlite = { version = "0.38", features = ["bundled"] }
 thiserror = "2.0.17"
+tauri-plugin-os = "2.3.2"
