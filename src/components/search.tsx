@@ -21,7 +21,7 @@ const Search = () => {
   });
 
   return (
-    <Form id='search' styles={style({ flexGrow: 1, maxWidth: '60%' })}>
+    <Form id='search' styles={style({ flexGrow: 1, maxWidth: '50%' })}>
       <SearchField
         size="L"
         styles={searchFieldStyle}

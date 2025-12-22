@@ -5,9 +5,9 @@ function DashboardLayout({ children }: { children: React.ReactNode }) {
   const dashboardStyle = style({
     display: 'grid',
     gridTemplateColumns: 'auto 2fr',
-    gridTemplateRows: 'calc(100dvh - 12px)',
+    gridTemplateRows: '100dvh',
     paddingX: 12,
-    columnGap: 12,
+    gap: 12,
     backgroundColor: 'layer-1',
     gridTemplateAreas: [
       'sidebar content content'
@@ -16,7 +16,7 @@ function DashboardLayout({ children }: { children: React.ReactNode }) {
 
   const mainStyle = style({
     gridArea: 'content',
-    paddingTop: 36,
+    paddingTop: 56,
     display: 'flex',
     flexDirection: 'column',
     rowGap: 12
@@ -27,6 +27,7 @@ function DashboardLayout({ children }: { children: React.ReactNode }) {
     borderRadius: 'xl',
     boxShadow: 'emphasized',
     padding: 20,
+    marginBottom: 12,
     height: 'full'
 
   });

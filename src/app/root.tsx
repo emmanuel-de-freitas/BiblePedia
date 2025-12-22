@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import '@react-spectrum/s2/page.css';
 import { Provider } from '@react-spectrum/s2';
 import { useNavigate, useHref, type NavigateOptions } from 'react-router';
+import { client } from '../services/appwrite';
 
 import {
   isRouteErrorResponse,
@@ -39,7 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <Meta />
           <Links />
         </head>
-        <body style={{ margin: 0, boxSizing: 'border-box', overscrollBehavior: 'none', height: '100vh', overflow: 'hidden', backgroundColor: "inherit"}}>
+        <body style={{ margin: 0, boxSizing: 'border-box', overscrollBehavior: 'none', height: '100vh', overflow: 'hidden'}}>
           {children}
           <ScrollRestoration />
           <Scripts />
@@ -49,6 +50,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  useEffect(() => {
+    // Verify Appwrite connection on app initialization
+    client.ping()
+      .then(() => {
+        console.log('Appwrite connection verified successfully');
+      })
+      .catch((error) => {
+        console.error('Failed to connect to Appwrite:', error);
+      });
+  }, []);
+
   return <Outlet />;
 }
 

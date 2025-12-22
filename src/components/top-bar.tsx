@@ -9,7 +9,8 @@ const Topbar = () => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    width: 'full'
+    width: 'calc(100% - 24px)',
+    paddingX: 12
   });
 
   return (

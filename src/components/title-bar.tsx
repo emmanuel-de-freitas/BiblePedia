@@ -55,7 +55,10 @@ const TitleBar = () => {
     flexGrow: 1,
     height: 'full',
     display: 'flex',
-    alignItems: 'center',
+    font: 'ui-xs',
+    justifyContent: "center",
+    alignItems: 'start',
+    paddingTop: 16
   });
 
   const titleStyle = style({
@@ -68,7 +71,9 @@ const TitleBar = () => {
   if (currentPlatform === 'macos') {
     return (
       <div className={titleBarStyle}>
-        <div className={dragRegionStyle} data-tauri-drag-region></div>
+        <div className={dragRegionStyle} data-tauri-drag-region>
+          <span className={titleStyle}>Livrea | Dashboard</span>
+        </div>
       </div>
     );
   }

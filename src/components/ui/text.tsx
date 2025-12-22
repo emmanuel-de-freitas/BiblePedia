@@ -3,7 +3,7 @@ import { style } from '@react-spectrum/s2/style' with {type: 'macro'};
 
 interface ITextProps {
   children: React.ReactNode;
-  variant?: 'label' | 'caption' | 'description';
+  variant?: 'label' | 'caption' | 'description' | 'navigation';
 }
 
 const Text = ({ children, variant }: ITextProps) => {
@@ -11,7 +11,7 @@ const Text = ({ children, variant }: ITextProps) => {
   const styles = useMemo(() => ({
     label: style({
       font: 'body',
-      fontWeight: 'normal',
+      fontWeight: 'bold',
       fontFamily: 'sans'
     }),
     caption: style({
@@ -22,6 +22,11 @@ const Text = ({ children, variant }: ITextProps) => {
     description: style({
       font: 'body-lg',
       fontWeight: 'normal',
+      fontFamily: 'sans'
+    }),
+    navigation: style({
+      font: 'body-lg',
+      fontWeight: 'medium',
       fontFamily: 'sans'
     }),
     default: style({

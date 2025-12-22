@@ -1,18 +1,25 @@
 'user client'
 
-import type { LivIconName } from '@/services/icons';
-import { ActionButton, type ActionButtonProps, type IconProps } from '@react-spectrum/s2';
+import { ALL_ICONS, type LIIconName, type IconProps } from '@/services/icons';
+import { ActionButton } from '@react-spectrum/s2';
+import Text from './text';
 import { style } from '@react-spectrum/s2/style' with { type: 'macro' };
 
-const NavButton = ({ children, ...props }: ActionButtonProps & { icon: React.ReactNode | LivIconName }) => {
+const Icon: React.FC<{ icon: LIIconName }> = ({ icon }) => {
+  //const { default: IconComponent } = await import(`@react-spectrum/s2/icons/${icon}`);
+  const IconComponent = ALL_ICONS[icon];
+  return <IconComponent size={24} variant="Broken" />;
+};
 
-  const Icon: React.FC<IconProps> = () => <>{props.icon}</>;
-
+const NavButton = ({ icon, label }:{ icon: LIIconName, label?: string }) => {
 
   return (
-    <ActionButton {...props} isQuiet UNSAFE_style={{ display: 'flex', flexDirection: 'column', cursor: 'pointer', padding: 8, minHeight: 54, minWidth: 54, width: '100%' }}>
-      <Icon />
-      {children}
+    <ActionButton isQuiet size='L' styles={style({
+      width: 'full',
+      justifySelf: 'start'
+    })} UNSAFE_style={{ justifyContent: 'start', cursor: 'pointer' }}>
+      <Icon icon={icon} />
+      {label && <Text variant="navigation">{label}</Text>}
     </ActionButton>
   )
 }
