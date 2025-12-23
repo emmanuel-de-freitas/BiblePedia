@@ -12,8 +12,8 @@ function DashboardLayout({ children }: { children: React.ReactNode }) {
     gridTemplateColumns: 'auto 2fr',
     gridTemplateRows: '100dvh',
     paddingEnd: 12,
-    paddingStart: 8,
-    columnGap: 8,
+    paddingStart: 4,
+    rowGap: 12,
     backgroundColor: 'layer-1',
     gridTemplateAreas: [
       'sidebar content content'

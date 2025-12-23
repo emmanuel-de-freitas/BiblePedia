@@ -36,7 +36,7 @@ const Sidebar = () => {
 
   return (
     <motion.div className={sidebarStyle}>
-      <div className={style({ paddingTop: 12 })}>
+      <div className={style({ paddingTop: 12, paddingX: 'text-to-control' })}>
         {renderLogo()}
         <Navbar />
       </div>

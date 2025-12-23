@@ -31,8 +31,8 @@ export default [
         index("routes/dashboard/citations/index.tsx"),
         // TODO: Any other routes to implement in the future related to the citations screen.
       ]),
-      ...prefix("activity", [
-        index("routes/dashboard/activity/index.tsx"),
+      ...prefix("community", [
+        index("routes/dashboard/community/index.tsx"),
         // TODO: Any other routes to implement in the future related to the activity screen.
       ]),
       route("activity", "routes/dashboard/activity/index.tsx")

@@ -12,8 +12,8 @@ const Navbar = () => {
   const navStyles = style({
     display: 'flex',
     flexDirection: "column",
-    gap: 12,
-    paddingTop: 4
+    rowGap: 12,
+    //paddingTop: 4
   });
 
   const links: { icon: LIIconName, label: string, route: string }[] = [
