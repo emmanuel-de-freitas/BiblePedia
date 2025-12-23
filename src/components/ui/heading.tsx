@@ -16,29 +16,40 @@ const Heading = ({ children, level }: IHeadingProps) => {
     1: style({
       font: 'heading-2xl',
       marginY: 8,
+      userSelect: 'none',
+      textTransform: 'capitalize',
       fontFamily: 'sans'
     }),
     2: style({
+      userSelect: 'none',
       font: 'heading-xl',
+      textTransform: 'capitalize',
       fontFamily: 'sans'
     }),
     3: style({
+      userSelect: 'none',
       font: 'heading-lg',
       fontWeight: 'bold',
+      textTransform: 'capitalize',
       marginY: 0,
       fontFamily: 'sans'
     }),
     4: style({
+      userSelect: 'none',
       font: 'heading',
+      textTransform: 'capitalize',
       fontWeight: 'normal',
       fontFamily: 'sans'
     }),
     5: style({
+      userSelect: 'none',
       font: 'heading-sm',
+      textTransform: 'capitalize',
       fontWeight: 'normal',
       fontFamily: 'sans'
     }),
     6: style({
+      userSelect: 'none',
       font: 'heading-xs',
       fontWeight: 'normal',
       fontFamily: 'sans'

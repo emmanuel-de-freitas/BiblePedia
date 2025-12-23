@@ -4,13 +4,19 @@ import { style } from '@react-spectrum/s2/style' with {type: 'macro'};
 interface ITextProps {
   children: React.ReactNode;
   variant?: 'label' | 'caption' | 'description' | 'navigation';
+  ref?: React.Ref<HTMLSpanElement>;
 }
 
-const Text = ({ children, variant }: ITextProps) => {
+const Text = ({ children, variant, ref }: ITextProps) => {
 
+  const base = {
+    fontWeight: 'normal',
+    fontFamily: 'sans'
+  };
   const styles = useMemo(() => ({
     label: style({
       font: 'body',
+
       fontWeight: 'bold',
       fontFamily: 'sans'
     }),
@@ -37,7 +43,7 @@ const Text = ({ children, variant }: ITextProps) => {
   }), [variant]);
 
 
-  return <span className={variant ? styles[variant] : styles.default}>{children}</span>;
+  return <span ref={ref} className={variant ? styles[variant] : styles.default} style={{ textOverflow: 'clip', textWrapMode: 'nowrap' }}>{children}</span>;
 }
 
 export default Text;

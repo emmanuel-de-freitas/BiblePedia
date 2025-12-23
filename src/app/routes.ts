@@ -2,7 +2,7 @@ import { type RouteConfig, index, layout, prefix, route } from "@react-router/de
 
 export default [
   // Root
-  index("routes/entry.tsx"),
+ // index("routes/entry.tsx"),
   // Windows
   // Dashboard (library, citations, activity, ...)
   layout("routes/dashboard/layout.tsx", [
@@ -13,7 +13,7 @@ export default [
      * This widow initially opens when application starts.
      * Always minimized, never automatically closed.
      */
-    ...prefix("dashboard", [
+    ...prefix("dashboard",  [
       /** Home - Overview of all books available
        * and reading progress, latest comment edits,
        * and social media activity
@@ -35,6 +35,7 @@ export default [
         index("routes/dashboard/activity/index.tsx"),
         // TODO: Any other routes to implement in the future related to the activity screen.
       ]),
+      route("activity", "routes/dashboard/activity/index.tsx")
     ])
   ]),
   //

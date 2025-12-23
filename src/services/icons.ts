@@ -6,6 +6,7 @@ import Community from '@react-spectrum/s2/icons/Community';
 
 // import icon.
 import { Home2, Book1, Stickynote, People, type IconProps, type Icon } from 'iconsax-reactjs';
+import * as Icons from 'iconsax-reactjs';
 
 export const allIcons = {
   Home,
@@ -14,13 +15,10 @@ export const allIcons = {
   Community
 }
 
-export const ALL_ICONS : Record<string, Icon> = {
-  Home2,
-  Book1,
-  People,
-  Stickynote
-};
+
 
 export type LivIconName = keyof typeof allIcons;
-export type LIIconName = keyof typeof ALL_ICONS;
+export type LIIconName = keyof typeof Icons;
 export type { IconProps, Icon };
+
+export const ALL_ICONS: Record<LIIconName, Icon> = Icons;

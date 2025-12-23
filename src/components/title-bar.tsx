@@ -1,9 +1,11 @@
 'use client'
 
+import usePathname from "@/hooks/usePathname";
 import { style } from "@react-spectrum/s2/style" with { type: 'macro' };
 import { getCurrentWindow } from '@tauri-apps/api/window';
 import { platform } from '@tauri-apps/plugin-os';
 import { useEffect, useState } from 'react';
+import { useAsyncValue } from "react-router";
 
 const TitleBar = () => {
   const appWindow = getCurrentWindow();
@@ -64,15 +66,19 @@ const TitleBar = () => {
   const titleStyle = style({
     fontSize: 'body-sm',
     fontWeight: 'medium',
+    textTransform: 'capitalize',
     letterSpacing: 'tight',
   });
+
+  const title = usePathname();
+  const appName: string | undefined = useAsyncValue() as unknown as string;
 
   // Don't show controls on macOS (uses native traffic lights)
   if (currentPlatform === 'macos') {
     return (
       <div className={titleBarStyle}>
         <div className={dragRegionStyle} data-tauri-drag-region>
-          <span className={titleStyle}>Livrea | Dashboard</span>
+          <span className={titleStyle}>{appName || 'Livrea'} | {title}</span>
         </div>
       </div>
     );

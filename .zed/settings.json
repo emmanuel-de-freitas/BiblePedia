@@ -6,6 +6,17 @@
     "source.action.useSortedKeys.biome": true,
     "source.fixAll.biome": true
   },
+  "buffer_font_features": [
+    "ita"
+  ],
+  "language_servers": ["...", "biome"],
+  "autosave": "on_window_change",
+  "completions": {
+    "lsp": true,
+    "words": "enabled"
+  },
+  "formatter": "language_server",
+  "window_decorations": "server",
   "languages": {
     "JavaScript": {
       "formatter": {

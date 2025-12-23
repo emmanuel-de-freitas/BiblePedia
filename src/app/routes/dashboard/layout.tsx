@@ -1,13 +1,19 @@
+import myStore from "@/atoms/store";
 import { Topbar, Sidebar, TitleBar } from "@/components";
 import { style } from "@react-spectrum/s2/style" with { type: "macro" };
+import { Provider } from "jotai";
+import { LayoutGroup, motion } from "motion/react";
+
+
 function DashboardLayout({ children }: { children: React.ReactNode }) {
 
   const dashboardStyle = style({
     display: 'grid',
     gridTemplateColumns: 'auto 2fr',
     gridTemplateRows: '100dvh',
-    paddingX: 12,
-    gap: 12,
+    paddingEnd: 12,
+    paddingStart: 8,
+    columnGap: 8,
     backgroundColor: 'layer-1',
     gridTemplateAreas: [
       'sidebar content content'
@@ -16,10 +22,10 @@ function DashboardLayout({ children }: { children: React.ReactNode }) {
 
   const mainStyle = style({
     gridArea: 'content',
-    paddingTop: 56,
+    paddingTop: 64,
     display: 'flex',
     flexDirection: 'column',
-    rowGap: 12
+    rowGap: 16
   });
 
   const contentStyle = style({
@@ -29,22 +35,23 @@ function DashboardLayout({ children }: { children: React.ReactNode }) {
     padding: 20,
     marginBottom: 12,
     height: 'full'
-
   });
 
   return (
-    <>
+    <Provider store={myStore}>
+    <LayoutGroup>
       <TitleBar />
-      <div className={dashboardStyle}>
+      <motion.div layout className={dashboardStyle}>
         <Sidebar />
-        <main className={mainStyle}>
+        <motion.main layout className={mainStyle}>
           <Topbar />
-          <div className={contentStyle}>
+          <motion.div className={contentStyle}>
             {children}
-          </div>
-        </main>
-      </div>
-    </>
+          </motion.div>
+        </motion.main>
+      </motion.div>
+      </LayoutGroup>
+    </Provider>
   );
 }
 

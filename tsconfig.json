@@ -39,6 +39,9 @@
       "@/services/*": [
         "./src/services/*"
       ],
+      "@/hooks/*": [
+        "./src/hooks/*.ts"
+      ],
       "@/styles/*": [
         "./src/styles/*"
       ],

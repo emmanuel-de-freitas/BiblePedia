@@ -2,17 +2,18 @@ import {Popover, MenuTrigger, ActionButton, Menu, MenuItem, MenuSection, Submenu
 import {style} from '@react-spectrum/s2/style' with {type: 'macro'};
 import Buildings from '@react-spectrum/s2/icons/Buildings';
 import Settings from '@react-spectrum/s2/icons/Settings';
+import IconButton from './ui/icon-button';
 
 const UserPopover = () => {
   return (
     <MenuTrigger>
-      <ActionButton aria-label="Account">
-        <Avatar size={32} src="https://i.imgur.com/xIe7Wlb.png" />
-      </ActionButton>
+      <IconButton>
+        <Avatar size={28} src="https://avatars.githubusercontent.com/u/29475051?v=4" />
+      </IconButton>
       <Popover>
         <div className={style({paddingTop: 4, display: 'flex', flexDirection: 'column', gap: 12})}>
           <div className={style({display: 'flex', gap: 12, alignItems: 'center', marginX: 12})}>
-            <Avatar src="https://i.imgur.com/xIe7Wlb.png" size={56} />
+            <Avatar src="https://avatars.githubusercontent.com/u/29475051?v=4" size={56} />
             <div>
               <div className={style({font: 'title'})}>Devon Govett</div>
               <div className={style({font: 'ui'})}>user@example.com</div>
