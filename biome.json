@@ -7,7 +7,7 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignoreUnknown": false
+    "ignoreUnknown": false,
   },
   "formatter": {
     "enabled": true,
@@ -19,11 +19,22 @@
   "linter": {
     "enabled": true,
     "rules": {
+      "complexity":"error",
+      "style": {
+        "indentStyle":"space",
+        "attributePosition":"multiline",
+        "bracketSpacing": true,
+        "enabled": true
+      },
       "recommended": true
     }
   },
   "javascript": {
     "formatter": {
+      "indentStyle":"space",
+      "attributePosition":"multiline",
+      "bracketSpacing": true,
+      "enabled": true,
       "arrowParentheses": "asNeeded",
       "bracketSameLine": true,
       "semicolons": "asNeeded",
@@ -45,7 +56,8 @@
         "useSortedKeys": "on",
         "organizeImports": "on"
       },
-      "recommended": true
+      "recommended": true,
+      "useSortedKeys": true
     }
   }
 }
