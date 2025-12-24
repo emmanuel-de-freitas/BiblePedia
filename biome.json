@@ -53,8 +53,8 @@
     "actions": {
       "source": {
         "recommended": true,
-        "useSortedKeys": "on",
-        "organizeImports": "on"
+        "useSortedKeys": true,
+        "organizeImports": true
       },
       "recommended": true,
       "useSortedKeys": true
