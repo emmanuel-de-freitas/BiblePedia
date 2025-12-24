@@ -41,9 +41,9 @@ const NavButton = ({ icon, label, route }:{ icon?: LIIconName, label?: string, r
       UNSAFE_style={{
         minHeight: 40,
         display: 'flex',
-        width: "100%",
+        width: showLabel ? 'auto' : "100%",
         gap: 12,
-       // justifyContent: showLabel ? 'start' : 'center',
+        justifyContent: showLabel ? 'start' : 'center',
         cursor: 'pointer',
         paddingTop: 8,
         paddingBottom: 8
