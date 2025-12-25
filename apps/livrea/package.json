@@ -1,5 +1,5 @@
 {
-  "name": "livrea",
+  "name": "@philagora/livrea",
   "private": true,
   "type": "module",
   "scripts": {
