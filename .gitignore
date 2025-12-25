@@ -1,7 +1,19 @@
 .DS_Store
 .env
-/node_modules/
+node_modules/
 
 # React Router
-/.react-router/
-/build/
+.react-router/
+build/
+
+# Turborepo
+.turbo/
+
+# Tauri
+apps/livrea/src-tauri/target/
+apps/livrea/src-tauri/gen/
+
+# Bun
+bun.lockb
+
+.env.keys

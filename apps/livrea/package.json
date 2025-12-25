@@ -1,0 +1,56 @@
+{
+  "name": "livrea",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc",
+    "lint": "biome --write check",
+    "clean": "rm -rf build node_modules .react-router src-tauri/gen src-tauri/target",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "dependencies": {
+    "@philagora/ui": "workspace:*",
+    "@react-router/node": "7.11.0",
+    "@react-router/serve": "7.11.0",
+    "@react-spectrum/s2": "^1.0.0",
+    "@tauri-apps/api": "^2.9.1",
+    "@tauri-apps/plugin-os": "^2.3.2",
+    "appwrite": "^21.5.0",
+    "iconsax-reactjs": "^0.0.8",
+    "isbot": "^5.1.31",
+    "jotai": "^2.16.0",
+    "motion": "^12.23.26",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router": "7.11.0",
+    "react-router-dom": "^7.11.0",
+    "unplugin-parcel-macros": "^0.1.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.9.6",
+    "@biomejs/biome": "2.0.5",
+    "@react-router/dev": "7.11.0",
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/node": "^22",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@react-types/shared": "^3.26.0",
+    "json-schema-to-typescript": "^15.0.4",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "@swc/core",
+    "esbuild",
+    "lmdb",
+    "msgpackr-extract"
+  ]
+}

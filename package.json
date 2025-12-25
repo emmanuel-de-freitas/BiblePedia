@@ -1,48 +1,36 @@
 {
-  "name": "livres",
+  "name": "@philagora/monorepo",
   "private": true,
   "type": "module",
+  "repository": "MannyDefreitas7/@philagora",
+  "packageManager": "bun@1.1.38",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "build": "react-router build",
-    "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc",
-    "lint": "biome --write check",
-    "clean": "rm -rf build node_modules .react-router src-tauri/gen src-tauri/target bun.lockb",
-    "tauri": "tauri"
-  },
-  "dependencies": {
-    "@react-router/node": "7.11.0",
-    "@react-router/serve": "7.11.0",
-    "@react-spectrum/s2": "^1.0.0",
-    "@tauri-apps/api": "^2.9.1",
-    "@tauri-apps/plugin-os": "^2.3.2",
-    "appwrite": "^21.5.0",
-    "iconsax-reactjs": "^0.0.8",
-    "isbot": "^5.1.31",
-    "jotai": "^2.16.0",
-    "motion": "^12.23.26",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "react-router": "7.11.0",
-    "react-router-dom": "^7.11.0",
-    "unplugin-parcel-macros": "^0.1.1"
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "typecheck": "turbo typecheck",
+    "lint": "turbo lint",
+    "clean": "turbo clean && rm -rf node_modules bun.lockb",
+    "tauri": "cd apps/livrea && tauri",
+    "tauri:dev": "cd apps/livrea && tauri dev",
+    "tauri:build": "cd apps/livrea && tauri build",
+    "env:encrypt": "dotenvx encrypt",
+    "env:decrypt": "dotenvx decrypt",
+    "env:set": "dotenvx set",
+    "env:get": "dotenvx get",
+    "env:ls": "dotenvx ls",
+    "dev:env": "dotenvx run --env-file=.env.development -- turbo dev",
+    "build:env": "dotenvx run --env-file=.env.production -- turbo build",
+    "precommit": "dotenvx precommit",
+    "prebuild": "dotenvx prebuild",
+    "setup:env": "bun run scripts/setup-env.ts"
   },
   "devDependencies": {
-    "@react-router/dev": "7.11.0",
-    "@tailwindcss/vite": "^4.1.13",
+    "@dotenvx/dotenvx": "^1.51.2",
     "@tauri-apps/cli": "^2.9.6",
-    "@types/node": "^22",
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3",
-    "json-schema-to-typescript": "^15.0.4",
-    "tailwindcss": "^4.1.13",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.7",
-    "vite-tsconfig-paths": "^5.1.4"
-  },
-  "trustedDependencies": [
-    "@parcel/watcher",
-    "@swc/core"
-  ]
+    "turbo": "^2.3.3"
+  }
 }
