@@ -11,10 +11,25 @@ use window_manager::init_window;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
+    // Define Python functions that will be available from JavaScript
+    let python_functions = vec![
+        "analyze_text",
+        "extract_keywords",
+        "calculate_reading_time",
+        "generate_book_hash",
+        "clean_text",
+        "extract_sentences",
+        "get_text_statistics",
+        "process_book_metadata",
+        "validate_isbn",
+        "format_author_name",
+    ];
+
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_os::init())
+        .plugin(tauri_plugin_python::init_and_register(python_functions))
         .setup(|app| {
             // Initialize window
             let app_handle = app.handle().clone();

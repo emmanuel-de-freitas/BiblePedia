@@ -10,7 +10,7 @@
       },
     },
     "apps/livrea": {
-      "name": "livrea",
+      "name": "@philagora/livrea",
       "dependencies": {
         "@philagora/ui": "workspace:*",
         "@react-router/node": "7.11.0",
@@ -27,6 +27,7 @@
         "react-dom": "^19.2.3",
         "react-router": "7.11.0",
         "react-router-dom": "^7.11.0",
+        "tauri-plugin-python-api": "^0.3.4",
         "unplugin-parcel-macros": "^0.1.1",
       },
       "devDependencies": {
@@ -363,6 +364,8 @@
     "@parcel/watcher-win32-x64": ["@parcel/watcher-win32-x64@2.5.1", "", { "os": "win32", "cpu": "x64" }, "sha512-9lHBdJITeNR++EvSQVUcaZoWupyHfXe1jZvGZ06O/5MflPcuPLtEphScIBL+AiCWBO46tDSHzWyD0uDmmZqsgA=="],
 
     "@parcel/workers": ["@parcel/workers@2.16.3", "", { "dependencies": { "@parcel/diagnostic": "2.16.3", "@parcel/logger": "2.16.3", "@parcel/profiler": "2.16.3", "@parcel/types-internal": "2.16.3", "@parcel/utils": "2.16.3", "nullthrows": "^1.1.1" }, "peerDependencies": { "@parcel/core": "^2.16.3" } }, "sha512-SxIXRnrlQFhw377wxWC5WIl1FL1Y9IedhUtuc7j3uac3tlbCQJJ+3rFr5/BDUknJbTktvVsPakE98fH7TIJyyw=="],
+
+    "@philagora/livrea": ["@philagora/livrea@workspace:apps/livrea"],
 
     "@philagora/ui": ["@philagora/ui@workspace:packages/ui"],
 
@@ -974,8 +977,6 @@
 
     "lightningcss-win32-x64-msvc": ["lightningcss-win32-x64-msvc@1.30.2", "", { "os": "win32", "cpu": "x64" }, "sha512-5g1yc73p+iAkid5phb4oVFMB45417DkRevRbt/El/gKXJk4jid+vPFF/AXbxn05Aky8PapwzZrdJShv5C0avjw=="],
 
-    "livrea": ["livrea@workspace:apps/livrea"],
-
     "lmdb": ["lmdb@2.8.5", "", { "dependencies": { "msgpackr": "^1.9.5", "node-addon-api": "^6.1.0", "node-gyp-build-optional-packages": "5.1.1", "ordered-binary": "^1.4.1", "weak-lru-cache": "^1.2.2" }, "optionalDependencies": { "@lmdb/lmdb-darwin-arm64": "2.8.5", "@lmdb/lmdb-darwin-x64": "2.8.5", "@lmdb/lmdb-linux-arm": "2.8.5", "@lmdb/lmdb-linux-arm64": "2.8.5", "@lmdb/lmdb-linux-x64": "2.8.5", "@lmdb/lmdb-win32-x64": "2.8.5" }, "bin": { "download-lmdb-prebuilds": "bin/download-prebuilds.js" } }, "sha512-9bMdFfc80S+vSldBmG3HOuLVHnxRdNTlpzR6QDnzqCQtCzGUEAGTzBKYMeIM+I/sU4oZfgbcbS7X7F65/z/oxQ=="],
 
     "lodash": ["lodash@4.17.21", "", {}, "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="],
@@ -1139,6 +1140,8 @@
     "tailwindcss": ["tailwindcss@4.1.18", "", {}, "sha512-4+Z+0yiYyEtUVCScyfHCxOYP06L5Ne+JiHhY2IjR2KWMIWhJOYZKLSGZaP5HkZ8+bY0cxfzwDE5uOmzFXyIwxw=="],
 
     "tapable": ["tapable@2.3.0", "", {}, "sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg=="],
+
+    "tauri-plugin-python-api": ["tauri-plugin-python-api@0.3.4", "", { "dependencies": { "@tauri-apps/api": ">=2.0.0-beta.6" } }, "sha512-WRawN6X1H/ALAvbZlKgjUiyjrMTYYlZXEo6ngEcGPaKjTBR5cqBVZXCC2KT4OL90Z6+g2oEw6mqBpQPw5fwOKw=="],
 
     "tinyglobby": ["tinyglobby@0.2.15", "", { "dependencies": { "fdir": "^6.5.0", "picomatch": "^4.0.3" } }, "sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ=="],
 

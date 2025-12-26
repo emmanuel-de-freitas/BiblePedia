@@ -4,6 +4,7 @@ export { default as Text } from './components/Text';
 export { default as Icon } from './components/Icon';
 export { default as IconButton } from './components/IconButton';
 export { default as NavButton } from './components/NavButton';
+export { default as View } from './components/View';
 
 // Types
 export type {

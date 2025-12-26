@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import '@react-spectrum/s2/page.css';
 import { Provider } from '@react-spectrum/s2';
-import { useNavigate, useHref, type NavigateOptions } from 'react-router';
+import { useNavigate, useHref, type NavigateOptions, isRouteErrorResponse } from 'react-router';
 import { client } from '../services/appwrite';
 
 import {
