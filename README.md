@@ -12,10 +12,10 @@ Livres/
 │   └── livrea/          # React Router + Vite app
 │       └── src-tauri/   # Tauri desktop app
 ├── packages/            # Shared packages
-│   └── ui/             # @philagora/ui - Shared UI components
-├── turbo.json          # Turborepo configuration
-├── package.json        # Root workspace configuration
-└── bun.lockb           # Bun lockfile
+│   └── ui/              # @philagora/ui - Shared UI components
+├── turbo.json           # Turborepo configuration
+├── package.json         # Root workspace configuration
+└── bun.lockb            # Bun lockfile
 ```
 
 ## 🚀 Features

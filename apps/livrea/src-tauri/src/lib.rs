@@ -73,8 +73,12 @@ pub fn run() {
             epub::extract_epub_metadata,
             epub::get_epub_content,
             epub::get_epub_toc,
+            epub::get_chapter_content,
+            epub::get_file_content,
+            epub::get_epub_stats,
             epub::get_current_epub,
             epub::set_current_epub,
+            epub::clear_current_epub,
             // Database commands
             database::init_database,
             database::save_book_metadata,
