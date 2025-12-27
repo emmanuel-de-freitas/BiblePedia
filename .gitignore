@@ -1,5 +1,7 @@
 .DS_Store
 node_modules/
+*.tsbuildinfo
+packages/**/*.tsbuildinfo
 
 # React Router
 .react-router/

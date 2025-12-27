@@ -19,11 +19,12 @@
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
+    "clean": "rm -rf node_modules .turbo",
     "lint": "biome check --write"
   },
   "dependencies": {
     "@react-spectrum/s2": "^1.0.0",
-    "@react-types/shared": "^3.26.0",
+    "@react-types/shared": "^3.32.1",
     "iconsax-reactjs": "^0.0.8",
     "motion": "^12.23.26",
     "react": "^19.2.3",
@@ -35,7 +36,7 @@
     "@biomejs/biome": "2.0.5",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "react": "^19.2.3",

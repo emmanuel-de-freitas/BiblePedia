@@ -41,7 +41,7 @@ Livres/
 
 Install dependencies:
 
-```bash
+```zsh
 bun install
 ```
 
@@ -115,18 +115,27 @@ Tasks are configured in `turbo.json`:
 {
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["build/**", ".react-router/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "build/**",
+        ".react-router/**"
+      ]
     },
     "dev": {
       "persistent": true,
       "cache": false
     },
     "typecheck": {
-      "dependsOn": ["^typecheck"]
+      "dependsOn": [
+        "^typecheck"
+      ]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": [
+        "^lint"
+      ]
     }
   }
 }
@@ -137,6 +146,7 @@ Tasks are configured in `turbo.json`:
 ### apps/livrea
 
 The main React application built with:
+
 - React Router for routing and SSR
 - Vite for bundling and HMR
 - React Spectrum S2 for UI components
@@ -146,6 +156,7 @@ The main React application built with:
 ### apps/livrea/src-tauri
 
 The Tauri backend that wraps the React app as a desktop application:
+
 - Located within the livrea app directory
 - Written in Rust
 - Provides native OS integrations
@@ -203,9 +214,9 @@ This project uses [dotenvx](https://dotenvx.com/) for secure environment variabl
    ```
 
 4. **Store the private key securely:**
-   - The `DOTENV_PRIVATE_KEY` is generated in `.env.keys`
-   - Store this key in your secrets manager (AWS Secrets Manager, HashiCorp Vault, etc.)
-   - Never commit `.env.keys` to version control
+    - The `DOTENV_PRIVATE_KEY` is generated in `.env.keys`
+    - Store this key in your secrets manager (AWS Secrets Manager, HashiCorp Vault, etc.)
+    - Never commit `.env.keys` to version control
 
 ### Environment Files
 
@@ -246,7 +257,7 @@ bun run prebuild       # Pre-build validation
 ### Accessing Variables in Code
 
 ```typescript
-import { env } from '@/config/env';
+import {env} from '@/config/env';
 
 // Use typed environment variables
 console.log(env.APP_URL);
@@ -254,7 +265,7 @@ console.log(env.FEATURES.ANALYTICS);
 
 // Check environment
 if (env.isDevelopment()) {
-  // Development-only code
+    // Development-only code
 }
 ```
 
