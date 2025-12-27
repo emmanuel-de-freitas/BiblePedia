@@ -1,189 +1,166 @@
-import { useEffect, useState } from 'react';
-import { style } from '@react-spectrum/s2/style' with { type: 'macro' };
-import { listenToSplashscreenStatus, type SplashscreenStatus } from '../services/splashscreen';
-import { ProgressCircle } from '@react-spectrum/s2';
+import {ProgressCircle} from "@react-spectrum/s2";
+import {style} from "@react-spectrum/s2/style" with {type: "macro"};
+import {useEffect, useState} from "react";
+import {listenToSplashscreenStatus, type SplashscreenStatus} from "@/services/splashscreen";
 
 /**
  * Splashscreen React component using React Spectrum style macro
  * This is an example component that can be used as the splashscreen page
  */
 export function Splashscreen() {
-  const [status, setStatus] = useState<SplashscreenStatus>({
-    message: 'Loading...',
-    progress: 0,
-  });
+   const [status, setStatus] = useState<SplashscreenStatus>({
+      message: "Loading...",
+      progress: 0,
+   });
 
-  useEffect(() => {
-    let unlisten: (() => void) | undefined;
+   useEffect(() => {
+      let unlisten: (() => void) | undefined;
 
-    const setupListener = async () => {
-      try {
-        unlisten = await listenToSplashscreenStatus((newStatus) => {
-          setStatus(newStatus);
-        });
-      } catch (error) {
-        console.error('Failed to setup splashscreen listener:', error);
-      }
-    };
+      const setupListener = async () => {
+         try {
+            unlisten = await listenToSplashscreenStatus((newStatus) => {
+               setStatus(newStatus);
+            });
+         } catch (error) {
+            console.error("Failed to setup splashscreen listener:", error);
+         }
+      };
 
-    setupListener();
+      setupListener();
 
-    return () => {
-      if (unlisten) {
-        unlisten();
-      }
-    };
-  }, []);
+      return () => {
+         if (unlisten) {
+            unlisten();
+         }
+      };
+   }, []);
 
-  return (
-    <div
-      className={style({
-        width: 'screen',
-        height: 'screen',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundImage: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        color: 'white',
-        overflow: 'hidden',
-        position: 'relative',
-      })}
-    >
-      {/* Pattern overlay */}
+   return (
       <div
-        className={style({
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.05) 35px, rgba(255, 255, 255, 0.05) 70px)',
-          pointerEvents: 'none',
-        })}
-      />
-
-      {/* Content container with fade-in animation */}
-      <div
-        className={style({
-          textAlign: 'center',
-          zIndex: 1,
-        })}
-        style={{ animation: 'fadeIn 0.5s ease-in' }}
-      >
-        {/* Logo with pulse animation */}
-        <div
-          className={style({
-            size: 120,
-            marginX: 'auto',
-            marginBottom: 32,
-            backgroundColor: 'transparent-white-900',
-            borderRadius: 'xl',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: 'elevated',
-          })}
-          style={{ animation: 'pulse 2s ease-in-out infinite' }}
-        >
-          <svg
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+         className={style({
+            alignItems: "center",
+            backgroundImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+            color: "white",
+            display: "flex",
+            flexDirection: "column",
+            height: "screen",
+            justifyContent: "center",
+            overflow: "hidden",
+            position: "relative",
+            width: "screen",
+         })}>
+         {/* Pattern overlay */}
+         <div
             className={style({
-              size: 64,
-              fill: 'indigo',
+               backgroundImage:
+                  "repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.05) 35px, rgba(255, 255, 255, 0.05) 70px)",
+               inset: 0,
+               pointerEvents: "none",
+               position: "absolute",
             })}
-          >
-            <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h12V4H6zm2 2h8v2H8V6zm0 4h8v2H8v-2zm0 4h5v2H8v-2z" />
-          </svg>
-        </div>
+         />
 
-        {/* Title */}
-        <h1
-          className={style({
-            font: 'heading-3xl',
-            marginBottom: 8,
-            color: 'white',
-          })}
-        >
-          Livrea
-        </h1>
-
-        {/* Tagline */}
-        <p
-          className={style({
-            color: 'transparent-white-900',
-            font: 'body-lg',
-            marginBottom: 40,
-          })}
-        >
-          Your Digital Library
-        </p>
-
-        {/* Loading container */}
-        <div
-          className={style({
-            marginTop: 40,
-          })}
-        >
-          {/* Progress bar */}
-          <div
+         {/* Content container with fade-in animation */}
+         <div
             className={style({
-              width: 240,
-              height: 4,
-              backgroundColor: 'transparent-white-200',
-              borderRadius: 'sm',
-              marginX: 'auto',
-              marginBottom: 16,
-              overflow: 'hidden',
-              position: 'relative',
+               textAlign: "center",
+               zIndex: 1,
             })}
-          >
+            style={{ animation: "fadeIn 0.5s ease-in" }}>
+            {/* Logo with pulse animation */}
             <div
-              className={style({
-                height: 'full',
-                backgroundColor: 'white',
-                borderRadius: 'sm',
-                boxShadow: 'elevated',
-                transition: 'default',
-              })}
-              style={{ width: `${status.progress || 0}%` }}
-            />
-          </div>
+               className={style({
+                  alignItems: "center",
+                  backgroundColor: "transparent-white-900",
+                  borderRadius: "xl",
+                  boxShadow: "elevated",
+                  display: "flex",
+                  justifyContent: "center",
+                  marginBottom: 32,
+                  marginX: "auto",
+                  size: 120,
+               })}
+               style={{ animation: "pulse 2s ease-in-out infinite" }}></div>
 
-          {/* Loading spinner */}
-          <ProgressCircle
-            aria-label="Loading…"
-            value={50}
-            isIndeterminate
-            staticColor="auto" />
+            {/* Title */}
+            <h1
+               className={style({
+                  color: "white",
+                  font: "heading-3xl",
+                  marginBottom: 8,
+               })}>
+               Livrea
+            </h1>
 
-          {/* Status text */}
-          <p
+            {/* Tagline */}
+            <p
+               className={style({
+                  color: "transparent-white-900",
+                  font: "body-lg",
+                  marginBottom: 40,
+               })}>
+               Your Digital Library
+            </p>
+
+            {/* Loading container */}
+            <div
+               className={style({
+                  marginTop: 40,
+               })}>
+               {/* Progress bar */}
+               <div
+                  className={style({
+                     backgroundColor: "transparent-white-200",
+                     borderRadius: "sm",
+                     height: 4,
+                     marginBottom: 16,
+                     marginX: "auto",
+                     overflow: "hidden",
+                     position: "relative",
+                     width: 240,
+                  })}>
+                  <div
+                     className={style({
+                        backgroundColor: "white",
+                        borderRadius: "sm",
+                        boxShadow: "elevated",
+                        height: "full",
+                        transition: "default",
+                     })}
+                     style={{ width: `${status.progress || 0}%` }}
+                  />
+               </div>
+
+               {/* Loading spinner */}
+               <ProgressCircle aria-label="Loading…" value={50} isIndeterminate staticColor="auto" />
+
+               {/* Status text */}
+               <p
+                  className={style({
+                     color: "transparent-white-900",
+                     font: "body-sm",
+                     fontWeight: "medium",
+                     marginTop: 16,
+                  })}>
+                  {status.message}
+               </p>
+            </div>
+         </div>
+
+         {/* Version */}
+         <div
             className={style({
-              color: 'transparent-white-900',
-              font: 'body-sm',
-              marginTop: 16,
-              fontWeight: 'medium',
+               bottom: 20,
+               color: "transparent-white-600",
+               font: "detail-sm",
+               position: "absolute",
             })}
-          >
-            {status.message}
-          </p>
-        </div>
-      </div>
+            style={{ left: "50%", transform: "translateX(-50%)" }}>
+            v0.1.0
+         </div>
 
-      {/* Version */}
-      <div
-        className={style({
-          position: 'absolute',
-          bottom: 20,
-          color: 'transparent-white-600',
-          font: 'detail-sm',
-        })}
-        style={{ left: '50%', transform: 'translateX(-50%)' }}
-      >
-        v0.1.0
-      </div>
-
-      {/* Global keyframe animations */}
-      <style>{`
+         {/* Global keyframe animations */}
+         <style>{`
         @keyframes fadeIn {
           from {
             opacity: 0;
@@ -210,8 +187,8 @@ export function Splashscreen() {
           }
         }
       `}</style>
-    </div>
-  );
+      </div>
+   );
 }
 
 export default Splashscreen;

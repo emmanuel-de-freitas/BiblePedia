@@ -1,52 +1,49 @@
-'use client'
+"use client";
 
-import { style } from "@react-spectrum/s2/style" with { type: 'macro' }
-import Libraries from '@react-spectrum/s2/illustrations/gradient/generic1/Libraries';
+import {IconButton} from "@philagora/ui";
+import Libraries from "@react-spectrum/s2/illustrations/gradient/generic1/Libraries";
+import {style} from "@react-spectrum/s2/style" with {type: "macro"};
+import {useAtom} from "jotai";
+import {motion} from "motion/react";
+import {sidebarOpenAtom} from "@/atoms/layout";
+import {myStore} from "../atoms";
 import Navbar from "./navbar";
-import IconButton from "@/ui/icon-button";
-import { useAtom, useAtomValue } from "jotai";
-import { sidebarOpenAtom } from "@/atoms/layout";
-import { motion, useInstantLayoutTransition, useMotionValue } from 'motion/react';
-import { useEffect, useMemo } from "react";
-import { myStore } from "../atoms";
-
-const MotionIconButton = motion.create(IconButton);
 
 const Sidebar = () => {
-  const sidebarStyle = style({
-    gridArea: 'sidebar',
-    paddingY: 20,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    paddingX: 8
-  });
+   const sidebarStyle = style({
+      display: "flex",
+      flexDirection: "column",
+      gridArea: "sidebar",
+      justifyContent: "space-between",
+      paddingX: 8,
+      paddingY: 20,
+   });
 
-  const renderLogo = () => {
-    return (
-      <Libraries UNSAFE_style={{
-        width: 58
-      }}  />
-    );
-  }
+   const renderLogo = () => {
+      return (
+         <Libraries
+            UNSAFE_style={{
+               width: 58,
+            }}
+         />
+      );
+   };
 
-  const [isOpen, setIsOpen] = useAtom(sidebarOpenAtom, { store: myStore });
+   const [isOpen, setIsOpen] = useAtom(sidebarOpenAtom, { store: myStore });
 
-
-
-  return (
-    <motion.div className={sidebarStyle}>
-      <div className={style({ paddingTop: 12, paddingX: 'text-to-control' })}>
-        {renderLogo()}
-        <Navbar />
-      </div>
-      <div>
-      <motion.div animate={{rotate: isOpen ? 180 : 0 }} style={{ display: 'inline-block' }}>
-        <IconButton icon='SidebarRight' variant="Linear" onPress={() => setIsOpen(!isOpen)} />
-        </motion.div>
-      </div>
-    </motion.div>
-  );
+   return (
+      <motion.div className={sidebarStyle}>
+         <div className={style({ paddingTop: 12, paddingX: "text-to-control" })}>
+            {renderLogo()}
+            <Navbar />
+         </div>
+         <div>
+            <motion.div animate={{ rotate: isOpen ? 180 : 0 }} style={{ display: "inline-block" }}>
+               <IconButton icon="SidebarRight" variant="Linear" onPress={() => setIsOpen(!isOpen)} />
+            </motion.div>
+         </div>
+      </motion.div>
+   );
 };
 
 export default Sidebar;
