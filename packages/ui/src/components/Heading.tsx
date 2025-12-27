@@ -1,6 +1,6 @@
-import {style} from "@react-spectrum/s2/style" with {type: "macro"};
-import {useMemo} from "react";
-import type {HeadingLevel} from "../types";
+import { style } from "@react-spectrum/s2/style" with { type: "macro" };
+import { useMemo } from "react";
+import type { HeadingLevel } from "../types";
 
 interface HeadingProps<L extends HeadingLevel = HeadingLevel> {
   children: React.ReactNode;
@@ -38,7 +38,7 @@ const Heading = ({ children, level, className }: HeadingProps) => {
         textTransform: "capitalize",
         fontWeight: "normal",
         marginY: 4,
-        fontFamily: "sans",
+        fontFamily: "serif",
       }),
       5: style({
         userSelect: "none",
