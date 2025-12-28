@@ -6,8 +6,13 @@
     <option name="formatOnSave" value="true" />
     <option name="sortImportOnSave" value="true" />
   </component>
-  <component name="GBrowserService"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{}]]></component>
+  <component name="Black">
+    <option name="enabledOnReformat" value="true" />
+    <option name="enabledOnSave" value="true" />
+    <option name="sdkName" value="Python 3.14 (Livres)" />
+  </component>
+  <component name="GBrowserService">{}</component>
+  <component name="KubernetesApiProvider">{}</component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>

@@ -1,20 +1,18 @@
 import type React from "react";
-import {useEffect} from "react";
 
 import "@react-spectrum/s2/page.css";
 import {Provider} from "@react-spectrum/s2";
 import {
-  isRouteErrorResponse,
-  Links,
-  Meta,
-  type NavigateOptions,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-  useHref,
-  useNavigate,
+    isRouteErrorResponse,
+    Links,
+    Meta,
+    type NavigateOptions,
+    Outlet,
+    Scripts,
+    ScrollRestoration,
+    useHref,
+    useNavigate,
 } from "react-router";
-import {client} from "@/services/appwrite";
 
 import type {Route} from "./+types/root";
 
@@ -59,18 +57,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-   useEffect(() => {
-      // Verify Appwrite connection on app initialization
-      client
-         .ping()
-         .then(() => {
-            console.log("Appwrite connection verified successfully");
-         })
-         .catch((error) => {
-            console.error("Failed to connect to Appwrite:", error);
-         });
-   }, []);
-
    return <Outlet />;
 }
 

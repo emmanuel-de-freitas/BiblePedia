@@ -1,63 +1,32 @@
 {
-  "include": [
-    "**/*",
-    "./src/**/*",
-    "**/.server/**/*",
-    "**/.client/**/*"
-  ],
-  "exclude": [
-    "node"
-  ],
-  "compilerOptions": {
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ES2022"
-    ],
-    "types": [
-      "node",
-      "vite/client"
-    ],
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "jsx": "react-jsx",
-    "rootDirs": [
-      ".",
-      "./.react-router/types"
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@/atoms/*": [
-        "./src/atoms/*"
-      ],
-      "@/components": [
-        "./src/components/index.ts"
-      ],
-      "@/ui/*": [
-        "./src/components/ui/*"
-      ],
-      "@/services/*": [
-        "./src/services/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*.ts"
-      ],
-      "@/styles/*": [
-        "./src/styles/*"
-      ],
-      "@/types": [
-        "./src/types/index.ts"
-      ]
-    },
-    "esModuleInterop": true,
-    "allowJs": true,
-    "isolatedModules": true,
-    "forceConsistentCasingInFileNames": true,
-    "useDefineForClassFields": true,
-    "verbatimModuleSyntax": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "noEmit": true,
-    "strict": true
-  }
+   "compilerOptions": {
+      "allowJs": true,
+      "baseUrl": ".",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "isolatedModules": true,
+      "jsx": "react-jsx",
+      "lib": ["DOM", "DOM.Iterable", "ES2022"],
+      "module": "ESNext",
+      "moduleResolution": "bundler",
+      "noEmit": true,
+      "paths": {
+         "@/atoms/*": ["./src/atoms/*"],
+         "@/components": ["./src/components/index.ts"],
+         "@/hooks/*": ["./src/hooks/*.ts"],
+         "@/services/*": ["./src/services/*"],
+         "@/styles/*": ["./src/styles/*"],
+         "@/types": ["./src/types/index.ts"],
+         "@/ui/*": ["./src/components/ui/*"]
+      },
+      "resolveJsonModule": true,
+      "rootDirs": [".", "./.react-router/types"],
+      "skipLibCheck": true,
+      "strict": true,
+      "types": ["node", "vite/client"],
+      "useDefineForClassFields": true,
+      "verbatimModuleSyntax": true
+   },
+   "exclude": ["node"],
+   "include": ["**/*", "./src/**/*", "**/.server/**/*", "**/.client/**/*"]
 }

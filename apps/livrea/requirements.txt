@@ -2,6 +2,9 @@
 # These are optional dependencies that can be installed in a virtual environment
 # for enhanced functionality when using PyO3 instead of RustPython
 
+# Appwrite Backend-as-a-Service SDK
+appwrite>=7.0.0
+
 # Text processing and analysis
 nltk==3.8.1
 textstat==0.7.3

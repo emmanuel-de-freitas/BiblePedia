@@ -7,6 +7,7 @@
       "@tauri-apps/api": "^2.9.1",
       "@tauri-apps/plugin-os": "^2.3.2",
       "appwrite": "^21.5.0",
+      "firebase": "^12.7.0",
       "iconsax-reactjs": "^0.0.8",
       "isbot": "^5.1.32",
       "jotai": "^2.16.1",

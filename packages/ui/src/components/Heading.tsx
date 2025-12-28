@@ -22,7 +22,7 @@ const Heading = ({ children, level, className }: HeadingProps) => {
         userSelect: "none",
         font: "heading-xl",
         textTransform: "capitalize",
-        fontFamily: "sans",
+        fontFamily: "serif",
       }),
       3: style({
         userSelect: "none",
@@ -30,7 +30,7 @@ const Heading = ({ children, level, className }: HeadingProps) => {
         fontWeight: "bold",
         textTransform: "capitalize",
         marginY: 0,
-        fontFamily: "sans",
+        fontFamily: "serif",
       }),
       4: style({
         userSelect: "none",

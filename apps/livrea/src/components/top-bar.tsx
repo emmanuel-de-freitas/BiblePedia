@@ -30,7 +30,7 @@ const Topbar = () => {
                display: "flex",
                gap: 8,
             })}>
-            {icon && <Icon icon={icon} variant="Bold" />}
+            {icon && <Icon icon={icon} variant="Bulk" />}
             <Heading level={3}>{route}</Heading>
          </div>
 

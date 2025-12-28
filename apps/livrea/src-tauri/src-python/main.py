@@ -9,14 +9,56 @@ import re
 import unicodedata
 from typing import Any, Dict, List, Optional
 
+# Import Appwrite service functions from the appwrite package
+try:
+    from appwrite import (
+        # Client initialization
+        appwrite_init_client,
+        appwrite_check_initialized,
+        # Account service
+        appwrite_account_get,
+        appwrite_account_create,
+        appwrite_account_create_email_session,
+        appwrite_account_delete_session,
+        appwrite_account_list_sessions,
+        appwrite_account_update_name,
+        appwrite_account_update_email,
+        appwrite_account_update_password,
+        # Database service
+        appwrite_database_list_documents,
+        appwrite_database_create_document,
+        appwrite_database_get_document,
+        appwrite_database_update_document,
+        appwrite_database_delete_document,
+        # Storage service
+        appwrite_storage_list_files,
+        appwrite_storage_get_file,
+        appwrite_storage_delete_file,
+        appwrite_storage_get_file_download_url,
+        appwrite_storage_get_file_view_url,
+        # Teams service
+        appwrite_teams_list,
+        appwrite_teams_create,
+        appwrite_teams_get,
+        appwrite_teams_update,
+        appwrite_teams_delete,
+        appwrite_teams_list_memberships,
+    )
+    APPWRITE_FUNCTIONS_AVAILABLE = True
+except ImportError as e:
+    print(f"Warning: Could not import Appwrite functions: {e}")
+    APPWRITE_FUNCTIONS_AVAILABLE = False
+
 
 # Helper function to ensure JSON serialization
 def to_json(data):
     """Convert data to JSON string for Rust/JS interop"""
     return json.dumps(data, ensure_ascii=False)
 
+
 # Register functions that can be called from Rust/JavaScript
 _tauri_plugin_functions = [
+    # Text processing functions
     "analyze_text",
     "extract_keywords",
     "calculate_reading_time",
@@ -26,10 +68,47 @@ _tauri_plugin_functions = [
     "get_text_statistics",
     "process_book_metadata",
     "validate_isbn",
-    "format_author_name"
+    "format_author_name",
 ]
 
-def analyze_text(text: str) -> str:
+# Add Appwrite functions if available
+if APPWRITE_FUNCTIONS_AVAILABLE:
+    _tauri_plugin_functions.extend([
+        # Client initialization
+        "appwrite_init_client",
+        "appwrite_check_initialized",
+        # Account service
+        "appwrite_account_get",
+        "appwrite_account_create",
+        "appwrite_account_create_email_session",
+        "appwrite_account_delete_session",
+        "appwrite_account_list_sessions",
+        "appwrite_account_update_name",
+        "appwrite_account_update_email",
+        "appwrite_account_update_password",
+        # Database service
+        "appwrite_database_list_documents",
+        "appwrite_database_create_document",
+        "appwrite_database_get_document",
+        "appwrite_database_update_document",
+        "appwrite_database_delete_document",
+        # Storage service
+        "appwrite_storage_list_files",
+        "appwrite_storage_get_file",
+        "appwrite_storage_delete_file",
+        "appwrite_storage_get_file_download_url",
+        "appwrite_storage_get_file_view_url",
+        # Teams service
+        "appwrite_teams_list",
+        "appwrite_teams_create",
+        "appwrite_teams_get",
+        "appwrite_teams_update",
+        "appwrite_teams_delete",
+        "appwrite_teams_list_memberships",
+    ])
+
+
+def analyze_text(text: str) -> dict[str, int] | str:
     """
     Analyze text and return various metrics
 
@@ -72,6 +151,7 @@ def analyze_text(text: str) -> str:
         "average_word_length": round(avg_word_length, 2)
     })
 
+
 def extract_keywords(text: str, max_keywords: int = 10) -> str:
     """
     Extract keywords from text using simple frequency analysis
@@ -110,6 +190,7 @@ def extract_keywords(text: str, max_keywords: int = 10) -> str:
     sorted_words = sorted(word_freq.items(), key=lambda x: x[1], reverse=True)
     return to_json([word for word, _ in sorted_words[:max_keywords]])
 
+
 def calculate_reading_time(text: str, words_per_minute: int = 200) -> str:
     """
     Calculate estimated reading time for text
@@ -137,6 +218,7 @@ def calculate_reading_time(text: str, words_per_minute: int = 200) -> str:
         "word_count": word_count
     })
 
+
 def generate_book_hash(title: str, author: str, content: Optional[str] = None) -> str:
     """
     Generate a unique hash for a book based on title, author, and optionally content
@@ -157,11 +239,12 @@ def generate_book_hash(title: str, author: str, content: Optional[str] = None) -
     hash_input = f"{normalized_title}:{normalized_author}"
 
     if content:
-        # Add first 1000 characters of content if available
+        # Add the first 1000 characters of content if available
         hash_input += f":{content[:1000]}"
 
     # Generate SHA256 hash
     return to_json(hashlib.sha256(hash_input.encode('utf-8')).hexdigest())
+
 
 def clean_text(text: str) -> str:
     """
@@ -190,6 +273,7 @@ def clean_text(text: str) -> str:
 
     return to_json(text)
 
+
 def extract_sentences_internal(text: str, max_sentences: Optional[int] = None) -> List[str]:
     """
     Extract sentences from text
@@ -215,11 +299,13 @@ def extract_sentences_internal(text: str, max_sentences: Optional[int] = None) -
 
     return sentences
 
+
 def extract_sentences(text: str, max_sentences: Optional[int] = None) -> str:
     """
     Extract sentences from text (JSON wrapper)
     """
     return to_json(extract_sentences_internal(text, max_sentences))
+
 
 def get_text_statistics(text: str) -> str:
     """
@@ -266,6 +352,7 @@ def get_text_statistics(text: str) -> str:
         "reading_time": json.loads(calculate_reading_time(text))
     })
 
+
 def count_syllables(word: str) -> int:
     """
     Count syllables in a word (simple approximation)
@@ -297,6 +384,7 @@ def count_syllables(word: str) -> int:
 
     return syllable_count
 
+
 def get_difficulty_level(score: float) -> str:
     """
     Get difficulty level from Flesch Reading Ease score
@@ -321,6 +409,7 @@ def get_difficulty_level(score: float) -> str:
         return "Difficult"
     else:
         return "Very Difficult"
+
 
 def process_book_metadata(metadata: Dict[str, Any]) -> str:
     """
@@ -361,6 +450,7 @@ def process_book_metadata(metadata: Dict[str, Any]) -> str:
 
     return to_json(processed)
 
+
 def validate_isbn(isbn: str) -> str:
     """
     Validate ISBN-10 or ISBN-13
@@ -381,7 +471,7 @@ def validate_isbn(isbn: str) -> str:
     if len(isbn) == 10:
         try:
             total = sum((10 - i) * (10 if c == 'X' else int(c))
-                       for i, c in enumerate(isbn))
+                        for i, c in enumerate(isbn))
             return to_json(total % 11 == 0)
         except (ValueError, IndexError):
             return to_json(False)
@@ -390,13 +480,14 @@ def validate_isbn(isbn: str) -> str:
     elif len(isbn) == 13:
         try:
             total = sum(int(isbn[i]) * (3 if i % 2 else 1)
-                       for i in range(12))
+                        for i in range(12))
             check = (10 - (total % 10)) % 10
             return to_json(check == int(isbn[12]))
         except (ValueError, IndexError):
             return to_json(False)
 
     return to_json(False)
+
 
 def format_author_name(author: str) -> str:
     """
@@ -439,6 +530,7 @@ def format_author_name(author: str) -> str:
             formatted_words.append(word.capitalize())
 
     return to_json(' '.join(formatted_words))
+
 
 # Initialize any required resources when the module loads
 print("Python module loaded successfully for Livrea")
