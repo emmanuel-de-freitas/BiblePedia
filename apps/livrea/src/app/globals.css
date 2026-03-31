@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "@react-spectrum/s2/page.css";
+
+/* Global styles for Livrea */
+
+* {
+   box-sizing: border-box;
+}
+
+html,
+body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   overflow: hidden;
+   overscroll-behavior: none;
+}
+
+/* Ensure smooth scrolling within content areas */
+.scroll-area {
+   scroll-behavior: smooth;
+}
+
+/* Hide scrollbars but keep functionality */
+.hide-scrollbar {
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+   display: none;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+   width: 8px;
+   height: 8px;
+}
+
+::-webkit-scrollbar-track {
+   background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+   background: rgba(128, 128, 128, 0.4);
+   border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: rgba(128, 128, 128, 0.6);
+}
+
+/* Focus visible styles for accessibility */
+:focus-visible {
+   outline: 2px solid var(--spectrum-focus-indicator-color, #0066cc);
+   outline-offset: 2px;
+}
+
+/* Tauri drag region styling */
+[data-tauri-drag-region] {
+   -webkit-app-region: drag;
+}
+
+[data-tauri-drag-region] button,
+[data-tauri-drag-region] a,
+[data-tauri-drag-region] input {
+   -webkit-app-region: no-drag;
+}
