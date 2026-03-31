@@ -1,6 +1,6 @@
 {
-  "name": "@philagora/ui",
-  "version": "0.0.1",
+  "name": "@biblepedia/ui",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "main": "./src/index.ts",
@@ -23,23 +23,16 @@
     "lint": "biome check --write"
   },
   "dependencies": {
-    "@react-spectrum/s2": "^1.0.0",
-    "@react-types/shared": "^3.32.1",
+    "@heroui/react": "^3.0.1",
+    "@heroui/styles": "^3.0.1",
     "iconsax-reactjs": "^0.0.8",
-    "motion": "^12.23.26",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "react-router": "7.11.0",
-    "react-router-dom": "^7.11.0"
+    "motion": "^12.38.0",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.5",
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3",
-    "typescript": "^5.9.3"
-  },
-  "peerDependencies": {
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "typescript": "catalog:"
   }
 }

@@ -394,16 +394,16 @@ export function createEnvironment<T extends z.ZodSchema>(
 /**
  * Type guards for environment checking
  */
-export const isProduction = (env: { NODE_ENV?: string } = process.env): boolean =>
+export const isProduction = (env: { NODE_ENV?: string }): boolean =>
   env.NODE_ENV === 'production';
 
-export const isDevelopment = (env: { NODE_ENV?: string } = process.env): boolean =>
+export const isDevelopment = (env: { NODE_ENV?: string }): boolean =>
   env.NODE_ENV === 'development';
 
-export const isTest = (env: { NODE_ENV?: string } = process.env): boolean =>
+export const isTest = (env: { NODE_ENV?: string }): boolean =>
   env.NODE_ENV === 'test';
 
-export const isStaging = (env: { NODE_ENV?: string } = process.env): boolean =>
+export const isStaging = (env: { NODE_ENV?: string }): boolean =>
   env.NODE_ENV === 'staging';
 
 /**

@@ -1,11 +1,11 @@
 {
-  "name": "@philagora/graphql",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "echo 'Add dev script here'",
-    "build": "echo 'Add build script here'",
-    "test": "echo 'Add test script here'",
-    "lint": "echo 'Add lint script here'"
-  }
+   "name": "@biblepedia/graphql",
+   "private": true,
+   "scripts": {
+      "build": "echo 'Add build script here'",
+      "dev": "echo 'Add dev script here'",
+      "lint": "echo 'Add lint script here'",
+      "test": "echo 'Add test script here'"
+   },
+   "version": "0.0.1"
 }
