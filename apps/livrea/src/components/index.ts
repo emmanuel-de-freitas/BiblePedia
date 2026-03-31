@@ -1,4 +1,4 @@
-import {BookAnalyzer} from "./BookAnalyzer";
+import { BookAnalyzer } from "./book-analyzer";
 import Dropzone from "./dropzone";
 import Search from "./search";
 import Sidebar from "./sidebar";

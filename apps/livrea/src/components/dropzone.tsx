@@ -1,16 +1,18 @@
+"use client";
+
 import {
-    Button,
-    ButtonGroup,
-    Content,
-    DropZone,
-    FileTrigger,
-    Heading,
-    IllustratedMessage,
-    Image,
+   Button,
+   ButtonGroup,
+   Content,
+   DropZone,
+   FileTrigger,
+   Heading,
+   IllustratedMessage,
+   Image,
 } from "@react-spectrum/s2";
 import CloudUpload from "@react-spectrum/s2/illustrations/gradient/generic2/DropToUpload";
-import {style} from "@react-spectrum/s2/style" with {type: "macro"};
-import type {ComponentProps} from "react";
+import { style } from "@react-spectrum/s2/style" with { type: "macro" };
+import type { ComponentProps } from "react";
 import useTheme from "@/hooks/useTheme";
 
 function Dropzone(props: ComponentProps<typeof DropZone>) {

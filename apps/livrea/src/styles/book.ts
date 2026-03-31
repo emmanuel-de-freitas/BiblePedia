@@ -1,23 +1,18 @@
-import { style } from '@react-spectrum/s2/style' with { type: 'macro' };
-
+import { style } from "@react-spectrum/s2/style" with { type: "macro" };
 
 const bookTitleStyle = style({
-  font: 'heading',
-  fontWeight: 'bold',
+   font: "heading",
+   fontWeight: "bold",
 });
 
 const bookAuthorStyle = style({
-  font: 'body',
-  color: 'gray-700',
+   color: "gray-700",
+   font: "body",
 });
 
 const bookMetaStyle = style({
-  font: 'body-sm',
-  color: 'gray-600',
+   color: "gray-600",
+   font: "body-sm",
 });
 
-export {
-  bookTitleStyle,
-  bookAuthorStyle,
-  bookMetaStyle,
-}
+export { bookTitleStyle, bookAuthorStyle, bookMetaStyle };

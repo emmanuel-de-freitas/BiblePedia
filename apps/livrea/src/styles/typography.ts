@@ -1,16 +1,13 @@
-import { style } from '@react-spectrum/s2/style' with { type: 'macro' };
+import { style } from "@react-spectrum/s2/style" with { type: "macro" };
 
 const headerStyle = style({
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  paddingX: 24,
-  paddingY: 16,
-  backgroundColor: 'layer-1',
+   alignItems: "center",
+   backgroundColor: "layer-1",
+   display: "flex",
+   flexDirection: "row",
+   justifyContent: "space-between",
+   paddingX: 24,
+   paddingY: 16,
 });
 
-
-export {
-  headerStyle,
-}
+export { headerStyle };

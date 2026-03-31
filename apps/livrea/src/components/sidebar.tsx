@@ -1,12 +1,12 @@
 "use client";
 
-import {IconButton} from "@philagora/ui";
 import Libraries from "@react-spectrum/s2/illustrations/gradient/generic1/Libraries";
-import {style} from "@react-spectrum/s2/style" with {type: "macro"};
-import {useAtom} from "jotai";
-import {motion} from "motion/react";
-import {sidebarOpenAtom} from "@/atoms/layout";
-import {myStore} from "../atoms";
+import { style } from "@react-spectrum/s2/style" with { type: "macro" };
+import { useAtom } from "jotai";
+import { motion } from "motion/react";
+import { sidebarOpenAtom } from "@/atoms/layout";
+import { IconButton } from "@/components/buttons";
+import { myStore } from "../atoms";
 import Navbar from "./navbar";
 
 const Sidebar = () => {

@@ -1,19 +1,21 @@
-import {IconButton} from "@philagora/ui";
+"use client";
+
 import {
-  Avatar,
-  Divider,
-  Menu,
-  MenuItem,
-  MenuSection,
-  MenuTrigger,
-  Popover,
-  SubmenuTrigger,
-  Switch,
-  Text,
+   Avatar,
+   Divider,
+   Menu,
+   MenuItem,
+   MenuSection,
+   MenuTrigger,
+   Popover,
+   SubmenuTrigger,
+   Switch,
+   Text,
 } from "@react-spectrum/s2";
 import Buildings from "@react-spectrum/s2/icons/Buildings";
 import Settings from "@react-spectrum/s2/icons/Settings";
-import {style} from "@react-spectrum/s2/style" with {type: "macro"};
+import { style } from "@react-spectrum/s2/style" with { type: "macro" };
+import { IconButton } from "@/components/buttons";
 
 const UserPopover = () => {
    return (

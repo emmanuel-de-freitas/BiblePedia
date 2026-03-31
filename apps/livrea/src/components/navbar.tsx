@@ -1,11 +1,11 @@
 "use client";
 
-import {NavButton} from "@philagora/ui";
-import {Tooltip, TooltipTrigger} from "@react-spectrum/s2";
-import {style} from "@react-spectrum/s2/style" with {type: "macro"};
-import {useAtom} from "jotai";
-import {sidebarOpenAtom} from "@/atoms/layout";
-import {links} from "@/services/navigation";
+import { Tooltip, TooltipTrigger } from "@react-spectrum/s2";
+import { style } from "@react-spectrum/s2/style" with { type: "macro" };
+import { useAtom } from "jotai";
+import { sidebarOpenAtom } from "@/atoms/layout";
+import { NavButton } from "@/components/buttons";
+import { links } from "@/services/navigation";
 
 const Navbar = () => {
    const [isOpen] = useAtom(sidebarOpenAtom);

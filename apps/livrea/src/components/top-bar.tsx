@@ -1,9 +1,13 @@
-import {Heading, Icon, IconButton} from "@philagora/ui";
-import {style} from "@react-spectrum/s2/style" with {type: "macro"};
-import {useLocation, useMatch} from "react-router";
+"use client";
+
+import { IconButton } from "@/components/buttons";
+import { Heading } from "@/components/typography";
+import { Icon } from "@/components/icons";
+import { style } from "@react-spectrum/s2/style" with { type: "macro" };
+import { usePathname } from "next/navigation";
 
 import useTitle from "@/hooks/useTitle";
-import {links} from "@/services/navigation";
+import { links } from "@/services/navigation";
 import Search from "./search";
 import UserPopover from "./user-popover";
 
@@ -18,9 +22,8 @@ const Topbar = () => {
    });
 
    const route = useTitle();
-   const path = useLocation();
-   const isActive = useMatch({ path: path.pathname });
-   const icon = links.find((link) => link.route === path.pathname)?.icon;
+   const pathname = usePathname();
+   const icon = links.find((link) => link.route === pathname)?.icon;
 
    return (
       <div className={topbarStyle}>

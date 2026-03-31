@@ -1,7 +1,9 @@
-import {ProgressCircle} from "@react-spectrum/s2";
-import {style} from "@react-spectrum/s2/style" with {type: "macro"};
-import {useEffect, useState} from "react";
-import {listenToSplashscreenStatus, type SplashscreenStatus} from "@/services/splashscreen";
+"use client";
+
+import { ProgressCircle } from "@react-spectrum/s2";
+import { style } from "@react-spectrum/s2/style" with { type: "macro" };
+import { useEffect, useState } from "react";
+import { listenToSplashscreenStatus, type SplashscreenStatus } from "@/services/splashscreen";
 
 /**
  * Splashscreen React component using React Spectrum style macro

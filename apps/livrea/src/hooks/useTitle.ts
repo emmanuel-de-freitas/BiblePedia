@@ -1,12 +1,13 @@
-import { parsePath } from 'react-router';
-import { useLocation } from 'react-router';
+"use client";
+
+import { usePathname } from "next/navigation";
 
 export const useTitle = () => {
-  const location = useLocation();
-  if (!location.pathname) return 'Home';
-  const segments = location.pathname?.replace('/', '').split('/');
+   const pathname = usePathname();
+   if (!pathname) return "Home";
+   const segments = pathname.replace("/", "").split("/");
 
-  return segments && segments.length > 0 ? segments[1] : 'Home';
+   return segments && segments.length > 0 ? segments[1] || segments[0] || "Home" : "Home";
 };
 
 export default useTitle;
