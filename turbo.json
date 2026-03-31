@@ -1,50 +1,35 @@
 {
-  "$schema": "https://turbo.build/schema.json",
-  "ui": "tui",
-  "tasks": {
-    "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "build/**",
-        ".react-router/**"
-      ]
-    },
-    "dev": {
-      "persistent": true,
-      "cache": false
-    },
-    "typecheck": {
-      "dependsOn": [
-        "^typecheck"
-      ]
-    },
-    "lint": {
-      "dependsOn": [
-        "^lint"
-      ]
-    },
-    "clean": {
-      "cache": false
-    },
-    "tauri": {
-      "cache": false
-    },
-    "tauri:dev": {
-      "dependsOn": [
-        "build"
-      ],
-      "persistent": true,
-      "cache": false
-    },
-    "tauri:build": {
-      "dependsOn": [
-        "build"
-      ],
-      "outputs": [
-        "src-tauri/target/**"
-      ]
-    }
-  }
+   "$schema": "https://turbo.build/schema.json",
+   "tasks": {
+      "build": {
+         "dependsOn": ["^build"],
+         "outputs": ["build/**", ".react-router/**"]
+      },
+      "clean": {
+         "cache": false
+      },
+      "dev": {
+         "cache": false,
+         "persistent": true
+      },
+      "lint": {
+         "dependsOn": ["^lint"]
+      },
+      "tauri": {
+         "cache": false
+      },
+      "tauri:build": {
+         "dependsOn": ["build"],
+         "outputs": ["src-tauri/target/**"]
+      },
+      "tauri:dev": {
+         "cache": false,
+         "dependsOn": ["build"],
+         "persistent": true
+      },
+      "typecheck": {
+         "dependsOn": ["^typecheck"]
+      }
+   },
+   "ui": "tui"
 }

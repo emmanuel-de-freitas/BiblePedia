@@ -2,6 +2,8 @@
 node_modules/
 *.tsbuildinfo
 packages/**/*.tsbuildinfo
+dist/
+.next/
 
 # React Router
 .react-router/
