@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "lib": [
       "DOM",
       "DOM.Iterable",
