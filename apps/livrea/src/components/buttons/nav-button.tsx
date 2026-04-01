@@ -1,79 +1,47 @@
 "use client";
 
-import { ActionButton } from "@react-spectrum/s2";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useMemo } from "react";
-import Icon from "@/components/icons/component";
-import Text from "@/components/typography/text";
 import type { NavButtonProps } from "./types";
+import { ALL_ICONS } from "@/components/icons/icons";
 
-const MotionText = motion.create(Text, { forwardMotionProps: true });
+const NavButton = ({
+  icon,
+  href,
+  label,
+  isExpanded = true,
+}: NavButtonProps) => {
+  const pathname = usePathname();
+  const isActive = pathname === href || pathname.startsWith(`${href}/`);
+  const Icon = icon ? ALL_ICONS[icon] : null;
 
-const NavButton = ({ icon, label, route, isQuiet = true, buttonStyle }: NavButtonProps) => {
-   const showLabel = useMemo(() => label !== undefined, [label]);
-   const pathname = usePathname();
-   const isActive = pathname === route || pathname.startsWith(`${route}/`);
-
-   return (
-      <Link href={route} style={{ textDecoration: "none" }}>
-         <ActionButton
-            aria-label={label || route}
-            isQuiet={!isActive && isQuiet}
-            UNSAFE_style={{
-               backgroundColor: isActive ? "ButtonText" : undefined,
-               color: isActive ? "Window" : undefined,
-               cursor: "pointer",
-               display: "flex",
-               gap: 12,
-               justifyContent: showLabel ? "start" : "center",
-               minHeight: 44,
-               paddingBottom: 8,
-               paddingTop: 8,
-               width: showLabel ? "auto" : "100%",
-               ...buttonStyle,
-            }}>
-            {icon && <Icon icon={icon} variant={isActive ? "Bold" : "Outline"} />}
-            <AnimatePresence>
-               {showLabel ? (
-                  <MotionText
-                     key={`${icon}-${label}`}
-                     textStyle={{ color: isActive ? "Window" : undefined, fontWeight: isActive ? "bold" : "normal" }}
-                     variant="navigation"
-                     layout="size"
-                     initial={{
-                        opacity: 0,
-                        width: 0,
-                     }}
-                     animate={{
-                        opacity: 1,
-                        transition: {
-                           width: {
-                              delay: 0.1,
-                              duration: 0.2,
-                           },
-                        },
-                        width: "min-content",
-                     }}
-                     exit={{
-                        opacity: 0,
-                        transition: {
-                           type: "tween",
-                           width: {
-                              delay: 0.1,
-                              duration: 0.2,
-                           },
-                        },
-                        width: 0,
-                     }}>
-                     {label}
-                  </MotionText>
-               ) : null}
-            </AnimatePresence>
-         </ActionButton>
-      </Link>
-   );
+  return (
+    <Link
+      href={href}
+      className={`
+        flex w-full items-center gap-3 rounded-lg px-3 py-3
+        transition-colors duration-200
+        ${isActive
+          ? "bg-primary/10 text-primary"
+          : "text-default-600 hover:bg-default-100"
+        }
+      `}
+    >
+      {Icon && <Icon size={24} variant={isActive ? "Bold" : "Outline"} />}
+      {isExpanded && (
+        <motion.span
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: "auto" }}
+          exit={{ opacity: 0, width: 0 }}
+          transition={{ duration: 0.2 }}
+          className="truncate text-sm font-medium"
+        >
+          {label}
+        </motion.span>
+      )}
+    </Link>
+  );
 };
 
 export default NavButton;
