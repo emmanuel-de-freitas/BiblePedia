@@ -1,67 +1,30 @@
 "use client";
 
+import { Button } from "@heroui/react";
 import { useEffect } from "react";
 
 interface ErrorProps {
-   error: Error & { digest?: string };
-   reset: () => void;
+  error: Error & { digest?: string };
+  reset: () => void;
 }
 
 export default function ErrorPage({ error, reset }: ErrorProps) {
-   useEffect(() => {
-      console.error("Application error:", error);
-   }, [error]);
+  useEffect(() => {
+    console.error("Application error:", error);
+  }, [error]);
 
-   return (
-      <main
-         style={{
-            alignItems: "center",
-            display: "flex",
-            flexDirection: "column",
-            height: "100vh",
-            justifyContent: "center",
-            padding: "1rem",
-         }}>
-         <h1
-            style={{
-               fontSize: "2rem",
-               fontWeight: "bold",
-               marginBottom: "1rem",
-            }}>
-            Something went wrong!
-         </h1>
-         <p
-            style={{
-               color: "#666",
-               marginBottom: "1.5rem",
-               textAlign: "center",
-            }}>
-            {error.message || "An unexpected error occurred."}
-         </p>
-         {error.digest && (
-            <p
-               style={{
-                  color: "#999",
-                  fontSize: "0.875rem",
-                  marginBottom: "1rem",
-               }}>
-               Error ID: {error.digest}
-            </p>
-         )}
-         <button
-            onClick={reset}
-            type="button"
-            style={{
-               backgroundColor: "#0066cc",
-               border: "none",
-               borderRadius: "8px",
-               color: "white",
-               cursor: "pointer",
-               fontSize: "1rem",
-               padding: "0.75rem 1.5rem",
-            }}>
-            Try again
-         </button>
-      </main>
-   );
+  return (
+    <main className="flex h-screen flex-col items-center justify-center p-4">
+      <h1 className="mb-4 text-3xl font-bold">Something went wrong!</h1>
+      <p className="mb-6 text-center text-default-500">
+        {error.message || "An unexpected error occurred."}
+      </p>
+      {error.digest && (
+        <p className="mb-4 text-sm text-default-400">Error ID: {error.digest}</p>
+      )}
+      <Button variant="primary" onPress={reset}>
+        Try again
+      </Button>
+    </main>
+  );
 }

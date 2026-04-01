@@ -1,54 +1,34 @@
 "use client";
 
-import { style } from "@react-spectrum/s2/style" with { type: "macro" };
 import { LayoutGroup, motion } from "motion/react";
 import type { ReactNode } from "react";
 
 import { Sidebar, TitleBar, Topbar } from "@/components";
 
-const dashboardStyle = style({
-   backgroundColor: "layer-1",
-   display: "grid",
-   gridTemplateAreas: ["sidebar content content"],
-   gridTemplateColumns: "auto 2fr",
-   gridTemplateRows: "100dvh",
-   paddingEnd: 12,
-   paddingStart: 4,
-   rowGap: 12,
-});
-
-const mainStyle = style({
-   display: "flex",
-   flexDirection: "column",
-   gridArea: "content",
-   paddingTop: 64,
-   rowGap: 16,
-});
-
-const contentStyle = style({
-   backgroundColor: "base",
-   borderRadius: "xl",
-   boxShadow: "emphasized",
-   height: "full",
-   marginBottom: 12,
-   padding: 24,
-});
-
 interface DashboardLayoutProps {
-   children: ReactNode;
+  children: ReactNode;
 }
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
-   return (
-      <LayoutGroup>
-         <TitleBar />
-         <motion.div layout className={dashboardStyle}>
-            <Sidebar />
-            <motion.main layout className={mainStyle}>
-               <Topbar />
-               <motion.div className={contentStyle}>{children}</motion.div>
-            </motion.main>
-         </motion.div>
-      </LayoutGroup>
-   );
+  return (
+    <LayoutGroup>
+      <TitleBar />
+      <motion.div
+        layout
+        className="grid grid-cols-[auto_2fr] grid-rows-[100dvh] gap-y-3 bg-default-100 pe-3 ps-1"
+        style={{ gridTemplateAreas: "'sidebar content content'" }}
+      >
+        <Sidebar />
+        <motion.main
+          layout
+          className="flex flex-col gap-4 pt-16 [grid-area:content]"
+        >
+          <Topbar />
+          <motion.div className="mb-3 h-full rounded-xl bg-background p-6 shadow-lg">
+            {children}
+          </motion.div>
+        </motion.main>
+      </motion.div>
+    </LayoutGroup>
+  );
 }
