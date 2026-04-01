@@ -1,19 +1,16 @@
 import type * as Icons from "iconsax-reactjs";
-import type {Icon, IconProps} from "iconsax-reactjs";
-import type {spectrumIcons} from "./icons";
-
-type SpectrumIconName = keyof typeof spectrumIcons;
-
-interface IconComponentProps {
-   icon: LIIconName;
-   variant?: IconProps["variant"];
-   size?: number;
-   color?: string;
-   className?: string;
-}
+import type { Icon, IconProps } from "iconsax-reactjs";
 
 // Iconsax icons
 type LIIconName = keyof typeof Icons;
 
+interface IconComponentProps {
+  icon: LIIconName;
+  variant?: IconProps["variant"];
+  size?: number;
+  color?: string;
+  className?: string;
+}
+
 // Re-export types
-export type { IconProps, Icon, SpectrumIconName, LIIconName, IconComponentProps };
+export type { IconProps, Icon, LIIconName, IconComponentProps };
