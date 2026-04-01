@@ -1,104 +1,129 @@
 "use client";
 
-import {
-   Button,
-   ButtonGroup,
-   Content,
-   DropZone,
-   FileTrigger,
-   Heading,
-   IllustratedMessage,
-   Image,
-} from "@react-spectrum/s2";
-import CloudUpload from "@react-spectrum/s2/illustrations/gradient/generic2/DropToUpload";
-import { style } from "@react-spectrum/s2/style" with { type: "macro" };
-import type { ComponentProps } from "react";
+import { Button } from "@heroui/react";
+import { DocumentUpload } from "iconsax-reactjs";
+import Image from "next/image";
+import { useCallback, useState } from "react";
+import type { DragEvent } from "react";
 import useTheme from "@/hooks/useTheme";
 
-function Dropzone(props: ComponentProps<typeof DropZone>) {
-   const { isDark } = useTheme();
+interface DropzoneProps {
+  onFilesSelected?: (files: File[]) => void;
+  acceptedFileTypes?: string[];
+  isFilled?: boolean;
+  children?: React.ReactNode;
+}
 
-   const styles = style({
-      alignItems: "center",
-      backgroundColor: {
-         default: "silver-subtle",
-         isDark: "layer-2",
-      },
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-around",
-      paddingX: 20,
-      paddingY: 40,
-      width: "full",
-   });
+function Dropzone({
+  onFilesSelected,
+  acceptedFileTypes = ["application/epub+zip"],
+  isFilled = false,
+  children,
+}: DropzoneProps) {
+  const { isDark } = useTheme();
+  const [isDragOver, setIsDragOver] = useState(false);
 
-   return (
-      <DropZone
-         {...props}
-         size="S"
-         styles={style({ width: "full" })}
-         isFilled={props.isFilled ?? false}
-         UNSAFE_style={{
-            overflow: "hidden",
-            padding: 0,
-         }}
-         // Determine whether dragged content should be accepted.
-         getDropOperation={(types) =>
-            // Accept ebook formats only.
-            ["application/epub+zip"].some((t) => types.has(t)) ? "copy" : "cancel"
-         }
-         onDrop={async (event) => {
-            // Find the first accepted item.
-            const item = event.items.find(
-               (item) =>
-                  (item.kind === "text" && item.types.has("text/plain")) ||
-                  (item.kind === "file" && item.type.startsWith("image/")),
-            );
+  const handleDragEnter = useCallback((e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragOver(true);
+  }, []);
 
-            if (item?.kind === "file") {
-               const file = await item.getFile();
-               const url = URL.createObjectURL(file);
-            }
-         }}>
-         <div className={styles({ isDark: isDark })}>
-            <div
-               className={style({
-                  position: "relative",
-                  width: 196,
-               })}>
-               <Image
-                  src={"/book-stacked.png"}
-                  alt="Book stacked illustration"
-                  styles={style({
-                     backgroundColor: "transparent",
-                     position: "absolute",
-                     rotate: 8,
-                     scale: 2,
-                     translateX: -64,
-                     translateY: -48,
-                  })}
-               />
-            </div>
+  const handleDragLeave = useCallback((e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragOver(false);
+  }, []);
 
-            {props.children}
-            <IllustratedMessage size="S" orientation="horizontal">
-               <CloudUpload />
-               <Heading>Drag and drop your ePub</Heading>
-               <Content>Or select the file from your computer</Content>
-               <ButtonGroup>
-                  <FileTrigger
-                     acceptedFileTypes={["application/epub+zip"]}
-                     onSelect={(files) => {
-                        if (!files) return;
-                        const url = URL.createObjectURL(files[0]);
-                     }}>
-                     <Button variant="primary">Browse</Button>
-                  </FileTrigger>
-               </ButtonGroup>
-            </IllustratedMessage>
-         </div>
-      </DropZone>
-   );
+  const handleDragOver = useCallback((e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setIsDragOver(false);
+
+      const files = Array.from(e.dataTransfer.files).filter((file) =>
+        acceptedFileTypes.some(
+          (type) => file.type === type || file.name.endsWith(".epub")
+        )
+      );
+
+      if (files.length > 0 && onFilesSelected) {
+        onFilesSelected(files);
+      }
+    },
+    [acceptedFileTypes, onFilesSelected]
+  );
+
+  const handleFileSelect = useCallback(() => {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = acceptedFileTypes.join(",");
+    input.multiple = false;
+
+    input.onchange = (e) => {
+      const target = e.target as HTMLInputElement;
+      const files = target.files ? Array.from(target.files) : [];
+      if (files.length > 0 && onFilesSelected) {
+        onFilesSelected(files);
+      }
+    };
+
+    input.click();
+  }, [acceptedFileTypes, onFilesSelected]);
+
+  return (
+    <div
+      onDragEnter={handleDragEnter}
+      onDragLeave={handleDragLeave}
+      onDragOver={handleDragOver}
+      onDrop={handleDrop}
+      className={`
+        w-full rounded-xl border-2 border-dashed transition-all duration-200
+        ${isDragOver
+          ? "border-primary bg-primary/10"
+          : "border-default-300 hover:border-default-400"
+        }
+        ${isDark ? "bg-default-100" : "bg-default-50"}
+      `}
+    >
+      <div className="flex flex-row items-center justify-around px-5 py-10">
+        <div className="relative w-48 h-32">
+          <Image
+            src="/book-stacked.png"
+            alt="Book stacked illustration"
+            fill
+            className="object-contain -translate-x-8 -translate-y-6 rotate-[8deg] scale-150"
+          />
+        </div>
+
+        {children}
+
+        <div className="flex flex-col items-center gap-4 text-center">
+          <div className="rounded-full bg-primary/10 p-4">
+            <DocumentUpload
+              size={48}
+              className="text-primary"
+              variant="Bulk"
+            />
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">Drag and drop your ePub</h3>
+            <p className="mt-1 text-default-500">
+              Or select the file from your computer
+            </p>
+          </div>
+          <Button variant="primary" onPress={handleFileSelect}>
+            Browse
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Dropzone;

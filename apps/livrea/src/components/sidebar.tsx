@@ -1,49 +1,54 @@
 "use client";
 
-import Libraries from "@react-spectrum/s2/illustrations/gradient/generic1/Libraries";
-import { style } from "@react-spectrum/s2/style" with { type: "macro" };
 import { useAtom } from "jotai";
 import { motion } from "motion/react";
+import { Book1 } from "iconsax-reactjs";
 import { sidebarOpenAtom } from "@/atoms/layout";
 import { IconButton } from "@/components/buttons";
 import { myStore } from "../atoms";
 import Navbar from "./navbar";
 
 const Sidebar = () => {
-   const sidebarStyle = style({
-      display: "flex",
-      flexDirection: "column",
-      gridArea: "sidebar",
-      justifyContent: "space-between",
-      paddingX: 8,
-      paddingY: 20,
-   });
+  const [isOpen, setIsOpen] = useAtom(sidebarOpenAtom, { store: myStore });
 
-   const renderLogo = () => {
-      return (
-         <Libraries
-            UNSAFE_style={{
-               width: 58,
-            }}
-         />
-      );
-   };
+  const renderLogo = () => {
+    return (
+      <div className="flex items-center gap-2 mb-4">
+        <Book1 size={40} variant="Bold" className="text-primary" />
+        {isOpen && (
+          <motion.span
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "auto" }}
+            exit={{ opacity: 0, width: 0 }}
+            className="text-xl font-bold"
+          >
+            Livrea
+          </motion.span>
+        )}
+      </div>
+    );
+  };
 
-   const [isOpen, setIsOpen] = useAtom(sidebarOpenAtom, { store: myStore });
-
-   return (
-      <motion.div className={sidebarStyle}>
-         <div className={style({ paddingTop: 12, paddingX: "text-to-control" })}>
-            {renderLogo()}
-            <Navbar />
-         </div>
-         <div>
-            <motion.div animate={{ rotate: isOpen ? 180 : 0 }} style={{ display: "inline-block" }}>
-               <IconButton icon="SidebarRight" variant="Linear" onPress={() => setIsOpen(!isOpen)} />
-            </motion.div>
-         </div>
-      </motion.div>
-   );
+  return (
+    <motion.div className="flex flex-col justify-between px-2 py-5 [grid-area:sidebar]">
+      <div className="pt-3 px-2">
+        {renderLogo()}
+        <Navbar />
+      </div>
+      <div>
+        <motion.div
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          style={{ display: "inline-block" }}
+        >
+          <IconButton
+            icon="SidebarRight"
+            variant="Linear"
+            onPress={() => setIsOpen(!isOpen)}
+          />
+        </motion.div>
+      </div>
+    </motion.div>
+  );
 };
 
 export default Sidebar;

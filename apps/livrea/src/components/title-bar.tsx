@@ -1,97 +1,99 @@
 "use client";
 
-import { style } from "@react-spectrum/s2/style" with { type: "macro" };
-import { getCurrentWindow } from "@tauri-apps/api/window";
-import { platform } from "@tauri-apps/plugin-os";
 import { useEffect, useState } from "react";
 
 import useTitle from "@/hooks/useTitle";
 
 const TitleBar = () => {
-   const appWindow = getCurrentWindow();
-   const [currentPlatform, setCurrentPlatform] = useState<string>("");
-   const platformName = platform();
+  const [currentPlatform, setCurrentPlatform] = useState<string>("");
+  const [isMounted, setIsMounted] = useState(false);
+  const title = useTitle();
 
-   useEffect(() => {
-      // Get platform
-      setCurrentPlatform(platformName);
+  useEffect(() => {
+    setIsMounted(true);
 
-      // Listen for maximize/unmaximize events
-      const unlistenResize = appWindow.onResized(async () => {
-         const maximized = await appWindow.isMaximized();
-         //setIsMaximized(maximized);
-      });
+    // Only run Tauri APIs on client side
+    if (typeof window === "undefined") return;
 
-      // Check initial maximize state
-      // appWindow.isMaximized().then(setIsMaximized);
+    let cleanup: (() => void) | undefined;
 
-      return () => {
-         unlistenResize.then((fn) => fn());
-      };
-   }, [platformName, appWindow.isMaximized, appWindow.onResized]);
+    const initTauri = async () => {
+      try {
+        // Dynamically import Tauri APIs to avoid SSR issues
+        const { getCurrentWindow } = await import("@tauri-apps/api/window");
+        const { platform } = await import("@tauri-apps/plugin-os");
 
-   const handleMinimize = async () => {
-      await appWindow.minimize();
-   };
+        const appWindow = getCurrentWindow();
+        const platformName = platform();
+        setCurrentPlatform(platformName);
 
-   const handleClose = async () => {
-      await appWindow.close();
-   };
+        // Listen for maximize/unmaximize events
+        const unlistenResize = await appWindow.onResized(async () => {
+          // const maximized = await appWindow.isMaximized();
+          // Handle maximize state if needed
+        });
 
-   const titleBarStyle = style({
-      alignItems: "center",
-      display: "flex",
-      height: 52,
-      justifyContent: "space-between",
-      paddingX: 16,
-      position: "fixed",
-      right: 0,
-      top: 0,
-      userSelect: "none",
-      width: "100%",
-      zIndex: 9999,
-   });
+        cleanup = () => {
+          unlistenResize();
+        };
+      } catch (error) {
+        // Tauri APIs not available (running in browser)
+        console.debug("Tauri APIs not available:", error);
+      }
+    };
 
-   const dragRegionStyle = style({
-      alignItems: "start",
-      display: "flex",
-      flexGrow: 1,
-      font: "ui-xs",
-      height: "full",
-      justifyContent: "center",
-      paddingTop: 16,
-   });
+    initTauri();
 
-   const titleStyle = style({
-      fontSize: "body-sm",
-      fontWeight: "medium",
-      letterSpacing: "tight",
-      textTransform: "capitalize",
-   });
+    return () => {
+      cleanup?.();
+    };
+  }, []);
 
-   const title = useTitle();
-
-   // Don't show controls on macOS (uses native traffic lights)
-   if (currentPlatform === "macos") {
-      return (
-         <div className={titleBarStyle}>
-            <div className={dragRegionStyle} data-tauri-drag-region>
-               <span className={titleStyle}>
-                  Livrea | {title}
-               </span>
-            </div>
-         </div>
-      );
-   }
-
-   return (
-      <div className={titleBarStyle}>
-         {/* Draggable region */}
-         <div className={dragRegionStyle} data-tauri-drag-region>
-            <span className={titleStyle}>Livrea</span>
-         </div>
+  // Don't render anything during SSR to avoid hydration mismatch
+  if (!isMounted) {
+    return (
+      <div className="fixed right-0 top-0 z-[9999] flex h-[52px] w-full select-none items-center justify-between px-4">
+        <div
+          className="flex h-full flex-grow items-start justify-center pt-4 text-xs"
+          data-tauri-drag-region
+        >
+          <span className="text-sm font-medium capitalize tracking-tight">
+            Livrea
+          </span>
+        </div>
       </div>
-   );
+    );
+  }
+
+  // Don't show controls on macOS (uses native traffic lights)
+  if (currentPlatform === "macos") {
+    return (
+      <div className="fixed right-0 top-0 z-[9999] flex h-[52px] w-full select-none items-center justify-between px-4">
+        <div
+          className="flex h-full flex-grow items-start justify-center pt-4 text-xs"
+          data-tauri-drag-region
+        >
+          <span className="text-sm font-medium capitalize tracking-tight">
+            Livrea | {title}
+          </span>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="fixed right-0 top-0 z-[9999] flex h-[52px] w-full select-none items-center justify-between px-4">
+      {/* Draggable region */}
+      <div
+        className="flex h-full flex-grow items-start justify-center pt-4 text-xs"
+        data-tauri-drag-region
+      >
+        <span className="text-sm font-medium capitalize tracking-tight">
+          Livrea | {title}
+        </span>
+      </div>
+    </div>
+  );
 };
 
 export default TitleBar;
