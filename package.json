@@ -39,8 +39,15 @@
          "tailwindcss": "^4.2.2",
          "tsup": "^8.5.1",
          "typescript": "^6.0.2",
+         "next": "^15.3.4",
+         "@heroui/react": "^3.0.1",
+         "@heroui/styles": "^3.0.1",
+         "iconsax-reactjs": "^0.0.8",
+         "motion": "^12.38.0",
          "zod": "^4.3.6",
-         "@uidotdev/usehooks": "^2.4.1"
+         "jotai": "^2.19.0",
+         "@uidotdev/usehooks": "^2.4.1",
+         "unplugin-parcel-macros": "^0.2.0"
       },
       "packages": [
          "packages/*",
