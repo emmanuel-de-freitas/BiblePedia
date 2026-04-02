@@ -17,6 +17,7 @@
       "tauri-plugin-python-api": "^0.3.4"
    },
    "devDependencies": {
+      "@svgr/webpack": "^8.1.0",
       "@tailwindcss/postcss": "catalog:",
       "@tauri-apps/cli": "^2.10.1",
       "@types/node": "catalog:",
@@ -27,12 +28,12 @@
       "tailwindcss": "catalog:",
       "typescript": "catalog:"
    },
-   "name": "@biblepedia/livrea",
+   "name": "@biblepedia/desktop",
    "private": true,
    "scripts": {
       "build": "next build",
       "clean": "rm -rf build node_modules .next src-tauri/gen src-tauri/target",
-      "dev": "next dev -p 5173",
+      "dev": "next dev",
       "start": "next start",
       "tauri": "tauri",
       "tauri:build": "tauri build",
