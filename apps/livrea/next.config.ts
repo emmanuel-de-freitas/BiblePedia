@@ -1,27 +1,35 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
+const internalHost = process.env.TAURI_DEV_HOST || 'localhost';
+
 const nextConfig: NextConfig = {
-  // Match existing Tauri config frontendDist path
-  distDir: "build",
-
-  // Environment variables to expose
-  env: {
-    // Add any public env vars here
-  },
-
-  // Disable image optimization for static export
+  // Ensure Next.js uses SSG instead of SSR
+  // https://nextjs.org/docs/pages/building-your-application/deploying/static-exports
+  output: 'export',
+  // Note: This feature is required to use the Next.js Image component in SSG mode.
+  // See https://nextjs.org/docs/messages/export-image-api for different workarounds.
   images: {
     unoptimized: true,
   },
-
-  // Static export for Tauri desktop app
-  output: "export",
+  // Configure assetPrefix or else the server won't properly resolve your assets.
+  assetPrefix: isProd ? undefined : `http://${internalHost}:3000`,
 
   // Trailing slash for better static file serving
   trailingSlash: true,
 
   // Transpile workspace packages
   transpilePackages: ["@heroui/react", "@heroui/styles"],
+
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
+  },
 
   // Enable typed routes
   typedRoutes: true,
