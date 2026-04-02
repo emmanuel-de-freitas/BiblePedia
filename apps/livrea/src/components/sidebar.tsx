@@ -7,6 +7,7 @@ import { sidebarOpenAtom } from "@/atoms/layout";
 import { IconButton } from "@/components/buttons";
 import { myStore } from "../atoms";
 import Navbar from "./navbar";
+import Logo from "@/assets/bible-pedia.svg";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useAtom(sidebarOpenAtom, { store: myStore });
@@ -14,7 +15,7 @@ const Sidebar = () => {
   const renderLogo = () => {
     return (
       <div className="flex items-center gap-2 mb-4">
-        <Book1 size={40} variant="Bold" className="text-primary" />
+        <Logo className="w-10 h-10 text-primary" />
         {isOpen && (
           <motion.span
             initial={{ opacity: 0, width: 0 }}
