@@ -4,19 +4,6 @@
     "//"
   ],
   "tasks": {
-    "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "build/**",
-        ".react-router/**"
-      ]
-    },
-    "dev": {
-      "persistent": true,
-      "cache": false
-    },
     "typecheck": {
       "dependsOn": [
         "^typecheck"
@@ -30,9 +17,6 @@
     "clean": {
       "cache": false
     },
-    "tauri": {
-      "cache": false
-    },
     "tauri:dev": {
       "dependsOn": [
         "build"
@@ -41,10 +25,8 @@
       "cache": false
     },
     "tauri:build": {
-      "dependsOn": [
-        "build"
-      ],
       "outputs": [
+        ".next/**",
         "src-tauri/target/**"
       ]
     }
