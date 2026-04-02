@@ -30,7 +30,7 @@
     "lint": "biome check --write"
   },
   "dependencies": {
-    "@react-spectrum/s2": "^1.2.0",
+    "@react-spectrum/s2": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"
   },

@@ -20,9 +20,11 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
 
   // Transpile workspace packages
-  transpilePackages: ["@heroui/react", "@heroui/styles"],
+  transpilePackages: ["@heroui/react", "@heroui/styles", "@react-spectrum/s2", "@uidotdev/usehooks"],
 
+  // SVG loader configuration for Turbopack (used in both dev and prod with --turbopack)
   turbopack: {
+
     rules: {
       '*.svg': {
         loaders: ['@svgr/webpack'],

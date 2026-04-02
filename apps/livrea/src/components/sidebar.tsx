@@ -2,7 +2,6 @@
 
 import { useAtom } from "jotai";
 import { motion } from "motion/react";
-import { Book1 } from "iconsax-reactjs";
 import { sidebarOpenAtom } from "@/atoms/layout";
 import { IconButton } from "@/components/buttons";
 import { myStore } from "../atoms";
@@ -15,7 +14,7 @@ const Sidebar = () => {
   const renderLogo = () => {
     return (
       <div className="flex items-center gap-2 mb-4">
-        <Logo className="w-10 h-10 text-primary" />
+        <Logo className="w-16 h-16 text-primary" />
         {isOpen && (
           <motion.span
             initial={{ opacity: 0, width: 0 }}

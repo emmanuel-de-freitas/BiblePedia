@@ -7,7 +7,7 @@
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "lib": [
       "DOM",
       "DOM.Iterable",
@@ -67,6 +67,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
+    "svgr.d.ts",
     "next-env.d.ts",
     "src/**/*",
     "build/types/**/*.ts",

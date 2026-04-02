@@ -1,19 +1,18 @@
-"use client";
 
 
-import type * as React from "react";
-import { Providers } from "./providers";
+import { Provider } from "./provider";
+
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
   return (
-    <html lang="en" suppressHydrationWarning>
-      <Providers>
-        <body>{children}</body>
-      </Providers>
-    </html>
+
+    <Provider>
+      <body>{children}</body>
+    </Provider>
   );
 }
