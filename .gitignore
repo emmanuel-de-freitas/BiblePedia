@@ -4,6 +4,7 @@ node_modules/
 packages/**/*.tsbuildinfo
 dist/
 .next/
+out/
 
 # React Router
 .react-router/
