@@ -7,20 +7,23 @@ import useBooks from "@/hooks/useBooks";
 export default function HomePage() {
   const { topPicks, loading } = useBooks();
 
+
+  const renderDropzone = () => (
+    <div className="flex flex-row items-center justify-evenly rounded-lg">
+      <Dropzone>
+        <div>
+          <Heading level={4}>Getting Started</Heading>
+          <Text textStyle={{ opacity: 0.7, userSelect: "none" }}>
+            Get started with one of the books below <br /> or import your epub
+            file using the import button.
+          </Text>
+        </div>
+      </Dropzone>
+    </div>
+  );
+
   return (
     <div>
-      <div className="flex flex-row items-center justify-evenly rounded-lg border-2 border-dashed border-default-300 bg-background">
-        <Dropzone>
-          <div>
-            <Heading level={4}>Getting Started</Heading>
-            <Text textStyle={{ opacity: 0.7, userSelect: "none" }}>
-              Get started with one of the books below <br /> or import your epub
-              file using the import button.
-            </Text>
-          </div>
-        </Dropzone>
-      </div>
-
       <TopPicks books={topPicks} loading={loading} />
     </div>
   );
