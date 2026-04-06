@@ -15,7 +15,7 @@ interface TopPicksProps {
 const TopPicks = ({ books, loading = false }: TopPicksProps) => {
   if (loading) {
     return (
-      <div className="mt-6">
+      <div>
         <Heading level={3}>Top Picks</Heading>
         <Text textStyle={{ marginTop: 8, opacity: 0.6 }}>
           Loading top picks...
@@ -25,7 +25,7 @@ const TopPicks = ({ books, loading = false }: TopPicksProps) => {
   }
 
   return (
-    <div className="mt-6">
+    <div>
       <Heading level={3}>Top Picks</Heading>
       <Text>Get started with one of the books below.</Text>
       {books.length === 0 && (

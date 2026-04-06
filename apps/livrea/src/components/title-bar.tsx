@@ -74,7 +74,7 @@ const TitleBar = () => {
           data-tauri-drag-region
         >
           <span className="text-sm font-medium capitalize tracking-tight">
-            Livrea | {title}
+            Biblepedia | {title}
           </span>
         </div>
       </div>

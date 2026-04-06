@@ -6,25 +6,25 @@ import { sidebarOpenAtom } from "@/atoms/layout";
 import { IconButton } from "@/components/buttons";
 import { myStore } from "../atoms";
 import Navbar from "./navbar";
-import Logo from "@/assets/bible-pedia.svg";
+import logo from "@/assets/biblepedia-light.png";
+import Image from "next/image";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useAtom(sidebarOpenAtom, { store: myStore });
 
+
+  const renderTitle = () => (
+    <div className="flex flex-col justify-center">
+      <span className="text-2xl font-semibold font-serif leading-6">Bible</span>
+      <span className="text-lg leading-3 font-stretch-145% text-violet-700">pedia</span>
+    </div>
+  );
+
   const renderLogo = () => {
     return (
-      <div className="flex items-center gap-2 mb-4">
-        <Logo className="w-16 h-16 text-primary" />
-        {isOpen && (
-          <motion.span
-            initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "auto" }}
-            exit={{ opacity: 0, width: 0 }}
-            className="text-xl font-bold"
-          >
-            Livrea
-          </motion.span>
-        )}
+      <div className="flex items-center gap-2 py-3 px-1">
+        <Image src={logo} alt="biblepedia" width={44} height={44} />
+        {isOpen && renderTitle()}
       </div>
     );
   };

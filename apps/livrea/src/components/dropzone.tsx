@@ -83,7 +83,7 @@ function Dropzone({
       onDragOver={handleDragOver}
       onDrop={handleDrop}
       className={`
-        w-full rounded-xl border-2 border-dashed transition-all duration-200
+        w-full rounded-xl border-2 border-dashed transition-all duration-200 bg-neutral-100 dark:bg-neutral-800
         ${isDragOver
           ? "border-primary bg-primary/10"
           : "border-default-300 hover:border-default-400"

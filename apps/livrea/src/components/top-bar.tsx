@@ -27,7 +27,7 @@ const Topbar = () => {
       <div className="flex items-center justify-end gap-1">
         <IconButton icon="Notification" onPress={() => { }} />
         <IconButton icon="Setting2" onPress={() => { }} />
-        <UserPopover />
+        {/*<UserPopover />*/}
       </div>
     </div>
   );
