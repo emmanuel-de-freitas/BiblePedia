@@ -23,7 +23,7 @@ const Sidebar = () => {
   const renderLogo = () => {
     return (
       <div className="flex items-center gap-2 py-3 px-1">
-        <Image src={logo} alt="biblepedia" width={44} height={44} />
+        <Image src={logo} alt="biblepedia" width={44} height={44} style={{ width: 44, height: 44 }} />
         {isOpen && renderTitle()}
       </div>
     );
@@ -31,7 +31,7 @@ const Sidebar = () => {
 
   return (
     <motion.div className="flex flex-col justify-between px-2 py-5 [grid-area:sidebar]">
-      <div className="pt-3 px-2">
+      <div className="px-2">
         {renderLogo()}
         <Navbar />
       </div>

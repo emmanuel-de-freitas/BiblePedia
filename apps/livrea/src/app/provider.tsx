@@ -3,10 +3,12 @@
 import { Provider as JotaiProvider } from "jotai";
 import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
+import { ThemeProvider } from "next-themes";
 import { Provider as SpectrumProvider } from '@react-spectrum/s2';
 
 import myStore from "@/atoms/store";
 import { useLocale } from "@heroui/react";
+import useTheme from "@/hooks/useTheme";
 
 interface ProvidersProps {
   children: ReactNode;
@@ -25,10 +27,13 @@ export function Provider({ children }: ProvidersProps) {
   const router = useRouter();
   const preferredLanguage = useLocale();
 
+
   return (
     <JotaiProvider store={myStore}>
-      <SpectrumProvider background="layer-2" locale={preferredLanguage.locale} elementType="html" router={{ navigate: router.push }}>
-        {children}
+      <SpectrumProvider background="layer-2" locale={preferredLanguage.locale} router={{ navigate: router.push }} >
+        <ThemeProvider attribute="class">
+          {children}
+        </ThemeProvider>
       </SpectrumProvider>
     </JotaiProvider>
   );

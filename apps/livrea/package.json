@@ -2,7 +2,7 @@
   "dependencies": {
     "@heroui/react": "catalog:",
     "@heroui/styles": "catalog:",
-    "lucide-react": "^1.7.0",
+    "@react-spectrum/s2": "catalog:",
     "@tauri-apps/api": "^2.10.1",
     "@tauri-apps/plugin-os": "^2.3.2",
     "@uidotdev/usehooks": "catalog:",
@@ -10,9 +10,10 @@
     "firebase": "^12.11.0",
     "iconsax-reactjs": "catalog:",
     "jotai": "catalog:",
+    "lucide-react": "^1.7.0",
     "motion": "catalog:",
-    "@react-spectrum/s2": "catalog:",
     "next": "catalog:",
+    "next-themes": "^0.4.6",
     "react": "catalog:",
     "react-dom": "catalog:",
     "tauri-plugin-python-api": "^0.3.4"
@@ -24,12 +25,13 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "@react-types/shared": "catalog:",
     "json-schema-to-typescript": "^15.0.4",
     "postcss": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:"
   },
-  "name": "@biblepedia/desktop",
+  "name": "@biblepedia/tauri",
   "private": true,
   "scripts": {
     "build": "next build --turbopack",

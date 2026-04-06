@@ -1,34 +1,16 @@
-[2025-12-27 17:35] - Updated by Junie
+[2026-04-06 01:45] - Updated by Junie
 {
-"TYPE": "negative",
-"CATEGORY": "compile errors",
-"EXPECTATION": "The user expected the new theme.rs implementation to compile cleanly without Rust errors.",
-"NEW INSTRUCTION": "WHEN adding or editing src-tauri Rust modules THEN ensure code compiles against the project’s Tauri
-version"
+    "TYPE": "correction",
+    "CATEGORY": "Route nesting correction",
+    "EXPECTATION": "Routes under dashboard and bible should be nested under their respective parent folders per fs-routes conventions.",
+    "NEW INSTRUCTION": "WHEN defining dashboard or bible routes THEN place them under routes/dashboard and routes/bible with a parent layout module."
 }
 
-[2025-12-27 17:36] - Updated by Junie
+[2026-04-06 02:36] - Updated by Junie
 {
-"TYPE": "correction",
-"CATEGORY": "Tauri API mismatch",
-"EXPECTATION": "Event emission should use the correct Tauri API for this project’s version so the code compiles.",
-"NEW INSTRUCTION": "WHEN compiler shows E0599 on AppHandle.emit_all THEN replace with app.emit or window.emit
-accordingly"
-}
-
-[2025-12-27 17:37] - Updated by Junie
-{
-"TYPE": "negative",
-"CATEGORY": "type inference error",
-"EXPECTATION": "The user expected the new theme.rs to compile without ambiguous type inference issues.",
-"NEW INSTRUCTION": "WHEN Rust reports E0282 in theme.rs THEN add explicit types to return or Into calls"
-}
-
-[2025-12-27 17:38] - Updated by Junie
-{
-"TYPE": "negative",
-"CATEGORY": "type inference error",
-"EXPECTATION": "The user expected theme.rs to compile without E0282 type annotation errors.",
-"NEW INSTRUCTION": "WHEN using Into::into in map or closures THEN prefer explicit From::<T> or annotate result type"
+    "TYPE": "correction",
+    "CATEGORY": "TypeScript path alias",
+    "EXPECTATION": "The import using \"@/components/provider\" should resolve correctly via the project path alias.",
+    "NEW INSTRUCTION": "WHEN using \"@/\" imports in apps/web THEN map \"@\" to \"src\" in tsconfig and Vite."
 }
 

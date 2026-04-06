@@ -10,8 +10,11 @@
       },
       "dev": {
          "cache": false,
-         "persistent": true,
-         "with": ["@biblepedia/desktop#tauri:dev"]
+         "persistent": true
+      },
+      "desktop": {
+         "cache": false,
+         "persistent": true
       },
       "lint": {
          "dependsOn": ["^lint"]

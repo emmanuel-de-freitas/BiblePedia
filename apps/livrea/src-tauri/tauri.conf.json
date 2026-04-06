@@ -36,11 +36,11 @@
       {
         "url": "dashboard",
         "decorations": true,
-        "titleBarStyle": "Transparent",
+        "titleBarStyle": "Overlay",
         "transparent": false,
         "dragDropEnabled": true,
         "userAgent": "chrome",
-        "hiddenTitle": false,
+        "hiddenTitle": true,
         "width": 1200,
         "height": 800,
         "resizable": true,

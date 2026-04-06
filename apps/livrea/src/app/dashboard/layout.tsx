@@ -25,7 +25,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
           className="flex flex-col gap-4 pt-8 [grid-area:content]"
         >
           <Topbar />
-          <motion.div className="mb-3 h-full rounded-2xl bg-white dark:bg-dark p-7">
+          <motion.div className="h-screen rounded-2xl bg-white dark:bg-background-tertiary p-7">
             {children}
           </motion.div>
         </motion.main>

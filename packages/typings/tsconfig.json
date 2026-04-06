@@ -12,7 +12,9 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "ignoreDeprecations": "6.0",
     "baseUrl": ".",
+    "types": ["node"],
     "declaration": true,
     "rootDir": "./src"
   },

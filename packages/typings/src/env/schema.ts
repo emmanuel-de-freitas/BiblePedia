@@ -360,20 +360,20 @@ export function getRequiredSchema(env: string = process.env.NODE_ENV || 'develop
 /**
  * Validate environment variables
  */
-export function validateEnvironment(
+export function validateEnvironment<T extends z.ZodSchema = typeof environmentSchema>(
   env: Record<string, string | undefined>,
-  schema: z.ZodSchema = environmentSchema
-): z.infer<typeof schema> {
+  schema: T = environmentSchema as unknown as T
+): z.infer<T> {
   return schema.parse(env);
 }
 
 /**
  * Safe validate environment variables (doesn't throw)
  */
-export function safeValidateEnvironment(
+export function safeValidateEnvironment<T extends z.ZodSchema = typeof environmentSchema>(
   env: Record<string, string | undefined>,
-  schema: z.ZodSchema = environmentSchema
-): { success: true; data: z.infer<typeof schema> } | { success: false; error: z.ZodError } {
+  schema: T = environmentSchema as unknown as T
+): { success: true; data: z.infer<T> } | { success: false; error: z.ZodError } {
   const result = schema.safeParse(env);
   if (result.success) {
     return { success: true, data: result.data };
