@@ -2,6 +2,7 @@
 @import "@heroui/styles";
 
 /* Global styles for Livrea */
+@custom-variant dark (&:where(.dark, .dark *));
 
 * {
     box-sizing: border-box;
