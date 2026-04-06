@@ -90,3 +90,5 @@ export type PolymorphicProps<
 > = Props &
   AsProp<C> &
   Omit<React.ComponentPropsWithoutRef<C>, keyof Props | "as">;
+
+export * from "./icons";

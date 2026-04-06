@@ -2,8 +2,8 @@ import type { ElectrobunConfig } from "electrobun";
 
 export default {
 	app: {
-		name: "multi-window",
-		identifier: "multiwindow.electrobun.dev",
+		name: "bible-pedia",
+		identifier: "biblepedia.philagora.io",
 		version: "0.0.1",
 	},
 	build: {

@@ -308,4 +308,9 @@ export type {
   HTMLProps,
   AsProp,
   PolymorphicProps,
+  Icon,
+  IconProps as IconSaxProps,
+  LIIconName
 } from "./types";
+
+export { ALL_ICONS } from "./types";

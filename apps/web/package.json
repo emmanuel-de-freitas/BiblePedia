@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "clean": "rm -rf node_modules .turbo .react-router",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
@@ -26,6 +27,7 @@
     "isbot": "^5"
   },
   "devDependencies": {
+    "@biblepedia/ui": "workspace:*",
     "@react-router/dev": "catalog:",
     "@tailwindcss/postcss": "catalog:",
     "@types/react": "catalog:",

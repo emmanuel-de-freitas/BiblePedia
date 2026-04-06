@@ -5,7 +5,7 @@ import { useAtom } from "jotai";
 import { SearchNormal1 } from "iconsax-reactjs";
 import { booksAtom } from "@/atoms/books";
 import { searchQueryAtom } from "@/atoms/search";
-import { searchBooks } from "@/services/books";
+import { searchBooks } from "../../../backend/services/books";
 
 const Search = () => {
   const [query, setQuery] = useAtom(searchQueryAtom);

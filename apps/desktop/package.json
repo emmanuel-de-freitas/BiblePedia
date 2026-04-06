@@ -5,6 +5,7 @@
 	"description": "Electrobun app demonstrating multiple windows with RPC communication",
 	"scripts": {
 		"start": "electrobun dev",
+		"clean": "rm -rf node_modules",
 		"dev": "electrobun dev --watch",
 		"build:canary": "electrobun build --env=canary"
 	},

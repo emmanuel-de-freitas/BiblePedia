@@ -3,7 +3,7 @@
 import { useAtom } from "jotai";
 import { sidebarOpenAtom } from "@/atoms/layout";
 import { NavButton } from "@/components/buttons";
-import { links } from "@/services/navigation";
+import { links } from "@/utils/navigation";
 
 const Navbar = () => {
   const [isOpen] = useAtom(sidebarOpenAtom);

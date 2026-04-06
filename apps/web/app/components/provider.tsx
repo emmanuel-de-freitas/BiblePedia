@@ -1,7 +1,6 @@
 import { Provider as JotaiProvider } from "jotai";
 import { useNavigate } from "react-router";
 import type { ReactNode } from "react";
-import { ThemeProvider } from "next-themes";
 import { Provider as SpectrumProvider } from '@react-spectrum/s2';
 
 import myStore from "@/atoms/store";
@@ -26,9 +25,7 @@ export function Provider({ children }: ProvidersProps) {
   return (
     <JotaiProvider store={myStore}>
       <SpectrumProvider background="layer-2" locale={preferredLanguage.locale} router={{ navigate: (path: string) => navigate(path) }} >
-        <ThemeProvider attribute="class">
           {children}
-        </ThemeProvider>
       </SpectrumProvider>
     </JotaiProvider>
   );

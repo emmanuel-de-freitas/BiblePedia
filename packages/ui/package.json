@@ -5,15 +5,15 @@
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "types": "./dist/src/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/src/index.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
     "./style": {
-      "types": "./dist/src/style.d.ts",
+      "types": "./dist/style.d.ts",
       "import": "./dist/style.js",
       "default": "./dist/style.js"
     },
@@ -23,7 +23,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "vite build && tsc --emitDeclarationOnly --declaration --outDir dist",
+    "build": "vite build && tsc",
     "dev": "vite build --watch",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf node_modules .turbo dist",
@@ -32,6 +32,7 @@
   "dependencies": {
     "@react-spectrum/s2": "catalog:",
     "react": "catalog:",
+    "iconsax-reactjs": "catalog:",
     "react-dom": "catalog:"
   },
   "devDependencies": {

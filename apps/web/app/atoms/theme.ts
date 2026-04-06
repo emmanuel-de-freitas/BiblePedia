@@ -1,4 +1,4 @@
-import type {Theme} from "@tauri-apps/api/window";
-import {atom} from "jotai";
+import { atom } from "jotai";
+import type { TOption } from "@/types";
 
-export const theme = atom<Theme | "system">("system");
+export const theme = atom<TOption | "system">("system");

@@ -2,9 +2,6 @@
  * Python API wrapper for calling Python functions from TypeScript/JavaScript
  * This module provides type-safe interfaces to the Python functions defined in src-tauri/src-python/main.py
  */
-
-import { callFunction, registerJs } from 'tauri-plugin-python-api';
-
 // Type definitions for Python function parameters and returns
 
 export interface TextAnalysis {
