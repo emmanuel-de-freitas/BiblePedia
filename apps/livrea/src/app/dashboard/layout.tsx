@@ -11,24 +11,26 @@ interface DashboardLayoutProps {
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
+    <div>
     <LayoutGroup>
       <TitleBar />
       <motion.div
         layout
-        className="grid grid-cols-[auto_2fr] grid-rows-[100dvh] gap-y-3 bg-default-100 pe-3 ps-1"
+        className="grid grid-cols-[auto_2fr] grid-rows-[100dvh] gap-y-3 bg-default-100 pe-3 ps-1 pt-4"
         style={{ gridTemplateAreas: "'sidebar content content'" }}
       >
         <Sidebar />
         <motion.main
           layout
-          className="flex flex-col gap-4 pt-16 [grid-area:content]"
+          className="flex flex-col gap-4 pt-8 [grid-area:content]"
         >
           <Topbar />
-          <motion.div className="mb-3 h-full rounded-xl bg-background p-6 shadow-lg">
+          <motion.div className="mb-3 h-full rounded-2xl bg-white dark:bg-dark p-7">
             {children}
           </motion.div>
         </motion.main>
       </motion.div>
-    </LayoutGroup>
+      </LayoutGroup>
+    </div>
   );
 }
