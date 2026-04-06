@@ -6,7 +6,7 @@ import { Icon } from "@/components/icons";
 import { useLocation } from "react-router";
 
 import useTitle from "@/hooks/useTitle";
-import { links } from "@/services/navigation";
+import { links } from "@/utils/navigation";
 import Search from "./search";
 import UserPopover from "./user-popover";
 
