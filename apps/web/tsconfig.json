@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "composite": true,
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
@@ -15,11 +16,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./app/*"]
-    }
+    },
+    "rootDirs": [".", "./.react-router/types"],
+    "verbatimModuleSyntax": true
   },
-  "include": ["app", "../backend/api/book-analyzer.tsx", "../backend/api", "../backend/firestore.ts", "../backend/services"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["vite.config.ts", "app", "react-router.config.ts", ".react-router/types/**/*"]
 }

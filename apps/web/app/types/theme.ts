@@ -2,8 +2,8 @@
 
 type TOption = "light" | "dark" | "system";
 interface ITheme {
-   mode: TOption;
-   name: string;
+	mode: TOption;
+	name: string;
 }
 
 export type { ITheme, TOption };

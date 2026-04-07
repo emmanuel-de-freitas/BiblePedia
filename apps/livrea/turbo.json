@@ -1,34 +1,23 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "extends": [
-    "//"
-  ],
+  "extends": ["//"],
   "tasks": {
     "typecheck": {
-      "dependsOn": [
-        "^typecheck"
-      ]
+      "dependsOn": ["^typecheck"]
     },
     "lint": {
-      "dependsOn": [
-        "^lint"
-      ]
+      "dependsOn": ["^lint"]
     },
     "clean": {
       "cache": false
     },
     "tauri:dev": {
-      "dependsOn": [
-        "build"
-      ],
+      "dependsOn": ["build"],
       "persistent": true,
       "cache": false
     },
     "tauri:build": {
-      "outputs": [
-        ".next/**",
-        "src-tauri/target/**"
-      ]
+      "outputs": [".next/**", "src-tauri/target/**"]
     }
   }
 }

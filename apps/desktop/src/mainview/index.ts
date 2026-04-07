@@ -70,7 +70,7 @@ openBtn.addEventListener("click", async () => {
 });
 
 sendBtn.addEventListener("click", async () => {
-	const targetId = parseInt(targetSelect.value);
+	const targetId = Number.parseInt(targetSelect.value);
 	const message = messageInput.value.trim();
 	if (!targetId || !message) return;
 

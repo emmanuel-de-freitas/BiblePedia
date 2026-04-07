@@ -7,4 +7,4 @@ import Topbar from "./top-bar";
 import TopPicks from "./top-picks";
 import UserPopover from "./user-popover";
 
-export { Topbar, Sidebar, Search, TitleBar, UserPopover, BookAnalyzer, Dropzone, TopPicks };
+export { BookAnalyzer, Dropzone, Search, Sidebar, TitleBar, Topbar, TopPicks, UserPopover };

@@ -20,5 +20,6 @@ apps/livrea/src-tauri/gen/
 # Bun
 bun.lockb
 
+.env
 .env.keys
 .idea/

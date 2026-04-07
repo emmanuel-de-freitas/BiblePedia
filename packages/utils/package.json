@@ -5,6 +5,14 @@
   "exports": {
     "default": "src/index.ts"
   },
+  "scripts": {
+    "clean": "rm -rf dist node_modules .turbo",
+    "typecheck": "tsc --noEmit",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write ."
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "react": "catalog:",

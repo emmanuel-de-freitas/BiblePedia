@@ -20,7 +20,7 @@ let initializationPromise: Promise<FirebaseApp | null> | null = null;
  * Check if we're running in a browser environment
  */
 function isBrowser(): boolean {
-  return typeof window !== "undefined";
+	return typeof window !== "undefined";
 }
 
 /**
@@ -28,34 +28,34 @@ function isBrowser(): boolean {
  * Uses NEXT_PUBLIC_ prefix for Next.js client-side access
  */
 function getFirebaseConfig() {
-  return {
-    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
-  };
+	return {
+		apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+		authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+		projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+		storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+		messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+		appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+		measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+	};
 }
 
 /**
  * Validate that required Firebase config values are present
  */
 function validateConfig(config: ReturnType<typeof getFirebaseConfig>): boolean {
-  const requiredFields = ["apiKey", "authDomain", "projectId", "appId"] as const;
+	const requiredFields = ["apiKey", "authDomain", "projectId", "appId"] as const;
 
-  for (const field of requiredFields) {
-    if (!config[field]) {
-      console.error(
-        `Firebase configuration error: Missing required field "${field}". ` +
-        `Make sure NEXT_PUBLIC_FIREBASE_${field.replace(/([A-Z])/g, "_$1").toUpperCase()} is set.`
-      );
-      return false;
-    }
-  }
+	for (const field of requiredFields) {
+		if (!config[field]) {
+			console.error(
+				`Firebase configuration error: Missing required field "${field}". ` +
+					`Make sure NEXT_PUBLIC_FIREBASE_${field.replace(/([A-Z])/g, "_$1").toUpperCase()} is set.`
+			);
+			return false;
+		}
+	}
 
-  return true;
+	return true;
 }
 
 /**
@@ -64,53 +64,53 @@ function validateConfig(config: ReturnType<typeof getFirebaseConfig>): boolean {
  * Returns null during SSR/static generation or if config is missing
  */
 export async function getFirebaseApp(): Promise<FirebaseApp | null> {
-  // Return null during SSR/static generation
-  if (!isBrowser()) {
-    return null;
-  }
+	// Return null during SSR/static generation
+	if (!isBrowser()) {
+		return null;
+	}
 
-  // Return cached instance if already initialized
-  if (isInitialized) {
-    return firebaseApp;
-  }
+	// Return cached instance if already initialized
+	if (isInitialized) {
+		return firebaseApp;
+	}
 
-  // Return existing promise if initialization is in progress
-  if (initializationPromise) {
-    return initializationPromise;
-  }
+	// Return existing promise if initialization is in progress
+	if (initializationPromise) {
+		return initializationPromise;
+	}
 
-  // Start initialization
-  initializationPromise = (async () => {
-    try {
-      const config = getFirebaseConfig();
+	// Start initialization
+	initializationPromise = (async () => {
+		try {
+			const config = getFirebaseConfig();
 
-      // Validate configuration
-      if (!validateConfig(config)) {
-        isInitialized = true;
-        return null;
-      }
+			// Validate configuration
+			if (!validateConfig(config)) {
+				isInitialized = true;
+				return null;
+			}
 
-      // Dynamically import Firebase to avoid SSR issues
-      const { initializeApp, getApps } = await import("firebase/app");
+			// Dynamically import Firebase to avoid SSR issues
+			const { initializeApp, getApps } = await import("firebase/app");
 
-      // Check if Firebase is already initialized (e.g., from hot reload)
-      const existingApps = getApps();
-      if (existingApps.length > 0) {
-        firebaseApp = existingApps[0];
-      } else {
-        firebaseApp = initializeApp(config);
-      }
+			// Check if Firebase is already initialized (e.g., from hot reload)
+			const existingApps = getApps();
+			if (existingApps.length > 0) {
+				firebaseApp = existingApps[0];
+			} else {
+				firebaseApp = initializeApp(config);
+			}
 
-      isInitialized = true;
-      return firebaseApp;
-    } catch (error) {
-      console.error("Failed to initialize Firebase:", error);
-      isInitialized = true;
-      return null;
-    }
-  })();
+			isInitialized = true;
+			return firebaseApp;
+		} catch (error) {
+			console.error("Failed to initialize Firebase:", error);
+			isInitialized = true;
+			return null;
+		}
+	})();
 
-  return initializationPromise;
+	return initializationPromise;
 }
 
 /**
@@ -118,25 +118,25 @@ export async function getFirebaseApp(): Promise<FirebaseApp | null> {
  * Returns null during SSR/static generation or if Firebase is not configured
  */
 export async function getFirestore(): Promise<Firestore | null> {
-  // Return cached instance
-  if (firestoreInstance) {
-    return firestoreInstance;
-  }
+	// Return cached instance
+	if (firestoreInstance) {
+		return firestoreInstance;
+	}
 
-  // Get Firebase app first
-  const app = await getFirebaseApp();
-  if (!app) {
-    return null;
-  }
+	// Get Firebase app first
+	const app = await getFirebaseApp();
+	if (!app) {
+		return null;
+	}
 
-  try {
-    const { getFirestore: getFirestoreFromSDK } = await import("firebase/firestore");
-    firestoreInstance = getFirestoreFromSDK(app);
-    return firestoreInstance;
-  } catch (error) {
-    console.error("Failed to initialize Firestore:", error);
-    return null;
-  }
+	try {
+		const { getFirestore: getFirestoreFromSDK } = await import("firebase/firestore");
+		firestoreInstance = getFirestoreFromSDK(app);
+		return firestoreInstance;
+	} catch (error) {
+		console.error("Failed to initialize Firestore:", error);
+		return null;
+	}
 }
 
 /**
@@ -144,25 +144,25 @@ export async function getFirestore(): Promise<Firestore | null> {
  * Returns null during SSR/static generation or if Firebase is not configured
  */
 export async function getAuth(): Promise<Auth | null> {
-  // Return cached instance
-  if (authInstance) {
-    return authInstance;
-  }
+	// Return cached instance
+	if (authInstance) {
+		return authInstance;
+	}
 
-  // Get Firebase app first
-  const app = await getFirebaseApp();
-  if (!app) {
-    return null;
-  }
+	// Get Firebase app first
+	const app = await getFirebaseApp();
+	if (!app) {
+		return null;
+	}
 
-  try {
-    const { getAuth: getAuthFromSDK } = await import("firebase/auth");
-    authInstance = getAuthFromSDK(app);
-    return authInstance;
-  } catch (error) {
-    console.error("Failed to initialize Firebase Auth:", error);
-    return null;
-  }
+	try {
+		const { getAuth: getAuthFromSDK } = await import("firebase/auth");
+		authInstance = getAuthFromSDK(app);
+		return authInstance;
+	} catch (error) {
+		console.error("Failed to initialize Firebase Auth:", error);
+		return null;
+	}
 }
 
 /**
@@ -172,46 +172,46 @@ export async function getAuth(): Promise<Auth | null> {
  * or if measurementId is not set
  */
 export async function getAnalytics(): Promise<Analytics | null> {
-  // Analytics only works in browser
-  if (!isBrowser()) {
-    return null;
-  }
+	// Analytics only works in browser
+	if (!isBrowser()) {
+		return null;
+	}
 
-  // Return cached instance
-  if (analyticsInstance) {
-    return analyticsInstance;
-  }
+	// Return cached instance
+	if (analyticsInstance) {
+		return analyticsInstance;
+	}
 
-  // Get Firebase app first
-  const app = await getFirebaseApp();
-  if (!app) {
-    return null;
-  }
+	// Get Firebase app first
+	const app = await getFirebaseApp();
+	if (!app) {
+		return null;
+	}
 
-  // Check if measurementId is configured
-  const config = getFirebaseConfig();
-  if (!config.measurementId) {
-    console.warn(
-      "Firebase Analytics: measurementId is not configured. " +
-      "Set NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID to enable analytics."
-    );
-    return null;
-  }
+	// Check if measurementId is configured
+	const config = getFirebaseConfig();
+	if (!config.measurementId) {
+		console.warn(
+			"Firebase Analytics: measurementId is not configured. " +
+				"Set NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID to enable analytics."
+		);
+		return null;
+	}
 
-  try {
-    const { getAnalytics: getAnalyticsFromSDK, isSupported } = await import("firebase/analytics");
+	try {
+		const { getAnalytics: getAnalyticsFromSDK, isSupported } = await import("firebase/analytics");
 
-    // Check if analytics is supported in this environment
-    const supported = await isSupported();
-    if (!supported) {
-      console.warn("Firebase Analytics is not supported in this environment.");
-      return null;
-    }
+		// Check if analytics is supported in this environment
+		const supported = await isSupported();
+		if (!supported) {
+			console.warn("Firebase Analytics is not supported in this environment.");
+			return null;
+		}
 
-    analyticsInstance = getAnalyticsFromSDK(app);
-    return analyticsInstance;
-  } catch (error) {
-    console.error("Failed to initialize Firebase Analytics:", error);
-    return null;
-  }
+		analyticsInstance = getAnalyticsFromSDK(app);
+		return analyticsInstance;
+	} catch (error) {
+		console.error("Failed to initialize Firebase Analytics:", error);
+		return null;
+	}
 }

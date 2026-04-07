@@ -1,40 +1,37 @@
 {
-   "description": "Shared TypeScript types, utility types, and environment variable declarations",
-   "devDependencies": {
-      "@types/node": "catalog:",
-      "tsup": "catalog:",
-      "typescript": "catalog:",
-      "zod": "catalog:"
-   },
-   "exports": {
-      ".": "./src/index.ts"
-   },
-   "files": [
-      "dist",
-      "src"
-   ],
-   "keywords": [
-      "typescript",
-      "types",
-      "utilities",
-      "environment-variables",
-      "type-safety"
-   ],
-   "license": "MIT",
-   "main": "./src/index.ts",
-   "name": "@biblepedia/typings",
-   "publishConfig": {
-      "access": "public"
-   },
-   "repository": {
-      "directory": "packages/typings",
-      "type": "git",
-      "url": "https://github.com/MannyDefreitas7/@philagora.git"
-   },
-   "scripts": {
-      "clean": "rm -rf dist node_modules .turbo",
-      "typecheck": "tsc --noEmit"
-   },
-   "type": "module",
-   "version": "0.1.0"
+  "description": "Shared TypeScript types, utility types, and environment variable declarations",
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:",
+    "zod": "catalog:"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "typescript",
+    "types",
+    "utilities",
+    "environment-variables",
+    "type-safety"
+  ],
+  "license": "MIT",
+  "main": "./src/index.ts",
+  "name": "@biblepedia/typings",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist node_modules .turbo",
+    "typecheck": "tsc --noEmit",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write ."
+  },
+  "type": "module",
+  "version": "0.1.0"
 }

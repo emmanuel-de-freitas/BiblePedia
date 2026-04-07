@@ -4,15 +4,15 @@
 import { useRouter } from "next/navigation";
 
 export default function Entry() {
-  const router = useRouter();
+	const router = useRouter();
 
-  // useEffect(() => {
-  router.replace("/dashboard");
-  // }, [router]);
+	// useEffect(() => {
+	router.replace("/dashboard");
+	// }, [router]);
 
-  return (
-    <div>
-      <p>Loading...</p>
-    </div>
-  );
+	return (
+		<div>
+			<p>Loading...</p>
+		</div>
+	);
 }

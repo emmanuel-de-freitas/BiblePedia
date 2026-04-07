@@ -7,42 +7,20 @@
     "incremental": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ES2022"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "module": "ESNext",
     "moduleResolution": "bundler",
     "noEmit": true,
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/atoms/*": [
-        "./src/atoms/*"
-      ],
-      "@/components": [
-        "./src/components/index.ts"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/services/*": [
-        "./src/services/*"
-      ],
-      "@/styles/*": [
-        "./src/styles/*"
-      ],
-      "@/types": [
-        "./src/types/index.ts"
-      ],
-      "@/ui/*": [
-        "./src/components/ui/*"
-      ]
+      "@/*": ["./src/*"],
+      "@/atoms/*": ["./src/atoms/*"],
+      "@/components": ["./src/components/index.ts"],
+      "@/components/*": ["./src/components/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/services/*": ["./src/services/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/types": ["./src/types/index.ts"],
+      "@/ui/*": ["./src/components/ui/*"]
     },
     "plugins": [
       {
@@ -56,12 +34,7 @@
     "useDefineForClassFields": true,
     "verbatimModuleSyntax": true
   },
-  "exclude": [
-    "node_modules",
-    "src-tauri",
-    "build",
-    ".next"
-  ],
+  "exclude": ["node_modules", "src-tauri", "build", ".next"],
   "include": [
     "**/*.ts",
     "**/*.tsx",

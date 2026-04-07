@@ -9,8 +9,10 @@ This repository is organized as a Turborepo monorepo with the following structur
 ```
 Livres/
 ├── apps/
-│   └── livrea/          # React Router + Vite app
-│       └── src-tauri/   # Tauri desktop app
+│   ├── desktop/         # Electrobun desktop app (native)
+│   ├── livrea/          # React Router + Vite app
+│   │   └── src-tauri/   # Tauri desktop app
+│   └── web/             # React Router + Vite web app
 ├── packages/            # Shared packages
 │   └── ui/              # @philagora/ui - Shared UI components
 ├── turbo.json           # Turborepo configuration
@@ -18,10 +20,13 @@ Livres/
 └── bun.lockb            # Bun lockfile
 ```
 
+> **📘 For AI Assistants**: See [CLAUDE.MD](CLAUDE.MD) for comprehensive codebase context, tech stack details, and development workflows.
+
 ## 🚀 Features
 
 - **Turborepo** - High-performance build system with smart caching
 - **React Router** - Full-stack React framework with SSR support
+- **Electrobun** - Fast, native desktop apps with hot reload support
 - **Tauri** - Build smaller, faster, and more secure desktop applications
 - **Vite** - Lightning fast HMR and optimized builds
 - **Bun** - Fast all-in-one JavaScript runtime & package manager
@@ -59,6 +64,9 @@ turbo dev
 # Run the Tauri app in development
 bun run tauri:dev
 
+# Run the Electrobun desktop app with hot reload
+bun run desktop        # Starts both web dev server and Electrobun app
+
 # Run with environment variables (using dotenvx)
 bun run dev:env        # Uses .env.development
 bun run build:env      # Uses .env.production
@@ -86,8 +94,14 @@ bun run tauri:build
 
 - `bun run dev` - Start development server using Turborepo
 - `bun run build` - Build all apps using Turborepo
+- `bun run desktop` - Start Electrobun desktop app with hot reload (web + desktop)
 - `bun run typecheck` - Run TypeScript type checking
-- `bun run lint` - Run linting across all apps
+- `bun run format` - Format all code with Biome
+- `bun run format:check` - Check code formatting (CI)
+- `bun run lint` - Lint all code with Biome
+- `bun run lint:fix` - Lint and auto-fix issues
+- `bun run check` - Format + Lint + Organize imports
+- `bun run check:fix` - All checks with auto-fix
 - `bun run clean` - Clean all build artifacts and dependencies
 - `bun run tauri` - Run Tauri CLI commands
 - `bun run tauri:dev` - Start Tauri in development mode
@@ -153,6 +167,49 @@ The main React application built with:
 - TailwindCSS for styling
 - Jotai for state management
 
+### apps/desktop
+
+The Electrobun desktop application for BiblePedia:
+
+- Built with Electrobun - a fast, lightweight alternative to Electron
+- Uses Bun runtime and native webviews (no bundled Chromium)
+- Connects to Vite dev server for hot module replacement
+- Multi-window support for different routes
+- Fast startup and minimal resource usage
+
+**Development with Hot Reload:**
+
+```bash
+# Run from monorepo root (recommended)
+bun run desktop
+
+# Or verify setup first
+cd apps/desktop
+bun run verify
+
+# Manual control
+cd apps/web && bun run dev    # Terminal 1: Start Vite dev server
+cd apps/desktop && bun run dev # Terminal 2: Start Electrobun
+```
+
+**Hot reload works for:**
+- ✅ React components and TypeScript changes
+- ✅ CSS and Tailwind styles  
+- ✅ Desktop app Bun code changes
+- ✅ Multi-window updates
+
+See `apps/desktop/README.md` for detailed documentation.
+
+### apps/web
+
+The web application built with React Router and Vite:
+
+- React Router 7 for routing and SSR
+- Vite dev server with HMR on port 5173
+- React Spectrum S2 for UI components
+- TailwindCSS for styling
+- Serves content to both web browsers and desktop app
+
 ### apps/livrea/src-tauri
 
 The Tauri backend that wraps the React app as a desktop application:
@@ -173,23 +230,58 @@ Reserved for shared packages and libraries that can be used across apps.
 - **Build System**: Turborepo
 - **Frontend Framework**: React 19
 - **Routing**: React Router 7
-- **Desktop Framework**: Tauri 2
-- **Bundler**: Vite 7
+- **Desktop Frameworks**: Electrobun 1.16, Tauri 2
+- **Bundler**: Vite 8
 - **CSS**: TailwindCSS 4
 - **UI Components**: React Spectrum S2
 - **State Management**: Jotai
 - **Animation**: Motion
-- **Language**: TypeScript 5
-- **Code Quality**: Biome
+- **Language**: TypeScript 6
+- **Code Quality**: Biome (formatting & linting)
 - **Environment Management**: Dotenvx
+- **Editor**: Zed (recommended)
 
 ## 📖 Documentation
 
+- [CLAUDE.MD](CLAUDE.MD) - **Comprehensive AI assistant context** (tech stack, conventions, workflows)
 - [Turborepo Documentation](https://turbo.build/repo/docs)
 - [React Router Documentation](https://reactrouter.com/)
+- [Electrobun Documentation](https://electrobun.dev/docs)
 - [Tauri Documentation](https://tauri.app/)
 - [Bun Documentation](https://bun.sh/docs)
 - [React Spectrum Documentation](https://react-spectrum.adobe.com/)
+- [Desktop App Hot Reload Guide](apps/desktop/README.md)
+- [Biome Setup Guide](docs/BIOME_SETUP.md)
+
+## 🎨 Code Quality with Biome
+
+This project uses [Biome](https://biomejs.dev) for fast, modern code formatting and linting.
+
+### Quick Commands
+
+```bash
+# Format all code
+bun run format
+
+# Lint all code
+bun run lint
+
+# Format + Lint + Organize imports
+bun run check:fix
+```
+
+### IDE Setup (Zed)
+
+The project includes Zed configuration in `.zed/settings.json` with:
+- Format on save enabled
+- Automatic import organization
+- Biome LSP integration
+- Hard tabs (width 2)
+- Line width: 100 characters
+
+Install the Biome extension in Zed for the best experience.
+
+For detailed setup and configuration, see the [Biome Setup Guide](docs/BIOME_SETUP.md).
 
 ## 🔐 Environment Variables
 

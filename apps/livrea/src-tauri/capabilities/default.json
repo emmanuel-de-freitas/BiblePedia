@@ -2,10 +2,7 @@
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
   "description": "Capability for the main window",
-  "windows": [
-    "dashboard",
-    "splashscreen"
-  ],
+  "windows": ["dashboard", "splashscreen"],
   "permissions": [
     "core:default",
     "opener:default",

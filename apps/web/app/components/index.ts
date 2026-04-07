@@ -1,4 +1,3 @@
-
 import Dropzone from "./dropzone";
 import Search from "./search";
 import Sidebar from "./sidebar";
@@ -7,4 +6,4 @@ import Topbar from "./top-bar";
 import TopPicks from "./top-picks";
 import UserPopover from "./user-popover";
 
-export { Topbar, Sidebar, Search, TitleBar, UserPopover, Dropzone, TopPicks };
+export { Dropzone, Search, Sidebar, TitleBar, Topbar, TopPicks, UserPopover };

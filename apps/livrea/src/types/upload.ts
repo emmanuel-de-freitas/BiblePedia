@@ -1,16 +1,13 @@
 interface ProgressUpdate {
-  stage: string;
-  progress: number;
-  message: string;
+	stage: string;
+	progress: number;
+	message: string;
 }
 
 interface ExtractionResult {
-  success: boolean;
-  metadata: any;
-  error: string | null;
+	success: boolean;
+	metadata: any;
+	error: string | null;
 }
 
-export type {
-  ProgressUpdate,
-  ExtractionResult
-}
+export type { ExtractionResult, ProgressUpdate };
