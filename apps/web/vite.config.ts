@@ -1,11 +1,13 @@
 import path from "node:path";
 import { defineConfig } from 'vite'
 import { reactRouter } from "@react-router/dev/vite";
+import macros from 'unplugin-parcel-macros';
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    macros.vite(),
     reactRouter(),
     react()
   ],

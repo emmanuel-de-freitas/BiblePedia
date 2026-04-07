@@ -1,1 +1,3 @@
-import {  } from "./use-platform";
+import usePlatform from "./use-platform";
+
+export { usePlatform };

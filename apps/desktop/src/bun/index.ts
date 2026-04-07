@@ -18,9 +18,19 @@ topLevelRoutes.forEach((route, index) => {
     url: `${BASE_URL}${route.path}`,
     titleBarStyle: "hiddenInset",
     styleMask: {
-
+      Borderless: false,
+          Titled: true,
+          Closable: true,
+          Miniaturizable: true,
+          Resizable: true,
+          UnifiedTitleAndToolbar: false,
+          FullScreen: false,
+          FullSizeContentView: false,
+          UtilityWindow: false,
+          DocModalWindow: false,
+          NonactivatingPanel: false,
+          HUDWindow: false,
     },
-    navigationRules: "",
 		frame: {
 			width: 1024,
 			height: 768,

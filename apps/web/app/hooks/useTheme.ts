@@ -1,7 +1,5 @@
-"use client";
-
 import { useCallback, useEffect, useMemo, useState } from "react";
-
+import { BrowserWindow } from "electrobun/bun";
 /**
  * A hook that provides theme-related properties for styling components.
  *
@@ -26,7 +24,7 @@ export const useTheme = () => {
     if (typeof window === "undefined") return;
 
     try {
-      const { getCurrentWindow } = await import("@tauri-apps/api/window");
+      BrowserWindow.getById
       const t = await getCurrentWindow().theme();
       // getCurrentWindow().theme() returns "light" | "dark" | null
       if (t === "light" || t === "dark") setTheme(t);

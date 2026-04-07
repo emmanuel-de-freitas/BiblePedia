@@ -1,11 +1,9 @@
-import * as React from "react";
-import Bun from "bun";
-import { useRenderInfo } from "@uidotdev/usehooks";
+import {UAParser} from 'ua-parser-js';
 
 const usePlatform = () => {
-
-  const info = useRenderInfo();
-
-
-
+  const parser = new UAParser();
+  const os = parser.getOS();
+  return os;
 }
+
+export default usePlatform;
