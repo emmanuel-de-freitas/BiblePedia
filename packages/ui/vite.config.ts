@@ -1,5 +1,5 @@
+import { resolve } from "node:path";
 import react from "@vitejs/plugin-react";
-import { resolve } from "path";
 import macros from "unplugin-parcel-macros";
 import { defineConfig } from "vite";
 

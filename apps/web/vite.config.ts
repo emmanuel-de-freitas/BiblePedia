@@ -1,12 +1,17 @@
 import path from "node:path";
 import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
-import react from "@vitejs/plugin-react";
 import macros from "unplugin-parcel-macros";
 import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+	plugins: [macros.vite(), tailwindcss(), reactRouter()],
+	resolve: {
+		alias: {
+			"@": path.resolve(__dirname, "./app"),
+		},
+	},
 	server: {
 		port: 5173,
 		host: true, // Listen on all addresses
@@ -18,11 +23,11 @@ export default defineConfig({
 			clientPort: 5173,
 		},
 	},
-	plugins: [macros.vite(), reactRouter(), tailwindcss(), react()],
-	resolve: {
-		alias: {
-			"@": path.resolve(__dirname, "./app"),
-		},
+	ssr: {
+		noExternal: ["@react-spectrum/s2"],
+	},
+	optimizeDeps: {
+		include: ["@react-spectrum/s2", "@heroui/styles"],
 	},
 	build: {
 		target: ["es2022"],

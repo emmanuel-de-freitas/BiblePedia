@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext", "DOM"],
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
     "target": "ESNext",
     "module": "ESNext",
     "moduleDetection": "force",
@@ -17,6 +20,14 @@
     "noUnusedParameters": true,
     "noPropertyAccessFromIndexSignature": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "build", "../../package/dist"]
+  "include": [
+    "src/**/*",
+    "../web/app/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "../../package/dist"
+  ]
 }

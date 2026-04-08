@@ -16,7 +16,9 @@
     "biome": {
       "binary": {
         "path": "node_modules/@biomejs/biome/bin/biome",
-        "arguments": ["lsp-proxy"]
+        "arguments": [
+          "lsp-proxy"
+        ]
       },
       "settings": {
         "enabled": true,
@@ -82,46 +84,14 @@
     }
   },
   "file_types": {
-    "Dockerfile": ["Dockerfile*"],
-    "JSON": ["*.json", "tsconfig.json", "biome.json"],
-    "JSONC": [".vscode/*.json"]
-  },
-  "git": {
-    "git_gutter": "tracked_files",
-    "inline_blame": {
-      "enabled": true
-    }
-  },
-  "ui_font_size": 14,
-  "buffer_font_size": 14,
-  "theme": {
-    "mode": "system"
-  },
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
-  "terminal": {
-    "shell": {
-      "program": "sh"
-    },
-    "working_directory": "current_project_directory",
-    "env": {
-      "TERM": "xterm-256color"
-    }
-  },
-  "project_panel": {
-    "dock": "left",
-    "default_width": 240
-  },
-  "outline_panel": {
-    "dock": "right"
-  },
-  "collaboration_panel": {
-    "dock": "left"
-  },
-  "notification_panel": {
-    "dock": "right"
+    "Dockerfile": [
+      "Dockerfile*"
+    ],
+    "JSON": [
+      "*.json",
+      "tsconfig.json",
+      "biome.json"
+    ]
   },
   "vim_mode": false,
   "autosave": "on_focus_change",

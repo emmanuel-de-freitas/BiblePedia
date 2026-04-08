@@ -1,13 +1,43 @@
 // app/root.tsx
 import "./global.css";
 
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
+import { Provider } from "@react-spectrum/s2";
+import { Provider as JotaiProvider } from "jotai";
+import type { ReactNode } from "react";
+import {
+	Links,
+	Meta,
+	type NavigateOptions,
+	Outlet,
+	Scripts,
+	ScrollRestoration,
+	useHref,
+	useNavigate,
+	useRouteLoaderData,
+} from "react-router";
+import myStore from "@/atoms/store";
+import type { Route } from "./+types/root";
 
-import { Provider } from "@/components/provider";
+// Configure the type of the `routerOptions` prop on all React Spectrum components.
+declare module "@react-spectrum/s2" {
+	interface RouterConfig {
+		routerOptions: NavigateOptions;
+	}
+}
 
-export default function App() {
+export function loader({ request }: Route.LoaderArgs) {
+	// Get the requested language (e.g. from headers, URL param, database, etc.)
+	const acceptLanguage = request.headers.get("accept-language");
+	const lang = acceptLanguage?.split(/[,;]/)[0] || "en-US";
+	return { lang };
+}
+
+export function Layout({ children }: { children: ReactNode }) {
+	const { lang } = useRouteLoaderData("root") || { lang: "en-US" };
+	const navigate = useNavigate();
+
 	return (
-		<Provider>
+		<Provider elementType="html" locale={lang} background="layer-1" router={{ navigate, useHref }}>
 			<head>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,14 +45,25 @@ export default function App() {
 				<Links />
 			</head>
 			<body>
-				<Outlet />
-				<ScrollRestoration />
-				<Scripts />
+				<JotaiProvider store={myStore}>
+					{/* children will be the root Component, ErrorBoundary, or HydrateFallback */}
+					{children}
+					<Scripts />
+					<ScrollRestoration />
+				</JotaiProvider>
 			</body>
 		</Provider>
 	);
 }
 
-// export default function App() {
-//   return <Outlet />;
-// }
+export default function App() {
+	return <Outlet />;
+}
+
+export function ErrorBoundary() {
+	return (
+		<div>
+			<h1>Error at root.tsx</h1>
+		</div>
+	);
+}

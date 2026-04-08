@@ -1,26 +1,23 @@
 {
   "name": "@biblepedia/desktop",
   "version": "1.0.0",
-  "type": "module",
   "description": "BiblePedia desktop app with Electrobun - includes hot reload support",
   "scripts": {
     "clean": "rm -rf node_modules build .turbo",
     "dev": "dotenvx run -f .env.development -- electrobun dev --watch",
-    "dev:check": "bun run verify && bun run dev",
     "build": "dotenvx run -f .env.development -- electrobun build",
     "build:canary": "electrobun build --env=canary",
     "format": "biome format --write .",
     "format:check": "biome format .",
     "lint": "biome lint .",
     "lint:fix": "biome lint --write .",
-    "test": "bun run src/bun/test-window.ts",
-    "typecheck": "tsc --noEmit",
-    "verify": "bun run scripts/verify-setup.ts"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "electrobun": "catalog:"
   },
   "devDependencies": {
+    "@biblepedia/typings": "workspace:*",
     "@types/bun": "latest",
     "@types/node": "catalog:",
     "@dotenvx/dotenvx": "catalog:",

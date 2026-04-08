@@ -15,7 +15,7 @@ export default function Layout() {
 					<Sidebar />
 					<motion.main layout className="flex flex-col gap-4 pt-8 [grid-area:content]">
 						<Topbar />
-						<motion.div className="h-screen rounded-2xl bg-white dark:bg-background-tertiary p-7">
+						<motion.div className="h-screen rounded-2xl bg-white dark:bg-neutral-900 p-7">
 							<Outlet />
 						</motion.div>
 					</motion.main>

@@ -11,6 +11,7 @@
   "repository": "emmanuel-de-freitas/biblepedia",
   "scripts": {
     "build": "turbo build",
+    "postbuild": "turbo typegen",
     "clean": "rm -rf node_modules bun.lock .turbo && turbo clean",
     "dev": "turbo dev --filter @biblepedia/web --filter @biblepedia/desktop",
     "env:decrypt": "turbo decrypt",
@@ -57,6 +58,8 @@
       "tsup": "^8.5.1",
       "typescript": "^6.0.2",
       "unplugin-parcel-macros": "^0.2.0",
+      "@vitejs/plugin-react": "^6.0.1",
+      "vite": "^8.0.7",
       "zod": "^4.3.6"
     },
     "packages": [

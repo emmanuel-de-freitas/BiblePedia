@@ -18,5 +18,9 @@
   },
   "devDependencies": {
     "mintlify": "latest"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
   }
 }

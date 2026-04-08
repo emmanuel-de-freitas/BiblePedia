@@ -237,8 +237,22 @@ export const developmentEnvironmentSchema = z.object({
 	GENERATE_SOURCEMAP: booleanString.optional(),
 	VITE_DEV_SERVER_HOST: z.string().optional(),
 	VITE_DEV_SERVER_PORT: portNumber.optional(),
+	VITE_DEV_SERVER_URL: urlString.optional(),
+	VITE_PORT: portNumber.optional(),
+	DEBUG: booleanString.optional(),
+	OPEN_DEVTOOLS: booleanString.optional(),
 	REACT_DEVTOOLS: booleanString.optional(),
 	VUE_DEVTOOLS: booleanString.optional(),
+});
+
+/**
+ * Electrobun desktop-specific environment schema
+ */
+export const electrobunEnvironmentSchema = z.object({
+	VITE_DEV_SERVER_URL: urlString.optional(),
+	VITE_PORT: portNumber.optional(),
+	DEBUG: booleanString.optional(),
+	OPEN_DEVTOOLS: booleanString.optional(),
 });
 
 /**
@@ -429,6 +443,7 @@ export const schemas = {
 	graphql: graphqlEnvironmentSchema,
 	complete: environmentSchema,
 	client: clientEnvironmentSchema,
+	electrobun: electrobunEnvironmentSchema,
 	productionRequired: productionRequiredSchema,
 	developmentRequired: developmentRequiredSchema,
 } as const;

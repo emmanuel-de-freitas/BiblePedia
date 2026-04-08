@@ -3,8 +3,14 @@
   "ui": "tui",
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["build/**", ".react-router/**", "dist/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "build/**",
+        ".react-router/**",
+        "dist/**"
+      ]
     },
     "clean": {
       "cache": false
@@ -13,14 +19,24 @@
       "cache": false,
       "persistent": true
     },
+    "typegen": {
+      "cache": true,
+      "outputs": [
+        ".react-router/**"
+      ]
+    },
     "format": {
       "cache": false
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": [
+        "^lint"
+      ]
     },
     "typecheck": {
-      "dependsOn": ["^typecheck"]
+      "dependsOn": [
+        "^typecheck"
+      ]
     }
   }
 }

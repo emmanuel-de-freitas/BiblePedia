@@ -290,10 +290,32 @@ export interface DevelopmentEnvironmentVariables {
 	VITE_DEV_SERVER_HOST?: string;
 	/** Vite development server port */
 	VITE_DEV_SERVER_PORT?: string;
+	/** Vite development server full URL (used by Electrobun desktop to connect) */
+	VITE_DEV_SERVER_URL?: string;
+	/** Custom port for the Vite dev server */
+	VITE_PORT?: string;
+	/** Enable verbose debug logging */
+	DEBUG?: string;
+	/** Auto-open DevTools on startup */
+	OPEN_DEVTOOLS?: string;
 	/** Enable React DevTools */
 	REACT_DEVTOOLS?: string;
 	/** Enable Vue DevTools */
 	VUE_DEVTOOLS?: string;
+}
+
+/**
+ * Electrobun desktop-specific environment variables
+ */
+export interface ElectrobunEnvironmentVariables {
+	/** Vite development server full URL for the Electrobun window to load */
+	VITE_DEV_SERVER_URL?: string;
+	/** Custom port for the Vite dev server */
+	VITE_PORT?: string;
+	/** Enable verbose debug logging */
+	DEBUG?: string;
+	/** Auto-open DevTools on startup */
+	OPEN_DEVTOOLS?: string;
 }
 
 /**

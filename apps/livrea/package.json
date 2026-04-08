@@ -34,9 +34,7 @@
   "name": "@biblepedia/tauri",
   "private": true,
   "scripts": {
-    "build": "next build --turbopack",
     "clean": "rm -rf node_modules .next out src-tauri/gen src-tauri/target",
-    "dev": "next dev --turbopack",
     "start": "next start",
     "tauri": "tauri",
     "tauri:build": "tauri build",
