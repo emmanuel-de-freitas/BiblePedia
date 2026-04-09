@@ -1,6 +1,3 @@
-"use client";
-
-import { style } from "@react-spectrum/s2/style" with { type: "macro" };
 import { useAtom } from "jotai";
 import { motion } from "motion/react";
 import logo from "@/assets/app-icon-light.png";
@@ -24,17 +21,6 @@ const Image = ({
 	height?: number;
 	style?: React.CSSProperties;
 }) => <img src={src} alt={alt} className={className} width={width} height={height} style={style} />;
-
-const styles = {
-	wrapper: style({
-		display: "flex",
-		flexDirection: "column",
-		justifyContent: "space-between",
-		paddingX: 4,
-		paddingY: 8,
-		gridArea: "sidebar",
-	}),
-};
 
 const Sidebar = () => {
 	const [isOpen, setIsOpen] = useAtom(sidebarOpenAtom, { store: myStore });
@@ -63,7 +49,7 @@ const Sidebar = () => {
 	};
 
 	return (
-		<motion.div className={styles.wrapper}>
+		<motion.div>
 			<div className="px-2">
 				{renderLogo()}
 				<Navbar />

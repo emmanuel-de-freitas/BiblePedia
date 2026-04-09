@@ -1,4 +1,3 @@
-
 // Function to check if dev server is ready
 async function waitForDevServer(url: string, maxRetries = 10): Promise<boolean> {
 	console.log(`\n🔍 Checking dev server at ${url}...`);
@@ -12,7 +11,7 @@ async function waitForDevServer(url: string, maxRetries = 10): Promise<boolean> 
 				return true;
 			}
 		} catch (error) {
-			console.log(`error: ${error}`)
+			console.log(`error: ${error}`);
 			console.log(`⏳ Waiting for dev server... (${i + 1}/${maxRetries})`);
 		}
 	}
@@ -23,4 +22,3 @@ async function waitForDevServer(url: string, maxRetries = 10): Promise<boolean> 
 }
 
 export { waitForDevServer };
-

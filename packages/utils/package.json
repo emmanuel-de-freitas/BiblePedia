@@ -1,13 +1,25 @@
 {
   "name": "@biblepedia/utils",
-  "module": "src/index.ts",
+  "private": true,
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    "default": "src/index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "clean": "rm -rf dist node_modules .turbo",
+    "clean": "rm -rf lib types node_modules .turbo",
     "typecheck": "tsc --noEmit",
+    "build": "bun run biome check --write . && tsc",
+    "check": "biome check --write . && tsc --noEmit",
     "format": "biome format --write .",
     "format:check": "biome format .",
     "lint": "biome lint .",
@@ -23,5 +35,8 @@
     "@types/react-dom": "catalog:",
     "@uidotdev/usehooks": "catalog:",
     "ua-parser-js": "^2.0.9"
+  },
+  "peerDependencies": {
+    "react-router": "catalog:"
   }
 }

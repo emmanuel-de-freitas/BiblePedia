@@ -6,6 +6,7 @@
     "clean": "rm -rf node_modules build .turbo",
     "dev": "dotenvx run -f .env.development -- electrobun dev --watch",
     "build": "dotenvx run -f .env.development -- electrobun build",
+    "check": "biome check --write . && tsc --noEmit",
     "build:canary": "electrobun build --env=canary",
     "format": "biome format --write .",
     "format:check": "biome format .",

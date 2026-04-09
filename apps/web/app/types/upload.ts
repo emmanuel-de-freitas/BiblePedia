@@ -6,7 +6,7 @@ interface ProgressUpdate {
 
 interface ExtractionResult {
 	success: boolean;
-	metadata: any;
+	metadata: string;
 	error: string | null;
 }
 

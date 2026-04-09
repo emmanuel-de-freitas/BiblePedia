@@ -1,3 +1,4 @@
 import usePlatform from "./use-platform";
+import useTitle from "./use-title";
 
-export { usePlatform };
+export { usePlatform, useTitle };

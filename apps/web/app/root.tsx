@@ -36,7 +36,7 @@ export function loader({ request }: Route.LoaderArgs) {
 export function Layout({ children }: { children: ReactNode }) {
 	const { lang } = useRouteLoaderData("root") || { lang: "en-US" };
 	const navigate = useNavigate();
-	const { mode, isMounted, isDark } = useTheme();
+	const { isDark } = useTheme();
 
 	return (
 		<Provider

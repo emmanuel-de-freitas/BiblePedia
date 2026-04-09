@@ -3,7 +3,6 @@ import type { TWindow } from "../types";
 import { waitForDevServer } from "./check";
 import { BASE_URL, DEV_URL } from "./constant";
 
-
 // Main initialization
 async function initializeApp(routes: TWindow[], isDev: boolean) {
 	try {

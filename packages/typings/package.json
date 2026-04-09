@@ -27,6 +27,7 @@
   "scripts": {
     "clean": "rm -rf dist node_modules .turbo",
     "typecheck": "tsc --noEmit",
+    "check": "biome check --write . && tsc --noEmit",
     "format": "biome format --write .",
     "format:check": "biome format .",
     "lint": "biome lint .",

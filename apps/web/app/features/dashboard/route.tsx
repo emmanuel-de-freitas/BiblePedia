@@ -4,7 +4,7 @@ import { Heading, Text } from "@/components/typography";
 export default function Route() {
 	// const { topPicks, loading } = useBooks();
 
-	const renderDropzone = () => (
+	const _renderDropzone = () => (
 		<div className="flex flex-row items-center justify-evenly rounded-lg">
 			<Dropzone>
 				<div>

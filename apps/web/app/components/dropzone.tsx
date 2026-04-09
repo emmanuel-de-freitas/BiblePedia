@@ -27,15 +27,15 @@ const Image = ({
 		style={
 			fill
 				? {
-						position: "absolute",
-						height: "100%",
-						width: "100%",
-						left: 0,
-						top: 0,
-						right: 0,
-						bottom: 0,
-						objectFit: "cover",
-					}
+					position: "absolute",
+					height: "100%",
+					width: "100%",
+					left: 0,
+					top: 0,
+					right: 0,
+					bottom: 0,
+					objectFit: "cover",
+				}
 				: undefined
 		}
 	/>
@@ -54,7 +54,6 @@ interface DropzoneProps {
 function Dropzone({
 	onFilesSelected,
 	acceptedFileTypes = ["application/epub+zip"],
-	isFilled = false,
 	children,
 }: DropzoneProps) {
 	const [isDragOver, setIsDragOver] = useState(false);
@@ -111,17 +110,17 @@ function Dropzone({
 	}, [acceptedFileTypes, onFilesSelected]);
 
 	return (
-		<div
+		<section
+			role="region"
 			onDragEnter={handleDragEnter}
 			onDragLeave={handleDragLeave}
 			onDragOver={handleDragOver}
 			onDrop={handleDrop}
 			className={`
         w-full rounded-xl border-2 border-dashed transition-all duration-200 bg-neutral-100 dark:bg-neutral-800
-        ${
-					isDragOver
-						? "border-primary bg-primary/10"
-						: "border-default-300 hover:border-default-400"
+        ${isDragOver
+					? "border-primary bg-primary/10"
+					: "border-default-300 hover:border-default-400"
 				}
       `}
 		>
@@ -150,7 +149,7 @@ function Dropzone({
 					</Button>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 

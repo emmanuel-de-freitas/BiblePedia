@@ -11,9 +11,10 @@
   "repository": "emmanuel-de-freitas/biblepedia",
   "scripts": {
     "build": "turbo build",
-    "postinstall": "turbo typegen",
+    "postinstall": "turbo check",
     "clean": "rm -rf node_modules bun.lock .turbo && turbo clean",
-    "dev": "turbo dev --filter @biblepedia/web --filter @biblepedia/desktop",
+    "desktop": "turbo dev --filter @biblepedia/web --filter @biblepedia/desktop",
+    "dev": "turbo dev --filter @biblepedia/web",
     "env:decrypt": "turbo decrypt",
     "env:encrypt": "turbo encrypt",
     "env:get": "dotenvx get",
@@ -23,7 +24,7 @@
     "format:check": "biome format .",
     "lint": "biome lint .",
     "lint:fix": "biome lint --write --unsafe .",
-    "check": "biome check .",
+    "check": "turbo check",
     "check:fix": "biome check --write --unsafe .",
     "typecheck": "turbo typecheck"
   },

@@ -1,14 +1,10 @@
-"use client";
-
 import { useLocation } from "react-router";
-import { IconButton } from "@/components/buttons";
 import { Icon } from "@/components/icons";
 import { Heading } from "@/components/typography";
 
 import useTitle from "@/hooks/useTitle";
 import { links } from "@/utils/navigation";
 import Search from "./search";
-import UserPopover from "./user-popover";
 
 const Topbar = () => {
 	const route = useTitle();
@@ -24,11 +20,7 @@ const Topbar = () => {
 
 			<Search />
 
-			<div className="flex items-center justify-end gap-1">
-				<IconButton icon="Notification" onPress={() => {}} />
-				<IconButton icon="Setting2" onPress={() => {}} />
-				{/*<UserPopover />*/}
-			</div>
+			<div className="flex items-center justify-end gap-1" />
 		</div>
 	);
 };

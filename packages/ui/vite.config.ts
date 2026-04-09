@@ -24,6 +24,7 @@ export default defineConfig({
 				"react",
 				"react-dom",
 				"react/jsx-runtime",
+				"@biblepedia/utils",
 				// Externalize all @react-spectrum packages
 				/^@react-spectrum\/.*/,
 				// Externalize react-aria-components

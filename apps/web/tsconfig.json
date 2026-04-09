@@ -3,41 +3,24 @@
     "target": "ESNext",
     "composite": true,
     "useDefineForClassFields": true,
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "types": [
-      "vite/client"
-    ],
+    "types": ["vite/client"],
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
-      "@/*": [
-        "./app/*"
-      ]
+      "@/*": ["./app/*"]
     },
-    "rootDirs": [
-      ".",
-      "./.react-router/types"
-    ],
+    "rootDirs": [".", "./.react-router/types"],
     "verbatimModuleSyntax": true
   },
-  "include": [
-    "vite.config.ts",
-    "app",
-    "react-router.config.ts",
-    ".react-router/types/**/*"
-  ]
+  "include": ["vite.config.ts", "app", "react-router.config.ts", ".react-router/types/**/*"]
 }

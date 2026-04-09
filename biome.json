@@ -39,11 +39,18 @@
     "lineWidth": 100,
     "attributePosition": "auto",
     "bracketSpacing": true,
-    "includes": ["**", "!**/node_modules/**", "!**/dist/**", "!**/build/**", "!**/.turbo/**"]
+    "includes": [
+      "**",
+      "!**/node_modules/**",
+      "!**/dist/**",
+      "!**/build/**",
+      "!**/.turbo/**"
+    ]
   },
   "assist": {
     "actions": {
       "source": {
+        "recommended": true,
         "organizeImports": "on"
       }
     }
@@ -189,7 +196,9 @@
         "noConsole": {
           "level": "warn",
           "options": {
-            "allow": ["log"]
+            "allow": [
+              "log"
+            ]
           }
         }
       },
@@ -252,7 +261,12 @@
   },
   "overrides": [
     {
-      "includes": ["**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts", "**/*.spec.tsx"],
+      "includes": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx"
+      ],
       "linter": {
         "rules": {
           "suspicious": {
@@ -262,14 +276,19 @@
       }
     },
     {
-      "includes": ["**/apps/web/**/*.ts", "**/apps/web/**/*.tsx"],
+      "includes": [
+        "**/apps/web/**/*.ts",
+        "**/apps/web/**/*.tsx"
+      ],
       "linter": {
         "rules": {
           "suspicious": {
             "noConsole": {
               "level": "off",
               "options": {
-                "allow": ["log"]
+                "allow": [
+                  "log"
+                ]
               }
             }
           }
@@ -277,14 +296,18 @@
       }
     },
     {
-      "includes": ["**/apps/desktop/**/*.ts"],
+      "includes": [
+        "**/apps/desktop/**/*.ts"
+      ],
       "linter": {
         "rules": {
           "suspicious": {
             "noConsole": {
               "level": "off",
               "options": {
-                "allow": ["log"]
+                "allow": [
+                  "log"
+                ]
               }
             }
           }

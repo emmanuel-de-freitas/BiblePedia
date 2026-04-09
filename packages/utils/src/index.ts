@@ -1,1 +1,3 @@
-export * from "./hooks";
+import { usePlatform, useTitle } from "./hooks";
+
+export { usePlatform, useTitle };

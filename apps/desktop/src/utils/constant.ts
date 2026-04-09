@@ -1,9 +1,7 @@
 import type { TWindow } from "../types";
 
 // Top-level routes identified from apps/web/src/routes
-const topLevelRoutes: TWindow[] = [
-	{ name: "Dashboard", path: "/dashboard" }
-];
+const topLevelRoutes: TWindow[] = [{ name: "Dashboard", path: "/dashboard" }];
 
 const isDev = process.env.NODE_ENV !== "production";
 

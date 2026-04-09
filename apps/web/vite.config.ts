@@ -14,6 +14,7 @@ export default defineConfig({
 	},
 	server: {
 		port: 5173,
+		open: true,
 		host: true, // Listen on all addresses
 		strictPort: false, // Allow fallback to other ports if 5173 is busy
 		hmr: {
@@ -27,13 +28,14 @@ export default defineConfig({
 		noExternal: ["@react-spectrum/s2"],
 	},
 	optimizeDeps: {
-		include: ["@react-spectrum/s2", "@heroui/styles"],
+		include: ["@react-spectrum/s2", "@heroui/styles", "react", "react-dom"],
 	},
 	build: {
 		target: ["es2022"],
 		// Lightning CSS produces a much smaller CSS bundle than the default minifier.
 		cssMinify: "lightningcss",
 		rollupOptions: {
+			external: ["@biblepedia/utils"],
 			output: {
 				// Bundle all S2 and style-macro generated CSS into a single bundle instead of code splitting.
 				// Because atomic CSS has so much overlap between components, loading all CSS up front results in

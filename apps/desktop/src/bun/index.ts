@@ -6,4 +6,4 @@ console.log(`🌐 Base URL: ${BASE_URL}`);
 
 initializeApp(topLevelRoutes, isDev)
 	.then(() => console.log("✅ server started..."))
-	.catch(error => console.log(`error starting the server ${error}`))
+	.catch((error) => console.log(`error starting the server ${error}`));

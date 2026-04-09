@@ -33,6 +33,12 @@
         "^lint"
       ]
     },
+    "check": {
+      "dependsOn": [
+        "^typegen",
+        "build"
+      ]
+    },
     "typecheck": {
       "dependsOn": [
         "^typecheck"

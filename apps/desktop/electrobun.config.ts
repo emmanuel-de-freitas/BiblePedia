@@ -5,14 +5,14 @@ export default {
 		name: "bible-pedia",
 		identifier: "biblepedia.philagora.io",
 		version: "0.0.1",
-		urlSchemes: ["biblepedia"]
+		urlSchemes: ["biblepedia"],
 	},
 
 	build: {
 		watch: ["../web/app/**"],
 		bun: {
 			entrypoint: "src/bun/index.ts",
-			reactFastRefresh: true
+			reactFastRefresh: true,
 		},
 		mac: {
 			bundleCEF: false,

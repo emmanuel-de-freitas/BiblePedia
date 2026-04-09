@@ -124,8 +124,8 @@ export type {
 	ToggleButtonGroupProps,
 	ToggleButtonProps,
 	TooltipProps,
-	TooltipTriggerProps,
 	TooltipTriggerProps as TooltipTriggerComponentProps,
+	TooltipTriggerProps,
 	UserCardProps,
 } from "@react-spectrum/s2";
 // Re-export all React Spectrum S2 components
@@ -263,7 +263,7 @@ export {
 } from "@react-spectrum/s2";
 
 // Export custom components
-export { ConfirmDialog, type ConfirmDialogProps } from "./components/dialog";
+export * from "./components";
 
 // Export utility types
 export type {
