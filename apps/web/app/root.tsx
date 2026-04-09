@@ -16,6 +16,7 @@ import {
 	useRouteLoaderData,
 } from "react-router";
 import myStore from "@/atoms/store";
+import { useTheme } from "@/hooks";
 import type { Route } from "./+types/root";
 
 // Configure the type of the `routerOptions` prop on all React Spectrum components.
@@ -35,9 +36,16 @@ export function loader({ request }: Route.LoaderArgs) {
 export function Layout({ children }: { children: ReactNode }) {
 	const { lang } = useRouteLoaderData("root") || { lang: "en-US" };
 	const navigate = useNavigate();
+	const { mode, isMounted, isDark } = useTheme();
 
 	return (
-		<Provider elementType="html" locale={lang} background="layer-1" router={{ navigate, useHref }}>
+		<Provider
+			UNSAFE_className={isDark ? "dark" : undefined}
+			elementType="html"
+			locale={lang}
+			background="layer-1"
+			router={{ navigate, useHref }}
+		>
 			<head>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />

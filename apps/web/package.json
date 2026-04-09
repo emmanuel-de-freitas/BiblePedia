@@ -30,7 +30,8 @@
     "motion": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "react-router": "catalog:"
+    "react-router": "catalog:",
+    "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
     "@biblepedia/typings": "workspace:*",

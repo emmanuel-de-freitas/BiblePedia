@@ -1,21 +1,40 @@
+import { style } from "@react-spectrum/s2/style" with { type: "macro" };
 import { LayoutGroup, motion } from "motion/react";
 import { Outlet } from "react-router";
 import { Sidebar, TitleBar, Topbar } from "@/components";
+
+const styles = {
+	layout: style({
+		display: "grid",
+		gridTemplateColumns: "auto",
+		gridAutoRows: "max-content",
+		gap: 16,
+		gridTemplateAreas: ["sidebar", "content", "content"],
+	}),
+	body: style({
+		display: "flex",
+		flexDirection: "column",
+		gap: 4,
+		paddingTop: 8,
+		gridArea: "content",
+	}),
+	detail: style({
+		borderRadius: "xl",
+		backgroundColor: "base",
+		padding: 20,
+	}),
+};
 
 export default function Layout() {
 	return (
 		<div>
 			<LayoutGroup>
 				<TitleBar />
-				<motion.div
-					layout
-					className="grid grid-cols-[auto_2fr] grid-rows-[100dvh] gap-y-3 bg-default-100 pe-3 ps-1 pt-4"
-					style={{ gridTemplateAreas: "'sidebar content content'" }}
-				>
+				<motion.div layout className={styles.layout}>
 					<Sidebar />
-					<motion.main layout className="flex flex-col gap-4 pt-8 [grid-area:content]">
+					<motion.main layout className={styles.body}>
 						<Topbar />
-						<motion.div className="h-screen rounded-2xl bg-white dark:bg-neutral-900 p-7">
+						<motion.div className={styles.detail}>
 							<Outlet />
 						</motion.div>
 					</motion.main>
