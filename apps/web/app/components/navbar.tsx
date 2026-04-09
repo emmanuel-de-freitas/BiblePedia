@@ -9,7 +9,7 @@ const Navbar = () => {
 	const [isOpen] = useAtom(sidebarOpenAtom);
 
 	return (
-		<nav className="flex flex-col gap-1" style={{ width: isOpen ? 220 : "auto" }}>
+		<nav className="flex flex-col gap-2" style={{ width: isOpen ? 220 : "auto" }}>
 			{links?.map((link, index) => (
 				<NavButton
 					key={index}

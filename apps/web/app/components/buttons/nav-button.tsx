@@ -14,12 +14,12 @@ const NavButton = ({ icon, href, label, isExpanded = true }: NavButtonProps) => 
 		<Link
 			to={href}
 			className={`
-        flex w-full items-center gap-3 rounded-lg px-3 py-3
+        flex w-full items-center gap-3 rounded-lg px-2 py-2
         transition-colors duration-200
         ${isActive ? "bg-primary/10 text-primary" : "text-default-600 hover:bg-default-100"}
       `}
 		>
-			{Icon && <Icon size={28} variant={isActive ? "Bold" : "Outline"} />}
+			{Icon && <Icon size={24} variant={isActive ? "Bold" : "Outline"} />}
 			{isExpanded && (
 				<motion.span
 					initial={{ opacity: 0, width: 0 }}

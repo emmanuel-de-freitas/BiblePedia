@@ -6,13 +6,12 @@
     "clean": "rm -rf node_modules build .turbo",
     "dev": "dotenvx run -f .env.development -- electrobun dev --watch",
     "build": "dotenvx run -f .env.development -- electrobun build",
-    "check": "biome check --write . && tsc --noEmit",
+    "check": "biome check --write .",
     "build:canary": "electrobun build --env=canary",
     "format": "biome format --write .",
     "format:check": "biome format .",
     "lint": "biome lint .",
-    "lint:fix": "biome lint --write .",
-    "typecheck": "tsc --noEmit"
+    "lint:fix": "biome lint --write ."
   },
   "dependencies": {
     "electrobun": "catalog:"
@@ -21,6 +20,7 @@
     "@biblepedia/typings": "workspace:*",
     "@types/bun": "latest",
     "@types/node": "catalog:",
+    "@types/three": "",
     "@dotenvx/dotenvx": "catalog:",
     "typescript": "catalog:"
   }

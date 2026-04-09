@@ -4,20 +4,29 @@ import TitleBar from "./title-bar";
 
 const styles = {
 	layout: style({
-		display: "grid",
+		display: "flex",
 		backgroundColor: "layer-1",
-		gridAutoFlow: "dense",
-		gridTemplateAreas: ["titlebar", "content", "footer"],
+		width: "screen",
+		height: 'screen',
+		flexDirection: "column"
 	}),
 	titlebar: style({
-		gridArea: "titlebar",
+		width: "full",
+		minHeight: 32
 	}),
 	content: style({
-		gridArea: "content",
+		width: "screen",
+		height: '100%',
+		flex: 1
 	}),
 	footer: style({
-		padding: 20,
-		gridArea: "footer",
+		width: "full",
+		height: 56,
+		display: 'flex',
+
+		justifyContent: 'center',
+		alignItems: 'center',
+		padding: 12
 	}),
 };
 
@@ -28,6 +37,9 @@ export function Window({ children }: { children: ReactNode }) {
 				<TitleBar />
 			</div>
 			<div className={styles.content}>{children}</div>
+			<footer className={styles.footer}>
+				<span>footer</span>
+			</footer>
 		</div>
 	);
 }

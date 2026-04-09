@@ -35,8 +35,7 @@
     },
     "check": {
       "dependsOn": [
-        "^typegen",
-        "build"
+        "typegen"
       ]
     },
     "typecheck": {
