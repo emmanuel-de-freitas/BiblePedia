@@ -8,19 +8,14 @@ class Settings(BaseSettings):
 		case_sensitive=False,
 	)
 
-	# Database
-	database_url: str = "postgresql+asyncpg://biblepedia:biblepedia@localhost:5432/biblepedia"
+	# Supabase
+	supabase_url: str = ""
+	supabase_anon_key: str = ""
+	supabase_service_role_key: str = ""
+	supabase_storage_bucket: str = "biblepedia-data"
 
-	# AWS
-	aws_access_key_id: str = ""
-	aws_secret_access_key: str = ""
-	aws_region: str = "us-east-1"
-	aws_s3_bucket: str = "biblepedia-data"
-
-	# Cognito
-	cognito_region: str = "us-east-1"
-	cognito_user_pool_id: str = ""
-	cognito_client_id: str = ""
+	# Database (Supabase PostgreSQL connection string)
+	database_url: str = "postgresql+asyncpg://postgres:[YOUR-PASSWORD]@db.vjkvpoemqigobzogmrrx.supabase.co:5432/postgres"
 
 	# App
 	environment: str = "development"
@@ -29,13 +24,6 @@ class Settings(BaseSettings):
 	@property
 	def cors_origins_list(self) -> list[str]:
 		return [origin.strip() for origin in self.cors_origins.split(",") if origin.strip()]
-
-	@property
-	def cognito_jwks_url(self) -> str:
-		return (
-			f"https://cognito-idp.{self.cognito_region}.amazonaws.com"
-			f"/{self.cognito_user_pool_id}/.well-known/jwks.json"
-		)
 
 	@property
 	def is_development(self) -> bool:

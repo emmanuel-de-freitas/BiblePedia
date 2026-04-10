@@ -8,7 +8,7 @@ from sqlalchemy.orm import selectinload
 
 from app.database import get_db
 from app.models.dataset import Dataset, DatasetBook, DatasetChapter
-from app.s3_client import get_object
+from app.storage_client import get_object
 from app.schemas.dataset import AvailableDatasets, DatasetBooks
 
 logger = logging.getLogger(__name__)

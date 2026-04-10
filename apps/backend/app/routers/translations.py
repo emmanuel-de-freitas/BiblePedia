@@ -8,7 +8,7 @@ from sqlalchemy.orm import selectinload
 
 from app.database import get_db
 from app.models.translation import Book, Chapter, Translation
-from app.s3_client import get_object
+from app.storage_client import get_object
 from app.schemas.translation import (
 	AvailableTranslations,
 	TranslationBooks,
