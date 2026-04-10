@@ -1,22 +1,4 @@
 services:
-  db:
-    image: postgres:16
-    container_name: biblepedia_db
-    environment:
-      POSTGRES_USER: biblepedia
-      POSTGRES_PASSWORD: biblepedia
-      POSTGRES_DB: biblepedia
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U biblepedia -d biblepedia"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 10s
-
   pgadmin:
     image: dpage/pgadmin4:latest
     container_name: biblepedia_pgadmin
@@ -26,12 +8,8 @@ services:
       PGADMIN_CONFIG_SERVER_MODE: "False"
     ports:
       - "5050:80"
-    depends_on:
-      db:
-        condition: service_healthy
     volumes:
       - pgadmin_data:/var/lib/pgadmin
 
 volumes:
-  postgres_data:
   pgadmin_data:
