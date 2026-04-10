@@ -2,9 +2,15 @@
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
   "tasks": {
+    "setup": {
+      "cache": true,
+      "inputs": ["requirements.txt"],
+      "outputs": [".venv/.turbo-installed"]
+    },
     "build": {
       "dependsOn": [
-        "^build"
+        "^build",
+        "setup"
       ],
       "outputs": [
         "build/**",

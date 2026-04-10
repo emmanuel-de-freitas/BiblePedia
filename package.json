@@ -11,7 +11,8 @@
   "repository": "emmanuel-de-freitas/biblepedia",
   "scripts": {
     "build": "turbo build",
-    "postinstall": "turbo typegen",
+    "postinstall": "turbo typegen && turbo setup",
+    "setup": "turbo setup",
     "clean": "rm -rf node_modules bun.lock .turbo && turbo clean",
     "desktop": "turbo dev --filter @biblepedia/web --filter @biblepedia/desktop",
     "dev": "turbo dev --filter @biblepedia/web",

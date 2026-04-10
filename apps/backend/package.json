@@ -1,9 +1,15 @@
 {
-  "name": "backend",
-  "module": "index.ts",
-  "type": "module",
+  "name": "@biblepedia/backend",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "clean": "rm -rf **/__pycache__"
+    "setup": "python3 -m venv .venv && .venv/bin/pip install --quiet -r requirements.txt && touch .venv/.turbo-installed",
+    "build": "docker build -t biblepedia-backend .",
+    "dev": ".venv/bin/fastapi dev app/main.py --port 8000",
+    "db:start": "docker compose up -d",
+    "db:stop": "docker compose down",
+    "db:migrate": ".venv/bin/alembic upgrade head",
+    "db:reset": "docker compose down -v && docker compose up -d",
+    "clean": "rm -rf .venv **/__pycache__ .ruff_cache"
   }
 }
