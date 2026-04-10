@@ -1,8 +1,8 @@
 "use client";
 
+import { ALL_ICONS } from "@biblepedia/ui";
 import { motion } from "motion/react";
-import { Link, useLocation } from "react-router";
-import { ALL_ICONS } from "@/components/icons/icons";
+import { NavLink, useLocation } from "react-router";
 import type { NavButtonProps } from "./types";
 
 const NavButton = ({ icon, href, label, isExpanded = true }: NavButtonProps) => {
@@ -11,7 +11,9 @@ const NavButton = ({ icon, href, label, isExpanded = true }: NavButtonProps) => 
 	const Icon = icon ? ALL_ICONS[icon] : null;
 
 	return (
-		<Link
+		<NavLink
+			key={label}
+			viewTransition
 			to={href}
 			className={`
         flex w-full items-center gap-3 rounded-lg px-2 py-2
@@ -31,7 +33,7 @@ const NavButton = ({ icon, href, label, isExpanded = true }: NavButtonProps) => 
 					{label}
 				</motion.span>
 			)}
-		</Link>
+		</NavLink>
 	);
 };
 

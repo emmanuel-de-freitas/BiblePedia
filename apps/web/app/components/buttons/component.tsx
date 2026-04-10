@@ -15,7 +15,7 @@ const IconButton = ({
 	ariaLabel,
 	size,
 }: IconButtonProps) => {
-	const Icon = icon ? ALL_ICONS[icon] : null;
+	const Icon = icon ? ALL_ICONS[String(icon)] : null;
 
 	const sizes: Record<number, "sm" | "md" | "lg"> = {
 		12: "sm",
@@ -29,7 +29,7 @@ const IconButton = ({
 	return (
 		<Button
 			ref={buttonRef}
-			aria-label={ariaLabel || (icon ? `${icon} button` : "Action button")}
+			aria-label={ariaLabel || (icon ? `${String(icon)} button` : "Action button")}
 			isPending={isLoading}
 			isIconOnly
 			variant={isQuiet ? "ghost" : "secondary"}

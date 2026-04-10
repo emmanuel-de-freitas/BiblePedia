@@ -1,8 +1,6 @@
-import type * as Icons from "iconsax-reactjs";
+import type { LIIconName } from "@biblepedia/ui";
 import type { Icon, IconProps } from "iconsax-reactjs";
 
-// Iconsax icons
-type LIIconName = keyof typeof Icons;
 
 interface IconComponentProps {
 	icon: LIIconName;

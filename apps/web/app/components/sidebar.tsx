@@ -7,22 +7,6 @@ import { useTheme } from "@/hooks";
 import { myStore } from "../atoms";
 import Navbar from "./navbar";
 
-const Image = ({
-	src,
-	alt,
-	className,
-	width,
-	height,
-	style,
-}: {
-	src: string | undefined;
-	alt: string;
-	className?: string;
-	width?: number;
-	height?: number;
-	style?: React.CSSProperties;
-}) => <img src={src} alt={alt} className={className} width={width} height={height} style={style} />;
-
 const Sidebar = () => {
 	const [isOpen, setIsOpen] = useAtom(sidebarOpenAtom, { store: myStore });
 	const { isDark } = useTheme();
@@ -46,7 +30,7 @@ const Sidebar = () => {
 	};
 
 	return (
-		<motion.div className="flex flex-col gap-4 justify-start items-center h-full">
+		<motion.div className="flex flex-col gap-4 justify-start items-center h-full mt-4">
 			{renderLogo()}
 			<Navbar />
 			<motion.div animate={{ rotate: isOpen ? 180 : 0 }}>
