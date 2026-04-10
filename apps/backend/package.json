@@ -1,0 +1,9 @@
+{
+  "name": "backend",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf **/__pycache__"
+  }
+}
