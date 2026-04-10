@@ -7,4 +7,5 @@
 
 // ConfirmDialog - A customizable confirmation dialog component
 export { ConfirmDialog, type ConfirmDialogProps } from "./dialog";
+export { Book } from "./icons/book";
 export { Window } from "./window";

@@ -1,7 +1,7 @@
 import { Window } from "@biblepedia/ui";
 import { style } from "@react-spectrum/s2/style" with { type: "macro" };
-import { LayoutGroup, motion } from "motion/react";
-import { Outlet } from "react-router";
+import { AnimatePresence, LayoutGroup, motion } from "motion/react";
+import { Outlet, useLocation } from "react-router";
 import { Sidebar, Topbar } from "@/components";
 
 const styles = {
@@ -25,10 +25,12 @@ const styles = {
 	content: style({
 		backgroundColor: "base",
 		borderRadius: "xl",
+		position: "relative",
 		boxShadow: "emphasized",
 		padding: 20,
 		flex: 1,
 		height: "full",
+		width: "full",
 		gridArea: "content",
 	}),
 	topbar: style({
@@ -43,6 +45,8 @@ const styles = {
 };
 
 export default function Layout() {
+	const { pathname } = useLocation();
+
 	return (
 		<Window>
 			<LayoutGroup>
@@ -56,7 +60,17 @@ export default function Layout() {
 					</div>
 
 					<motion.main layout className={styles.content}>
-						<Outlet />
+						<AnimatePresence mode="wait">
+							<motion.div
+								key={pathname}
+								initial={{ y: -5, opacity: 0 }}
+								animate={{ y: 0, opacity: 1, transition: { ease: "easeInOut" } }}
+								exit={{ y: -5, opacity: 0, transition: { ease: "easeIn" } }}
+								transition={{ duration: 0.3, delay: 0.3 }}
+							>
+								<Outlet />
+							</motion.div>
+						</AnimatePresence>
 					</motion.main>
 					<motion.div className={styles.inspector}>
 						<></>
