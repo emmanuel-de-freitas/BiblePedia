@@ -1,7 +1,4 @@
-"use client";
-
-import { Input } from "@heroui/react";
-import { SearchNormal1 } from "iconsax-reactjs";
+import { SearchField } from "@react-spectrum/s2";
 import { useAtom } from "jotai";
 import { booksAtom } from "@/atoms/books";
 import { searchQueryAtom } from "@/atoms/search";
@@ -22,28 +19,7 @@ const Search = () => {
 		handleSearch(query);
 	};
 
-	return (
-		<form id="search" onSubmit={handleSubmit} className="mx-auto w-80">
-			<div className="relative">
-				<div className="absolute left-3 top-1/2 -translate-y-1/2 text-default-400">
-					<SearchNormal1 size={20} variant="Outline" />
-				</div>
-				<Input
-					className="w-full pl-10"
-					placeholder="Search books, authors, or titles..."
-					name="search"
-					type="search"
-					value={query}
-					onChange={(e) => setQuery(e.target.value)}
-					onKeyDown={(e) => {
-						if (e.key === "Enter") {
-							handleSearch(query);
-						}
-					}}
-				/>
-			</div>
-		</form>
-	);
+	return <SearchField placeholder="Apologists, Bibles, Commentary..." size="L" />;
 };
 
 export default Search;

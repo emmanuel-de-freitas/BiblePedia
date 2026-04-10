@@ -1,8 +1,11 @@
+/// <reference types="vite-plugin-svgr/client" />
+
 declare module "*.css";
 declare module "*.png";
 declare module "*.jpg";
 declare module "*.jpeg";
 declare module "*.svg";
+declare module "*.svg?react";
 declare module "*.gif";
 
 // Augment Vite's ImportMetaEnv with all VITE_-prefixed env vars used in this project.

@@ -1,7 +1,6 @@
 import { useAtom } from "jotai";
 import { motion } from "motion/react";
-import logoDark from "@/assets/app-icon-dark.png";
-import logo from "@/assets/app-icon-light.png";
+import LogoSvg from "@/assets/biblepedia-light.svg?react";
 import { sidebarOpenAtom } from "@/atoms/layout";
 import { IconButton } from "@/components/buttons";
 import { useTheme } from "@/hooks";
@@ -40,12 +39,7 @@ const Sidebar = () => {
 	const renderLogo = () => {
 		return (
 			<div className="flex items-center justify-start w-full gap-2 px-2">
-				<Image
-					className="select-none pointer-events-none"
-					src={isDark ? logoDark : logo}
-					alt="biblepedia"
-					style={{ width: 36, height: 36 }}
-				/>
+				<LogoSvg className="select-none pointer-events-none w-7 h-7 stroke-black dark:stroke-white stroke-2 fill-black dark:fill-white" />
 				{isOpen && renderTitle()}
 			</div>
 		);

@@ -3,10 +3,11 @@ import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
 import macros from "unplugin-parcel-macros";
 import { defineConfig } from "vite";
+import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [macros.vite(), tailwindcss(), reactRouter()],
+	plugins: [macros.vite(), tailwindcss(), reactRouter(), svgr()],
 	resolve: {
 		alias: {
 			"@": path.resolve(__dirname, "./app"),
