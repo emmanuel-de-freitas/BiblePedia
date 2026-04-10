@@ -24,3 +24,6 @@ bun.lockb
 .env.keys
 .idea/
 .types
+
+# python
+__pycache__/
