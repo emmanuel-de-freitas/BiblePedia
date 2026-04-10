@@ -15,7 +15,7 @@
     "setup": "turbo setup",
     "clean": "rm -rf node_modules bun.lock .turbo && turbo clean",
     "desktop": "turbo dev --filter @biblepedia/web --filter @biblepedia/desktop",
-    "dev": "turbo dev --filter @biblepedia/web",
+    "dev": "turbo dev --filter @biblepedia/web --filter @biblepedia/backend",
     "env:decrypt": "turbo decrypt",
     "env:encrypt": "turbo encrypt",
     "env:get": "dotenvx get",
