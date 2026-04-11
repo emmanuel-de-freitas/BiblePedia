@@ -1,5 +1,3 @@
 [install]
 saveTextLockfile = true
 linker = "isolated"
-# Disable loading .env files
-env = false
