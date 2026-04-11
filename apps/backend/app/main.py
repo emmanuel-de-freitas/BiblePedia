@@ -6,6 +6,16 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.routers.commentaries import available_commentaries_router, router as commentaries_router
 from app.routers.datasets import available_datasets_router, router as datasets_router
+from app.routers.sefaria import (
+	calendar_router,
+	index_router,
+	lexicon_router,
+	misc_router,
+	related_router,
+	term_router,
+	text_router,
+	topic_router,
+)
 from app.routers.translations import router as translations_router
 
 logging.basicConfig(
@@ -32,8 +42,19 @@ app.add_middleware(
 	allow_headers=["*"],
 )
 
-# Routers — register specific prefixes BEFORE generic translation routes
-# to avoid /{translation}/{book}/{chapter}.json shadowing /c/... and /d/... paths
+# ── Sefaria proxy routers ─────────────────────────────────────────────────────
+# Registered first so their specific paths take precedence over generic ones.
+app.include_router(text_router, prefix="/api")
+app.include_router(index_router, prefix="/api")
+app.include_router(related_router, prefix="/api")
+app.include_router(calendar_router, prefix="/api")
+app.include_router(lexicon_router, prefix="/api")
+app.include_router(topic_router, prefix="/api")
+app.include_router(term_router, prefix="/api")
+app.include_router(misc_router, prefix="/api")
+
+# ── BiblePedia (helloao.org compatible) routers ───────────────────────────────
+# Register specific prefixes before the generic /{translation}/... catch-all.
 app.include_router(available_commentaries_router, prefix="/api")
 app.include_router(available_datasets_router, prefix="/api")
 app.include_router(commentaries_router, prefix="/api")
