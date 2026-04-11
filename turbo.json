@@ -4,8 +4,12 @@
   "tasks": {
     "setup": {
       "cache": true,
-      "inputs": ["requirements.txt"],
-      "outputs": [".venv/.turbo-installed"]
+      "inputs": [
+        "requirements.txt"
+      ],
+      "outputs": [
+        ".venv/.turbo-installed"
+      ]
     },
     "build": {
       "dependsOn": [
@@ -29,6 +33,18 @@
       "cache": true,
       "outputs": [
         ".react-router/**"
+      ]
+    },
+    "env:decrypt": {
+      "cache": true,
+      "inputs": [
+        ".env.development"
+      ]
+    },
+    "env:encrypt": {
+      "cache": true,
+      "inputs": [
+        ".env.development"
       ]
     },
     "format": {

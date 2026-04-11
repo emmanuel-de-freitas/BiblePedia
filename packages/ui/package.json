@@ -29,6 +29,7 @@
     "clean": "rm -rf node_modules .turbo dist",
     "check": "biome check --write . && tsc --noEmit",
     "format": "biome format --write .",
+    "encrypt": "dotenvx",
     "format:check": "biome format .",
     "lint": "biome lint .",
     "lint:fix": "biome lint --write ."
