@@ -17,6 +17,7 @@ from app.routers.sefaria import (
 	topic_router,
 )
 from app.routers.translations import router as translations_router
+from app.ssl_cert import CERT_FILE, KEY_FILE, generate_ssl_cert
 
 logging.basicConfig(
 	level=logging.DEBUG if settings.is_development else logging.INFO,
@@ -25,12 +26,17 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
+# Generate certs at import time so they exist before the server binds.
+if settings.is_development:
+	generate_ssl_cert()
+
 app = FastAPI(
 	title="BiblePedia API",
 	description="Bible API compatible with bible.helloao.org",
 	version="1.0.0",
 	docs_url="/docs",
 	redoc_url="/redoc",
+	lifespan=lifespan,
 )
 
 # CORS
@@ -70,3 +76,16 @@ async def health() -> dict[str, str]:
 @app.get("/", tags=["Health"], include_in_schema=False)
 async def root() -> dict[str, str]:
 	return {"message": "BiblePedia API — see /docs for API reference"}
+
+
+if __name__ == "__main__":
+	import uvicorn
+
+	uvicorn.run(
+		"app.main:app",
+		host="0.0.0.0",
+		port=8000,
+		reload=True,
+		ssl_certfile=str(CERT_FILE),
+		ssl_keyfile=str(KEY_FILE),
+	)

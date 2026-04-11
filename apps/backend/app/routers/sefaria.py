@@ -92,40 +92,33 @@ async def get_text_versions(index: str, request: Request) -> Any:
 	return await _get(f"/api/texts/versions/{index}", dict(request.query_params))
 
 
+_ALLOWED_LANGS = {"en", "he"}
+
+
 @text_router.get(
 	"/texts/translations",
 	summary="Languages",
-	description="Returns the list of all translation languages available in Sefaria.",
+	description="Returns translation languages available in Sefaria, restricted to English (`en`) and Hebrew (`he`).",
 )
 async def get_translations(request: Request) -> Any:
-	return await _get("/api/texts/translations", dict(request.query_params))
+	data = await _get("/api/texts/translations", dict(request.query_params))
+	if isinstance(data, list):
+		return [item for item in data if item.get("iso_code", item.get("language", "")) in _ALLOWED_LANGS]
+	return data
 
 
 @text_router.get(
 	"/texts/translations/{lang}",
 	summary="Translations",
-	description="Returns all translations available in Sefaria for a given ISO 639-1 language code.",
+	description="Returns all translations for a language. Only `en` (English) and `he` (Hebrew) are supported.",
 )
 async def get_translations_by_lang(lang: str, request: Request) -> Any:
+	if lang not in _ALLOWED_LANGS:
+		raise HTTPException(
+			status_code=status.HTTP_404_NOT_FOUND,
+			detail=f"Language '{lang}' is not available. Supported languages: en, he.",
+		)
 	return await _get(f"/api/texts/translations/{lang}", dict(request.query_params))
-
-
-@text_router.get(
-	"/texts/random",
-	summary="Random Text",
-	description="Returns a random text. Optional `titles` and `categories` query params to constrain the pool.",
-)
-async def get_random_text(request: Request) -> Any:
-	return await _get("/api/texts/random", dict(request.query_params))
-
-
-@text_router.get(
-	"/texts/random-by-topic",
-	summary="Random Text by Topic",
-	description="Returns a random text associated with a random topic.",
-)
-async def get_random_by_topic(request: Request) -> Any:
-	return await _get("/api/texts/random-by-topic", dict(request.query_params))
 
 
 @text_router.get(
