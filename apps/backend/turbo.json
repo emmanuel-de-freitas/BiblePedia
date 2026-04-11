@@ -1,0 +1,29 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "postinstall": {
+      "dependsOn": ["setup"],
+      "cache": false
+    },
+    "db:pull": {
+      "cache": false
+    },
+    "db:start": {
+      "dependsOn": ["db:pull"],
+      "cache": false
+    },
+    "dev": {
+      "dependsOn": ["db:start"],
+      "cache": false,
+      "persistent": true
+    },
+    "db:stop": {
+      "cache": false
+    },
+    "stop": {
+      "dependsOn": ["db:stop"],
+      "cache": false
+    }
+  }
+}
