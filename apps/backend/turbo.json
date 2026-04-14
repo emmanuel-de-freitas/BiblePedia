@@ -1,28 +1,40 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "extends": ["//"],
+  "extends": [
+    "//"
+  ],
   "tasks": {
     "postinstall": {
-      "dependsOn": ["setup"],
+      "dependsOn": [
+        "setup"
+      ],
       "cache": false
     },
     "db:pull": {
       "cache": false
     },
+    "build": {
+      "dependsOn": [
+        "db:pull"
+      ]
+    },
     "db:start": {
-      "dependsOn": ["db:pull"],
       "cache": false
     },
     "dev": {
-      "dependsOn": ["db:start"],
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "dependsOn": [
+        "db:start"
+      ]
     },
     "db:stop": {
       "cache": false
     },
     "stop": {
-      "dependsOn": ["db:stop"],
+      "dependsOn": [
+        "db:stop"
+      ],
       "cache": false
     }
   }

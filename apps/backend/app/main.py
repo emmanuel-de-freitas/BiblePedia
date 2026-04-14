@@ -4,48 +4,51 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
-from app.routers.commentaries import available_commentaries_router, router as commentaries_router
-from app.routers.datasets import available_datasets_router, router as datasets_router
+from app.routers.commentaries import available_commentaries_router
+from app.routers.commentaries import router as commentaries_router
+from app.routers.datasets import available_datasets_router
+from app.routers.datasets import router as datasets_router
+from app.routers.epub import router as epub_router
+from app.routers.library import router as library_router
 from app.routers.sefaria import (
-	calendar_router,
-	index_router,
-	lexicon_router,
-	misc_router,
-	related_router,
-	term_router,
-	text_router,
-	topic_router,
+    calendar_router,
+    index_router,
+    lexicon_router,
+    misc_router,
+    related_router,
+    term_router,
+    text_router,
+    topic_router,
 )
 from app.routers.translations import router as translations_router
 from app.ssl_cert import CERT_FILE, KEY_FILE, generate_ssl_cert
 
 logging.basicConfig(
-	level=logging.DEBUG if settings.is_development else logging.INFO,
-	format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+    level=logging.DEBUG if settings.is_development else logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
 )
 
 logger = logging.getLogger(__name__)
 
 # Generate certs at import time so they exist before the server binds.
 if settings.is_development:
-	generate_ssl_cert()
+    generate_ssl_cert()
 
 app = FastAPI(
-	title="BiblePedia API",
-	description="Bible API compatible with bible.helloao.org",
-	version="1.0.0",
-	docs_url="/docs",
-	redoc_url="/redoc",
-	lifespan=lifespan,
+    title="BiblePedia API",
+    description="Bible API compatible with bible.helloao.org",
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc",
 )
 
 # CORS
 app.add_middleware(
-	CORSMiddleware,
-	allow_origins=settings.cors_origins_list,
-	allow_credentials=True,
-	allow_methods=["*"],
-	allow_headers=["*"],
+    CORSMiddleware,
+    allow_origins=settings.cors_origins_list,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # ── Sefaria proxy routers ─────────────────────────────────────────────────────
@@ -66,26 +69,28 @@ app.include_router(available_datasets_router, prefix="/api")
 app.include_router(commentaries_router, prefix="/api")
 app.include_router(datasets_router, prefix="/api")
 app.include_router(translations_router, prefix="/api")
+app.include_router(epub_router, prefix="/api")
+app.include_router(library_router, prefix="/api")
 
 
 @app.get("/health", tags=["Health"])
 async def health() -> dict[str, str]:
-	return {"status": "ok"}
+    return {"status": "ok"}
 
 
 @app.get("/", tags=["Health"], include_in_schema=False)
 async def root() -> dict[str, str]:
-	return {"message": "BiblePedia API — see /docs for API reference"}
+    return {"message": "BiblePedia API — see /docs for API reference"}
 
 
 if __name__ == "__main__":
-	import uvicorn
+    import uvicorn
 
-	uvicorn.run(
-		"app.main:app",
-		host="0.0.0.0",
-		port=8000,
-		reload=True,
-		ssl_certfile=str(CERT_FILE),
-		ssl_keyfile=str(KEY_FILE),
-	)
+    uvicorn.run(
+        "app.main:app",
+        port=8000,
+        reload=True,
+        use_colors=true,
+        ssl_certfile=str(CERT_FILE),
+        ssl_keyfile=str(KEY_FILE),
+    )

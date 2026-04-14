@@ -18,7 +18,7 @@ const TitleBar = () => {
 	return (
 		<div className="flex w-full h-full items-center select-none justify-center px-4 electrobun-webkit-app-region-drag">
 			<span className="text-xs font-medium capitalize tracking-tight">
-				BiblePedia&copy; | {title}
+				Exegia&copy; | {title}
 			</span>
 		</div>
 	);

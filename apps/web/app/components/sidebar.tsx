@@ -1,11 +1,16 @@
+import { style } from "@react-spectrum/s2/style" with { type: "macro" };
 import { useAtom } from "jotai";
 import { motion } from "motion/react";
-import LogoSvg from "@/assets/biblepedia-light.svg?react";
+import LogoSvg from "@/assets/app-icon-dark.svg?react";
 import { sidebarOpenAtom } from "@/atoms/layout";
 import { IconButton } from "@/components/buttons";
 import { useTheme } from "@/hooks";
 import { myStore } from "../atoms";
 import Navbar from "./navbar";
+
+const styles = {
+	logo: style({ width: 64, height: 64, backgroundColor: "transparent" }),
+};
 
 const Sidebar = () => {
 	const [isOpen, setIsOpen] = useAtom(sidebarOpenAtom, { store: myStore });
@@ -22,15 +27,15 @@ const Sidebar = () => {
 
 	const renderLogo = () => {
 		return (
-			<div className="flex items-center justify-start w-full gap-2 px-2">
-				<LogoSvg className="select-none pointer-events-none w-7 h-7 stroke-black dark:stroke-white stroke-2 fill-black dark:fill-white" />
+			<div className="flex items-center justify-start w-full gap-2 px-2 bg-transparent">
+				<LogoSvg className="w-11 h-11 fill-indigo-900 dark:fill-indigo-50" />
 				{isOpen && renderTitle()}
 			</div>
 		);
 	};
 
 	return (
-		<motion.div className="flex flex-col gap-4 justify-start items-center h-full mt-4">
+		<motion.div className="flex flex-col gap-4 justify-start items-center h-full">
 			{renderLogo()}
 			<Navbar />
 			<motion.div animate={{ rotate: isOpen ? 180 : 0 }}>

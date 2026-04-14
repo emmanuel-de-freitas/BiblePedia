@@ -13,9 +13,9 @@ const Heading = ({ children, level, className }: HeadingProps) => {
 	const styles = useMemo(
 		() => ({
 			1: "text-4xl font-sans font-bold my-2 capitalize select-none",
-			2: "text-3xl font-serif font-semibold capitalize select-none",
-			3: "text-2xl font-serif font-bold my-0 capitalize select-none",
-			4: "text-xl font-serif font-normal my-1 capitalize select-none",
+			2: "text-3xl font-sans font-semibold capitalize select-none",
+			3: "text-2xl font-sans font-bold my-0 capitalize select-none",
+			4: "text-xl font-sans font-normal my-1 capitalize select-none",
 			5: "text-lg font-sans font-normal capitalize select-none",
 			6: "text-base font-sans font-normal select-none",
 		}),

@@ -6,8 +6,8 @@
     "setup": "python3 -m venv .venv && .venv/bin/pip install --quiet -r requirements.txt && touch .venv/.turbo-installed",
     "build": "docker build -t biblepedia-backend .",
     "dev": ".venv/bin/python -m app.main",
-    "db:start": "supabase status > /dev/null 2>&1 || dotenvx run -f .env.development -- supabase start",
-    "db:stop": "dotenvx run -f .env.development -- supabase stop",
+    "db:start": "supabase status > /dev/null 2>&1 || dotenvx run -fk ../../.env.keys -f .env.development -- supabase start",
+    "db:stop": "supabase stop",
     "stop": "pkill -f 'app.main' || true",
     "db:reset": "supabase db reset",
     "db:migrate": "supabase migration up",
@@ -20,5 +20,8 @@
     "pgadmin": "docker compose up -d",
     "pgadmin:stop": "docker compose down",
     "clean": "rm -rf .venv **/__pycache__ .ruff_cache"
+  },
+  "dependencies": {
+    "supabase": "^2.90.0"
   }
 }
