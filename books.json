@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-09-02T10:16:35Z",
+ "generated_at": "2026-10-02T11:38:51Z",
  "bucket": "gs://sefaria-export",
  "base_url": "https://storage.googleapis.com/sefaria-export",
- "total_texts": 19754,
+ "total_texts": 19815,
  "special_files": [
   {
    "path": "last_export.txt",
@@ -12,102 +12,102 @@
   {
    "path": "links/links0.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links0.csv",
-   "size": 34773927
+   "size": 34906234
   },
   {
    "path": "links/links1.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links1.csv",
-   "size": 36857859
+   "size": 36908425
   },
   {
    "path": "links/links10.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links10.csv",
-   "size": 44463567
+   "size": 43911362
   },
   {
    "path": "links/links11.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links11.csv",
-   "size": 40665390
+   "size": 40586178
   },
   {
    "path": "links/links12.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links12.csv",
-   "size": 44939856
+   "size": 44708721
   },
   {
    "path": "links/links13.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links13.csv",
-   "size": 47039977
+   "size": 48799861
   },
   {
    "path": "links/links14.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links14.csv",
-   "size": 39273719
+   "size": 38436321
   },
   {
    "path": "links/links15.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links15.csv",
-   "size": 36331056
+   "size": 36587796
   },
   {
    "path": "links/links16.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links16.csv",
-   "size": 34760347
+   "size": 37900299
   },
   {
    "path": "links/links2.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links2.csv",
-   "size": 39598515
+   "size": 39712486
   },
   {
    "path": "links/links3.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links3.csv",
-   "size": 41720808
+   "size": 41620837
   },
   {
    "path": "links/links4.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links4.csv",
-   "size": 38075652
+   "size": 38146835
   },
   {
    "path": "links/links5.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links5.csv",
-   "size": 38116648
+   "size": 38414071
   },
   {
    "path": "links/links6.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links6.csv",
-   "size": 34749415
+   "size": 34639855
   },
   {
    "path": "links/links7.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links7.csv",
-   "size": 38494713
+   "size": 38714215
   },
   {
    "path": "links/links8.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links8.csv",
-   "size": 42415281
+   "size": 41653660
   },
   {
    "path": "links/links9.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links9.csv",
-   "size": 44674940
+   "size": 45050982
   },
   {
    "path": "links/links_by_book.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links_by_book.csv",
-   "size": 13987163
+   "size": 14003115
   },
   {
    "path": "links/links_by_book_without_commentary.csv",
    "url": "https://storage.googleapis.com/sefaria-export/links/links_by_book_without_commentary.csv",
-   "size": 13682276
+   "size": 13698227
   },
   {
    "path": "misc/topic_graph.csv",
    "url": "https://storage.googleapis.com/sefaria-export/misc/topic_graph.csv",
-   "size": 15603804
+   "size": 15670660
   },
   {
    "path": "schemas/A_Dictionary_of_the_Talmud.json",
@@ -5727,7 +5727,7 @@
   {
    "path": "schemas/Deuteronomy.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/Deuteronomy.json",
-   "size": 36055
+   "size": 36264
   },
   {
    "path": "schemas/Devarim_Nichumim_on_Lamentations.json",
@@ -6902,7 +6902,7 @@
   {
    "path": "schemas/Genesis.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/Genesis.json",
-   "size": 38291
+   "size": 38500
   },
   {
    "path": "schemas/German_Commentary,_Introduction.json",
@@ -12767,7 +12767,7 @@
   {
    "path": "schemas/Lessons_in_Leadership;_A_Weekly_Reading_of_the_Jewish_Bible.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/Lessons_in_Leadership;_A_Weekly_Reading_of_the_Jewish_Bible.json",
-   "size": 55751
+   "size": 55747
   },
   {
    "path": "schemas/Lessons_in_Leadership;_Hebrew_Edition.json",
@@ -15042,7 +15042,7 @@
   {
    "path": "schemas/Meir_Ayin_on_Seder_Olam_Rabbah.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/Meir_Ayin_on_Seder_Olam_Rabbah.json",
-   "size": 4788
+   "size": 4819
   },
   {
    "path": "schemas/Meiri_on_Avodah_Zarah.json",
@@ -15207,7 +15207,7 @@
   {
    "path": "schemas/Mekhilta_DeRabbi_Yishmael.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/Mekhilta_DeRabbi_Yishmael.json",
-   "size": 57421
+   "size": 57578
   },
   {
    "path": "schemas/Mekhir_Yayin_on_Esther.json",
@@ -20670,6 +20670,11 @@
    "size": 154175
   },
   {
+   "path": "schemas/Peninei_Halakhah,_Emunah_Umitzvoteha.json",
+   "url": "https://storage.googleapis.com/sefaria-export/schemas/Peninei_Halakhah,_Emunah_Umitzvoteha.json",
+   "size": 418280
+  },
+  {
    "path": "schemas/Peninei_Halakhah,_Family.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/Peninei_Halakhah,_Family.json",
    "size": 200235
@@ -20683,6 +20688,11 @@
    "path": "schemas/Peninei_Halakhah,_Festivals.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/Peninei_Halakhah,_Festivals.json",
    "size": 159687
+  },
+  {
+   "path": "schemas/Peninei_Halakhah,_Giyur.json",
+   "url": "https://storage.googleapis.com/sefaria-export/schemas/Peninei_Halakhah,_Giyur.json",
+   "size": 115997
   },
   {
    "path": "schemas/Peninei_Halakhah,_Kashrut.json",
@@ -21757,7 +21767,7 @@
   {
    "path": "schemas/Rabbi_Sacks_on_Rosh_HaShana_Mahzor.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/Rabbi_Sacks_on_Rosh_HaShana_Mahzor.json",
-   "size": 57030
+   "size": 59089
   },
   {
    "path": "schemas/Rabbi_Sacks_on_Siddur.json",
@@ -21767,7 +21777,7 @@
   {
    "path": "schemas/Rabbi_Sacks_on_Yom_Kippur_Mahzor.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/Rabbi_Sacks_on_Yom_Kippur_Mahzor.json",
-   "size": 53909
+   "size": 55390
   },
   {
    "path": "schemas/Rabbinic_Authority_I.json",
@@ -24322,7 +24332,7 @@
   {
    "path": "schemas/Seder_Olam_Rabbah.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/Seder_Olam_Rabbah.json",
-   "size": 6102
+   "size": 5238
   },
   {
    "path": "schemas/Seder_Olam_Zutta.json",
@@ -25852,7 +25862,7 @@
   {
    "path": "schemas/Shibbolei_HaLeket.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/Shibbolei_HaLeket.json",
-   "size": 62207
+   "size": 62355
   },
   {
    "path": "schemas/Shibolei_HaLeket_on_Pesach_Haggadah.json",
@@ -28322,17 +28332,17 @@
   {
    "path": "schemas/The_Koren_Rosh_HaShana_Mahzor;_Ashkenaz.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/The_Koren_Rosh_HaShana_Mahzor;_Ashkenaz.json",
-   "size": 75543
+   "size": 77423
   },
   {
    "path": "schemas/The_Koren_Shalem_Siddur;_Ashkenaz.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/The_Koren_Shalem_Siddur;_Ashkenaz.json",
-   "size": 162331
+   "size": 164531
   },
   {
    "path": "schemas/The_Koren_Yom_Kippur_Mahzor;_Ashkenaz.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/The_Koren_Yom_Kippur_Mahzor;_Ashkenaz.json",
-   "size": 78463
+   "size": 80170
   },
   {
    "path": "schemas/The_Midrash_of_Philo.json",
@@ -31382,7 +31392,7 @@
   {
    "path": "schemas/Vilna_Gaon_on_Seder_Olam_Rabbah.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/Vilna_Gaon_on_Seder_Olam_Rabbah.json",
-   "size": 7290
+   "size": 6152
   },
   {
    "path": "schemas/Weekday_Siddur_Chabad.json",
@@ -31432,7 +31442,7 @@
   {
    "path": "schemas/Yaakov_Emden_on_Seder_Olam_Rabbah.json",
    "url": "https://storage.googleapis.com/sefaria-export/schemas/Yaakov_Emden_on_Seder_Olam_Rabbah.json",
-   "size": 5977
+   "size": 6008
   },
   {
    "path": "schemas/Yachin_on_Mishnah_Arakhin.json",
@@ -33117,7 +33127,7 @@
   {
    "path": "table_of_contents.json",
    "url": "https://storage.googleapis.com/sefaria-export/table_of_contents.json",
-   "size": 10820059
+   "size": 10822534
   }
  ],
  "books": [
@@ -35766,6 +35776,19 @@
   {
    "title": "Amos",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Amos/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Amos/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Amos/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Amos/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Amos",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -37524,6 +37547,38 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Halakhah/Mishneh Torah/Commentary/Annotations of Maharatz Chajes/Sefer Shoftim/Annotations of Maharatz Chajes on Mishneh Torah, Rebels/Hebrew/merged.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Halakhah/Mishneh Torah/Commentary/Annotations of Maharatz Chajes/Sefer Shoftim/Annotations of Maharatz Chajes on Mishneh Torah, Rebels/Hebrew/merged.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Halakhah/Mishneh Torah/Commentary/Annotations of Maharatz Chajes/Sefer Shoftim/Annotations of Maharatz Chajes on Mishneh Torah, Rebels/Hebrew/merged.json"
+  },
+  {
+   "title": "Annotations of Maharatz Chajes on Mishneh Torah, Repentance",
+   "language": "English",
+   "versionTitle": "Sefaria Community Translation",
+   "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Annotations of Maharatz Chajes",
+    "Sefer Madda"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Halakhah/Mishneh Torah/Commentary/Annotations of Maharatz Chajes/Sefer Madda/Annotations of Maharatz Chajes on Mishneh Torah, Repentance/English/Sefaria Community Translation.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Halakhah/Mishneh Torah/Commentary/Annotations of Maharatz Chajes/Sefer Madda/Annotations of Maharatz Chajes on Mishneh Torah, Repentance/English/Sefaria Community Translation.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Halakhah/Mishneh Torah/Commentary/Annotations of Maharatz Chajes/Sefer Madda/Annotations of Maharatz Chajes on Mishneh Torah, Repentance/English/Sefaria Community Translation.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Halakhah/Mishneh Torah/Commentary/Annotations of Maharatz Chajes/Sefer Madda/Annotations of Maharatz Chajes on Mishneh Torah, Repentance/English/Sefaria Community Translation.json"
+  },
+  {
+   "title": "Annotations of Maharatz Chajes on Mishneh Torah, Repentance",
+   "language": "English",
+   "versionTitle": "merged",
+   "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Annotations of Maharatz Chajes",
+    "Sefer Madda"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Halakhah/Mishneh Torah/Commentary/Annotations of Maharatz Chajes/Sefer Madda/Annotations of Maharatz Chajes on Mishneh Torah, Repentance/English/merged.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Halakhah/Mishneh Torah/Commentary/Annotations of Maharatz Chajes/Sefer Madda/Annotations of Maharatz Chajes on Mishneh Torah, Repentance/English/merged.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Halakhah/Mishneh Torah/Commentary/Annotations of Maharatz Chajes/Sefer Madda/Annotations of Maharatz Chajes on Mishneh Torah, Repentance/English/merged.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Halakhah/Mishneh Torah/Commentary/Annotations of Maharatz Chajes/Sefer Madda/Annotations of Maharatz Chajes on Mishneh Torah, Repentance/English/merged.json"
   },
   {
    "title": "Annotations of Maharatz Chajes on Mishneh Torah, Repentance",
@@ -69786,6 +69841,38 @@
   },
   {
    "title": "Chidushei Agadot on Makkot",
+   "language": "English",
+   "versionTitle": "Sefaria Community Translation",
+   "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Agadot",
+    "Seder Nezikin"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Talmud/Bavli/Acharonim on Talmud/Chidushei Agadot/Seder Nezikin/Chidushei Agadot on Makkot/English/Sefaria Community Translation.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Talmud/Bavli/Acharonim on Talmud/Chidushei Agadot/Seder Nezikin/Chidushei Agadot on Makkot/English/Sefaria Community Translation.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Talmud/Bavli/Acharonim on Talmud/Chidushei Agadot/Seder Nezikin/Chidushei Agadot on Makkot/English/Sefaria Community Translation.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Talmud/Bavli/Acharonim on Talmud/Chidushei Agadot/Seder Nezikin/Chidushei Agadot on Makkot/English/Sefaria Community Translation.json"
+  },
+  {
+   "title": "Chidushei Agadot on Makkot",
+   "language": "English",
+   "versionTitle": "merged",
+   "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Agadot",
+    "Seder Nezikin"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Talmud/Bavli/Acharonim on Talmud/Chidushei Agadot/Seder Nezikin/Chidushei Agadot on Makkot/English/merged.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Talmud/Bavli/Acharonim on Talmud/Chidushei Agadot/Seder Nezikin/Chidushei Agadot on Makkot/English/merged.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Talmud/Bavli/Acharonim on Talmud/Chidushei Agadot/Seder Nezikin/Chidushei Agadot on Makkot/English/merged.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Talmud/Bavli/Acharonim on Talmud/Chidushei Agadot/Seder Nezikin/Chidushei Agadot on Makkot/English/merged.json"
+  },
+  {
+   "title": "Chidushei Agadot on Makkot",
    "language": "Hebrew",
    "versionTitle": "Chidushei Agadot on Makkot  Daf 10b",
    "categories": [
@@ -79700,6 +79787,19 @@
   {
    "title": "Daniel",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Writings/Daniel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Daniel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Daniel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Daniel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Daniel",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -81056,6 +81156,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Torah/Deuteronomy/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Torah/Deuteronomy/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Torah/Deuteronomy/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Deuteronomy",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Torah"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Torah/Deuteronomy/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Torah/Deuteronomy/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Torah/Deuteronomy/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Torah/Deuteronomy/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Deuteronomy",
@@ -83067,6 +83180,20 @@
   },
   {
    "title": "Duties of the Heart",
+   "language": "English",
+   "versionTitle": "ב״א",
+   "categories": [
+    "Jewish Thought",
+    "Rishonim",
+    "Duties of the Heart"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Jewish Thought/Rishonim/Duties of the Heart/Duties of the Heart/English/ב״א.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Jewish Thought/Rishonim/Duties of the Heart/Duties of the Heart/English/ב״א.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Jewish Thought/Rishonim/Duties of the Heart/Duties of the Heart/English/ב״א.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Jewish Thought/Rishonim/Duties of the Heart/Duties of the Heart/English/ב״א.json"
+  },
+  {
+   "title": "Duties of the Heart",
    "language": "Hebrew",
    "versionTitle": "Chovat Halevavot, Amsterdam 1768.",
    "categories": [
@@ -83265,6 +83392,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Ecclesiastes/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Ecclesiastes/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Ecclesiastes/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Ecclesiastes",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Writings/Ecclesiastes/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Ecclesiastes/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Ecclesiastes/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Ecclesiastes/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Ecclesiastes",
@@ -87219,6 +87359,19 @@
   {
    "title": "Esther",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Writings/Esther/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Esther/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Esther/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Esther/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Esther",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -90220,6 +90373,19 @@
   {
    "title": "Exodus",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Torah"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Torah/Exodus/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Torah/Exodus/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Torah/Exodus/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Torah/Exodus/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Exodus",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -90584,6 +90750,19 @@
   {
    "title": "Ezekiel",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Ezekiel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Ezekiel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Ezekiel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Ezekiel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Ezekiel",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -90829,6 +91008,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Ezra/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Ezra/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Ezra/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Ezra",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Writings/Ezra/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Ezra/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Ezra/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Ezra/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Ezra",
@@ -91864,6 +92056,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Torah/Genesis/English/Tanach Completo em Português [pt].txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Torah/Genesis/English/Tanach Completo em Português [pt].json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Torah/Genesis/English/Tanach Completo em Português [pt].json"
+  },
+  {
+   "title": "Genesis",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Torah"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Torah/Genesis/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Torah/Genesis/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Torah/Genesis/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Torah/Genesis/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Genesis",
@@ -96269,6 +96474,19 @@
   {
    "title": "Guide for the Perplexed",
    "language": "English",
+   "versionTitle": "Friedlander 1903, revised",
+   "categories": [
+    "Jewish Thought",
+    "Rishonim"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Jewish Thought/Rishonim/Guide for the Perplexed/English/Friedlander 1903, revised.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Jewish Thought/Rishonim/Guide for the Perplexed/English/Friedlander 1903, revised.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Jewish Thought/Rishonim/Guide for the Perplexed/English/Friedlander 1903, revised.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Jewish Thought/Rishonim/Guide for the Perplexed/English/Friedlander 1903, revised.json"
+  },
+  {
+   "title": "Guide for the Perplexed",
+   "language": "English",
    "versionTitle": "Guide des égarés, trans. by Salomon Munk, Paris, 1856 [fr]",
    "categories": [
     "Jewish Thought",
@@ -98791,6 +99009,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Habakkuk/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Habakkuk/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Habakkuk/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Habakkuk",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Habakkuk/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Habakkuk/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Habakkuk/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Habakkuk/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Habakkuk",
@@ -105107,6 +105338,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Haggai/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Haggai/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Haggai/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Haggai",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Haggai/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Haggai/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Haggai/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Haggai/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Haggai",
@@ -111947,6 +112191,19 @@
   {
    "title": "Hosea",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Hosea/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Hosea/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Hosea/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Hosea/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Hosea",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -112250,6 +112507,19 @@
   {
    "title": "I Chronicles",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Writings/I Chronicles/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/I Chronicles/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/I Chronicles/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/I Chronicles/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "I Chronicles",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -112506,6 +112776,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/I Kings/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/I Kings/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/I Kings/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "I Kings",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/I Kings/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/I Kings/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/I Kings/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/I Kings/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "I Kings",
@@ -112770,6 +113053,19 @@
   {
    "title": "I Samuel",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/I Samuel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/I Samuel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/I Samuel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/I Samuel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "I Samuel",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -113017,6 +113313,19 @@
   {
    "title": "II Chronicles",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Writings/II Chronicles/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/II Chronicles/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/II Chronicles/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/II Chronicles/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "II Chronicles",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -113260,6 +113569,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/II Kings/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/II Kings/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/II Kings/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "II Kings",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/II Kings/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/II Kings/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/II Kings/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/II Kings/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "II Kings",
@@ -113533,6 +113855,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/II Samuel/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/II Samuel/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/II Samuel/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "II Samuel",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/II Samuel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/II Samuel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/II Samuel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/II Samuel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "II Samuel",
@@ -119704,6 +120039,19 @@
   {
    "title": "Isaiah",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Isaiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Isaiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Isaiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Isaiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Isaiah",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -120107,6 +120455,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Jeremiah/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Jeremiah/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Jeremiah/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Jeremiah",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Jeremiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Jeremiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Jeremiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Jeremiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Jeremiah",
@@ -124556,6 +124917,19 @@
   {
    "title": "Job",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Writings/Job/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Job/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Job/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Job/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Job",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -124790,6 +125164,19 @@
   {
    "title": "Joel",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Joel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Joel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Joel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Joel/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Joel",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -124972,6 +125359,19 @@
   {
    "title": "Jonah",
    "language": "English",
+   "versionTitle": "Jonah; Based on Malbim. Trans. M Atlas, 2026",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Jonah/English/Jonah; Based on Malbim. Trans. M Atlas, 2026.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Jonah/English/Jonah; Based on Malbim. Trans. M Atlas, 2026.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Jonah/English/Jonah; Based on Malbim. Trans. M Atlas, 2026.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Jonah/English/Jonah; Based on Malbim. Trans. M Atlas, 2026.json"
+  },
+  {
+   "title": "Jonah",
+   "language": "English",
    "versionTitle": "La Bible, Traduction Nouvelle, Samuel Cahen, 1831 [fr]",
    "categories": [
     "Tanakh",
@@ -125046,6 +125446,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Jonah/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Jonah/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Jonah/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Jonah",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Jonah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Jonah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Jonah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Jonah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Jonah",
@@ -125396,6 +125809,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Joshua/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Joshua/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Joshua/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Joshua",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Joshua/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Joshua/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Joshua/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Joshua/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Joshua",
@@ -125754,6 +126180,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Judges/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Judges/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Judges/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Judges",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Judges/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Judges/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Judges/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Judges/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Judges",
@@ -138923,6 +139362,19 @@
   {
    "title": "Lamentations",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Writings/Lamentations/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Lamentations/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Lamentations/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Lamentations/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Lamentations",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -144407,6 +144859,19 @@
   {
    "title": "Leviticus",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Torah"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Torah/Leviticus/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Torah/Leviticus/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Torah/Leviticus/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Torah/Leviticus/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Leviticus",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -146092,6 +146557,32 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Liturgy/Other Liturgy Works/Ma'aneh Lashon Chabad/Hebrew/merged.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Liturgy/Other Liturgy Works/Ma'aneh Lashon Chabad/Hebrew/merged.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Liturgy/Other Liturgy Works/Ma'aneh Lashon Chabad/Hebrew/merged.json"
+  },
+  {
+   "title": "Ma'arekhet HaElokut",
+   "language": "English",
+   "versionTitle": "Sefaria Community Translation",
+   "categories": [
+    "Kabbalah",
+    "Other Kabbalah Works"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Kabbalah/Other Kabbalah Works/Ma'arekhet HaElokut/English/Sefaria Community Translation.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Kabbalah/Other Kabbalah Works/Ma'arekhet HaElokut/English/Sefaria Community Translation.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Kabbalah/Other Kabbalah Works/Ma'arekhet HaElokut/English/Sefaria Community Translation.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Kabbalah/Other Kabbalah Works/Ma'arekhet HaElokut/English/Sefaria Community Translation.json"
+  },
+  {
+   "title": "Ma'arekhet HaElokut",
+   "language": "English",
+   "versionTitle": "merged",
+   "categories": [
+    "Kabbalah",
+    "Other Kabbalah Works"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Kabbalah/Other Kabbalah Works/Ma'arekhet HaElokut/English/merged.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Kabbalah/Other Kabbalah Works/Ma'arekhet HaElokut/English/merged.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Kabbalah/Other Kabbalah Works/Ma'arekhet HaElokut/English/merged.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Kabbalah/Other Kabbalah Works/Ma'arekhet HaElokut/English/merged.json"
   },
   {
    "title": "Ma'arekhet HaElokut",
@@ -153225,6 +153716,19 @@
   {
    "title": "Malachi",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Malachi/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Malachi/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Malachi/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Malachi/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Malachi",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -154736,6 +155240,36 @@
   },
   {
    "title": "Malbim on Hosea",
+   "language": "English",
+   "versionTitle": "Trans. Betzalel Avraham Feinstein, 2026",
+   "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Hosea/English/Trans. Betzalel Avraham Feinstein, 2026.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Hosea/English/Trans. Betzalel Avraham Feinstein, 2026.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Hosea/English/Trans. Betzalel Avraham Feinstein, 2026.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Hosea/English/Trans. Betzalel Avraham Feinstein, 2026.json"
+  },
+  {
+   "title": "Malbim on Hosea",
+   "language": "English",
+   "versionTitle": "merged",
+   "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Hosea/English/merged.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Hosea/English/merged.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Hosea/English/merged.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Hosea/English/merged.json"
+  },
+  {
+   "title": "Malbim on Hosea",
    "language": "Hebrew",
    "versionTitle": "Malbim on Hosea--Wikisource",
    "categories": [
@@ -155502,6 +156036,21 @@
   {
    "title": "Malbim on Joshua",
    "language": "English",
+   "versionTitle": "Trans. Betzalel Avraham Feinstein, 2026",
+   "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Joshua/English/Trans. Betzalel Avraham Feinstein, 2026.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Joshua/English/Trans. Betzalel Avraham Feinstein, 2026.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Joshua/English/Trans. Betzalel Avraham Feinstein, 2026.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Joshua/English/Trans. Betzalel Avraham Feinstein, 2026.json"
+  },
+  {
+   "title": "Malbim on Joshua",
+   "language": "English",
    "versionTitle": "merged",
    "categories": [
     "Tanakh",
@@ -155768,6 +156317,21 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Micah/English/Sefaria Community Translation.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Micah/English/Sefaria Community Translation.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Micah/English/Sefaria Community Translation.json"
+  },
+  {
+   "title": "Malbim on Micah",
+   "language": "English",
+   "versionTitle": "Trans. Betzalel Avraham Feinstein, 2026",
+   "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Micah/English/Trans. Betzalel Avraham Feinstein, 2026.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Micah/English/Trans. Betzalel Avraham Feinstein, 2026.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Micah/English/Trans. Betzalel Avraham Feinstein, 2026.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Acharonim on Tanakh/Malbim/Prophets/Malbim on Micah/English/Trans. Betzalel Avraham Feinstein, 2026.json"
   },
   {
    "title": "Malbim on Micah",
@@ -156068,6 +156632,21 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Acharonim on Tanakh/Malbim/Writings/Malbim on Proverbs/English/Sefaria Community Translation.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Acharonim on Tanakh/Malbim/Writings/Malbim on Proverbs/English/Sefaria Community Translation.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Acharonim on Tanakh/Malbim/Writings/Malbim on Proverbs/English/Sefaria Community Translation.json"
+  },
+  {
+   "title": "Malbim on Proverbs",
+   "language": "English",
+   "versionTitle": "Trans. Betzalel Avraham Feinstein, 2026",
+   "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Acharonim on Tanakh/Malbim/Writings/Malbim on Proverbs/English/Trans. Betzalel Avraham Feinstein, 2026.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Acharonim on Tanakh/Malbim/Writings/Malbim on Proverbs/English/Trans. Betzalel Avraham Feinstein, 2026.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Acharonim on Tanakh/Malbim/Writings/Malbim on Proverbs/English/Trans. Betzalel Avraham Feinstein, 2026.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Acharonim on Tanakh/Malbim/Writings/Malbim on Proverbs/English/Trans. Betzalel Avraham Feinstein, 2026.json"
   },
   {
    "title": "Malbim on Proverbs",
@@ -166341,6 +166920,19 @@
   {
    "title": "Melammed Lehoil Part II",
    "language": "English",
+   "versionTitle": "Sefaria Community Translation",
+   "categories": [
+    "Responsa",
+    "Acharonim"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Responsa/Acharonim/Melammed Lehoil Part II/English/Sefaria Community Translation.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Responsa/Acharonim/Melammed Lehoil Part II/English/Sefaria Community Translation.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Responsa/Acharonim/Melammed Lehoil Part II/English/Sefaria Community Translation.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Responsa/Acharonim/Melammed Lehoil Part II/English/Sefaria Community Translation.json"
+  },
+  {
+   "title": "Melammed Lehoil Part II",
+   "language": "English",
    "versionTitle": "Sefaria Responsa Anthology",
    "categories": [
     "Responsa",
@@ -173792,6 +174384,19 @@
   {
    "title": "Micah",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Micah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Micah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Micah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Micah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Micah",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -176690,6 +177295,32 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Halakhah/Mishneh Torah/Commentary/Migdal Oz/Sefer Nashim/Migdal Oz on Mishneh Torah, Woman Suspected of Infidelity/Hebrew/merged.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Halakhah/Mishneh Torah/Commentary/Migdal Oz/Sefer Nashim/Migdal Oz on Mishneh Torah, Woman Suspected of Infidelity/Hebrew/merged.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Halakhah/Mishneh Torah/Commentary/Migdal Oz/Sefer Nashim/Migdal Oz on Mishneh Torah, Woman Suspected of Infidelity/Hebrew/merged.json"
+  },
+  {
+   "title": "Mikdash Melekh on Zohar",
+   "language": "English",
+   "versionTitle": "Sefaria Community Translation",
+   "categories": [
+    "Kabbalah",
+    "Zohar"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Kabbalah/Zohar/Mikdash Melekh on Zohar/English/Sefaria Community Translation.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Kabbalah/Zohar/Mikdash Melekh on Zohar/English/Sefaria Community Translation.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Kabbalah/Zohar/Mikdash Melekh on Zohar/English/Sefaria Community Translation.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Kabbalah/Zohar/Mikdash Melekh on Zohar/English/Sefaria Community Translation.json"
+  },
+  {
+   "title": "Mikdash Melekh on Zohar",
+   "language": "English",
+   "versionTitle": "merged",
+   "categories": [
+    "Kabbalah",
+    "Zohar"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Kabbalah/Zohar/Mikdash Melekh on Zohar/English/merged.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Kabbalah/Zohar/Mikdash Melekh on Zohar/English/merged.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Kabbalah/Zohar/Mikdash Melekh on Zohar/English/merged.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Kabbalah/Zohar/Mikdash Melekh on Zohar/English/merged.json"
   },
   {
    "title": "Mikdash Melekh on Zohar",
@@ -206640,6 +207271,19 @@
   {
    "title": "Nahum",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Nahum/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Nahum/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Nahum/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Nahum/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Nahum",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -207294,6 +207938,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Nehemiah/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Nehemiah/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Nehemiah/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Nehemiah",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Writings/Nehemiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Nehemiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Nehemiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Nehemiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Nehemiah",
@@ -210816,6 +211473,19 @@
   {
    "title": "Numbers",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Torah"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Torah/Numbers/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Torah/Numbers/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Torah/Numbers/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Torah/Numbers/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Numbers",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -211199,6 +211869,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Obadiah/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Obadiah/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Obadiah/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Obadiah",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Obadiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Obadiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Obadiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Obadiah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Obadiah",
@@ -212270,6 +212953,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Kabbalah/Ramak/Ohr Ne'erav/English/Moses Cordovero's Introduction to Kabbalah, Annotated trans. of Or ne'erav, Ira Robinson, 1994..txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Kabbalah/Ramak/Ohr Ne'erav/English/Moses Cordovero's Introduction to Kabbalah, Annotated trans. of Or ne'erav, Ira Robinson, 1994..json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Kabbalah/Ramak/Ohr Ne'erav/English/Moses Cordovero's Introduction to Kabbalah, Annotated trans. of Or ne'erav, Ira Robinson, 1994..json"
+  },
+  {
+   "title": "Ohr Ne'erav",
+   "language": "English",
+   "versionTitle": "Ohr Ne'erav; Translated to Turkish by Gökhan Aryeh Duran, 2026 [tr]",
+   "categories": [
+    "Kabbalah",
+    "Ramak"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Kabbalah/Ramak/Ohr Ne'erav/English/Ohr Ne'erav; Translated to Turkish by Gökhan Aryeh Duran, 2026 [tr].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Kabbalah/Ramak/Ohr Ne'erav/English/Ohr Ne'erav; Translated to Turkish by Gökhan Aryeh Duran, 2026 [tr].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Kabbalah/Ramak/Ohr Ne'erav/English/Ohr Ne'erav; Translated to Turkish by Gökhan Aryeh Duran, 2026 [tr].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Kabbalah/Ramak/Ohr Ne'erav/English/Ohr Ne'erav; Translated to Turkish by Gökhan Aryeh Duran, 2026 [tr].json"
   },
   {
    "title": "Ohr Ne'erav",
@@ -217409,6 +218105,19 @@
   {
    "title": "Orchot Chaim L'HaRosh",
    "language": "English",
+   "versionTitle": "Version française 2026; établie à partir de la traduction anglaise de Reuven Brauner, 2014 [fr]",
+   "categories": [
+    "Musar",
+    "Rishonim"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Musar/Rishonim/Orchot Chaim L'HaRosh/English/Version française 2026; établie à partir de la traduction anglaise de Reuven Brauner, 2014 [fr].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Musar/Rishonim/Orchot Chaim L'HaRosh/English/Version française 2026; établie à partir de la traduction anglaise de Reuven Brauner, 2014 [fr].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Musar/Rishonim/Orchot Chaim L'HaRosh/English/Version française 2026; établie à partir de la traduction anglaise de Reuven Brauner, 2014 [fr].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Musar/Rishonim/Orchot Chaim L'HaRosh/English/Version française 2026; établie à partir de la traduction anglaise de Reuven Brauner, 2014 [fr].json"
+  },
+  {
+   "title": "Orchot Chaim L'HaRosh",
+   "language": "English",
    "versionTitle": "merged",
    "categories": [
     "Musar",
@@ -220821,6 +221530,34 @@
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Days of Awe/Hebrew/merged.json"
   },
   {
+   "title": "Peninei Halakhah, Emunah Umitzvoteha",
+   "language": "Hebrew",
+   "versionTitle": "Peninei Halakhah, Yeshivat Har Bracha",
+   "categories": [
+    "Halakhah",
+    "Modern",
+    "Peninei Halakhah"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Emunah Umitzvoteha/Hebrew/Peninei Halakhah, Yeshivat Har Bracha.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Emunah Umitzvoteha/Hebrew/Peninei Halakhah, Yeshivat Har Bracha.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Emunah Umitzvoteha/Hebrew/Peninei Halakhah, Yeshivat Har Bracha.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Emunah Umitzvoteha/Hebrew/Peninei Halakhah, Yeshivat Har Bracha.json"
+  },
+  {
+   "title": "Peninei Halakhah, Emunah Umitzvoteha",
+   "language": "Hebrew",
+   "versionTitle": "merged",
+   "categories": [
+    "Halakhah",
+    "Modern",
+    "Peninei Halakhah"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Emunah Umitzvoteha/Hebrew/merged.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Emunah Umitzvoteha/Hebrew/merged.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Emunah Umitzvoteha/Hebrew/merged.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Emunah Umitzvoteha/Hebrew/merged.json"
+  },
+  {
    "title": "Peninei Halakhah, Family",
    "language": "English",
    "versionTitle": "Sefaria Community Translation",
@@ -220987,6 +221724,34 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Festivals/Hebrew/merged.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Festivals/Hebrew/merged.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Festivals/Hebrew/merged.json"
+  },
+  {
+   "title": "Peninei Halakhah, Giyur",
+   "language": "Hebrew",
+   "versionTitle": "Peninei Halakhah, Yeshivat Har Bracha",
+   "categories": [
+    "Halakhah",
+    "Modern",
+    "Peninei Halakhah"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Giyur/Hebrew/Peninei Halakhah, Yeshivat Har Bracha.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Giyur/Hebrew/Peninei Halakhah, Yeshivat Har Bracha.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Giyur/Hebrew/Peninei Halakhah, Yeshivat Har Bracha.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Giyur/Hebrew/Peninei Halakhah, Yeshivat Har Bracha.json"
+  },
+  {
+   "title": "Peninei Halakhah, Giyur",
+   "language": "Hebrew",
+   "versionTitle": "merged",
+   "categories": [
+    "Halakhah",
+    "Modern",
+    "Peninei Halakhah"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Giyur/Hebrew/merged.json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Giyur/Hebrew/merged.txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Giyur/Hebrew/merged.json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Halakhah/Modern/Peninei Halakhah/Peninei Halakhah, Giyur/Hebrew/merged.json"
   },
   {
    "title": "Peninei Halakhah, Kashrut",
@@ -227742,6 +228507,19 @@
   {
    "title": "Proverbs",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Writings/Proverbs/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Proverbs/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Proverbs/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Proverbs/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Proverbs",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -228167,6 +228945,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Psalms/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Psalms/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Psalms/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Psalms",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Writings/Psalms/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Psalms/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Psalms/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Psalms/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Psalms",
@@ -255202,6 +255993,19 @@
   {
    "title": "Ruth",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Writings/Ruth/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Ruth/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Ruth/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Ruth/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Ruth",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -274505,19 +275309,6 @@
   {
    "title": "Shulchan Arukh, Orach Chayim",
    "language": "Hebrew",
-   "versionTitle": "Wikisource Shulchan Aruch",
-   "categories": [
-    "Halakhah",
-    "Shulchan Arukh"
-   ],
-   "json_url": "https://storage.googleapis.com/sefaria-export/json/Halakhah/Shulchan Arukh/Shulchan Arukh, Orach Chayim/Hebrew/Wikisource Shulchan Aruch.json",
-   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Halakhah/Shulchan Arukh/Shulchan Arukh, Orach Chayim/Hebrew/Wikisource Shulchan Aruch.txt",
-   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Halakhah/Shulchan Arukh/Shulchan Arukh, Orach Chayim/Hebrew/Wikisource Shulchan Aruch.json",
-   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Halakhah/Shulchan Arukh/Shulchan Arukh, Orach Chayim/Hebrew/Wikisource Shulchan Aruch.json"
-  },
-  {
-   "title": "Shulchan Arukh, Orach Chayim",
-   "language": "Hebrew",
    "versionTitle": "httpswww.nli.org.ilhebooksNNL_ALEPH002084080",
    "categories": [
     "Halakhah",
@@ -277405,6 +278196,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Song of Songs/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Song of Songs/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Song of Songs/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Song of Songs",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Writings"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Writings/Song of Songs/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Writings/Song of Songs/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Writings/Song of Songs/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Writings/Song of Songs/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Song of Songs",
@@ -312448,15 +313252,15 @@
   {
    "title": "Weekday Siddur Sefard Linear",
    "language": "English",
-   "versionTitle": "The Metsudah siddur a new linear siddur with English translation by Avrohom Davis, 1981",
+   "versionTitle": "The Metsudah siddur a new linear siddur with English translation by Avrohom Davis, 1981 [en]",
    "categories": [
     "Liturgy",
     "Siddur"
    ],
-   "json_url": "https://storage.googleapis.com/sefaria-export/json/Liturgy/Siddur/Weekday Siddur Sefard Linear/English/The Metsudah siddur a new linear siddur with English translation by Avrohom Davis, 1981.json",
-   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Liturgy/Siddur/Weekday Siddur Sefard Linear/English/The Metsudah siddur a new linear siddur with English translation by Avrohom Davis, 1981.txt",
-   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Liturgy/Siddur/Weekday Siddur Sefard Linear/English/The Metsudah siddur a new linear siddur with English translation by Avrohom Davis, 1981.json",
-   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Liturgy/Siddur/Weekday Siddur Sefard Linear/English/The Metsudah siddur a new linear siddur with English translation by Avrohom Davis, 1981.json"
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Liturgy/Siddur/Weekday Siddur Sefard Linear/English/The Metsudah siddur a new linear siddur with English translation by Avrohom Davis, 1981 [en].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Liturgy/Siddur/Weekday Siddur Sefard Linear/English/The Metsudah siddur a new linear siddur with English translation by Avrohom Davis, 1981 [en].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Liturgy/Siddur/Weekday Siddur Sefard Linear/English/The Metsudah siddur a new linear siddur with English translation by Avrohom Davis, 1981 [en].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Liturgy/Siddur/Weekday Siddur Sefard Linear/English/The Metsudah siddur a new linear siddur with English translation by Avrohom Davis, 1981 [en].json"
   },
   {
    "title": "Weekday Siddur Sefard Linear",
@@ -324210,6 +325014,19 @@
   {
    "title": "Zechariah",
    "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Zechariah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Zechariah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Zechariah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Zechariah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
+  },
+  {
+   "title": "Zechariah",
+   "language": "English",
    "versionTitle": "Tanakh The Holy Scriptures, published by JPS",
    "categories": [
     "Tanakh",
@@ -324427,6 +325244,19 @@
    "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Zephaniah/English/THE JPS TANAKH Gender-Sensitive Edition.txt",
    "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Zephaniah/English/THE JPS TANAKH Gender-Sensitive Edition.json",
    "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Zephaniah/English/THE JPS TANAKH Gender-Sensitive Edition.json"
+  },
+  {
+   "title": "Zephaniah",
+   "language": "English",
+   "versionTitle": "Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es]",
+   "categories": [
+    "Tanakh",
+    "Prophets"
+   ],
+   "json_url": "https://storage.googleapis.com/sefaria-export/json/Tanakh/Prophets/Zephaniah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "txt_url": "https://storage.googleapis.com/sefaria-export/txt/Tanakh/Prophets/Zephaniah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].txt",
+   "cltk_full_url": "https://storage.googleapis.com/sefaria-export/cltk-full/Tanakh/Prophets/Zephaniah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json",
+   "cltk_flat_url": "https://storage.googleapis.com/sefaria-export/cltk-flat/Tanakh/Prophets/Zephaniah/English/Tanaj Español, trans. Rav Yehuda Ribco, 2026 [es].json"
   },
   {
    "title": "Zephaniah",
